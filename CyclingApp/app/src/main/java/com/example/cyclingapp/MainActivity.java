@@ -1,76 +1,119 @@
 package com.example.cyclingapp;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
+import com.firebase.ui.auth.AuthUI;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.cyclingapp.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    // variable for Firebase Auth
+    private FirebaseAuth mFirebaseAuth;
+
+    // declaring a const int value which we
+    // will be using in Firebase auth.
+    public static final int RC_SIGN_IN = 1;
+
+    // creating an auth listener for our Firebase auth
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
+
+    // below is the list which we have created in which
+    // we can add the authentication which we have to
+    // display inside our app.
+    List<AuthUI.IdpConfig> providers = Arrays.asList(
+
+            // below is the line for adding
+            // email and password authentication.
+            new AuthUI.IdpConfig.EmailBuilder().build(),
+
+            // below line is used for adding google
+            // authentication builder in our app.
+            new AuthUI.IdpConfig.GoogleBuilder().build());
+
+            // below line is used for adding phone
+            // authentication builder in our app.
+         // new AuthUI.IdpConfig.PhoneBuilder().build());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        // below line is for getting instance
+        // for our firebase auth
+        mFirebaseAuth = FirebaseAuth.getInstance();
 
-        setSupportActionBar(binding.toolbar);
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        // below line is used for calling auth listener
+        // for our Firebase authentication.
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+            @SuppressLint("ResourceType")
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
+                // we are calling method for on authentication state changed.
+                // below line is used for getting current user which is
+                // authenticated previously.
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+
+                // checking if the user
+                // is null or not.
+                if (user != null) {
+                    // if the user is already authenticated then we will
+                    // redirect our user to next screen which is our home screen.
+                    // we are redirecting to new screen via an intent.
+                    Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(i);
+                    // we are calling finish method to kill or
+                    // mainactivity which is displaying our login ui.
+                    finish();
+                } else {
+                    Intent intent = AuthUI.getInstance().createSignInIntentBuilder()
+                            .setIsSmartLockEnabled(false)
+                            .setAvailableProviders(providers)
+                            .setLogo(R.drawable.doge)
+                            .setTheme(R.style.Theme)
+                            .build();
+                    startActivity(intent);
+                }
             }
-        });
+        };
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    protected void onResume() {
+        super.onResume();
+        // we are calling our auth
+        // listener method on app resume.
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    protected void onPause() {
+        super.onPause();
+        // here we are calling remove auth
+        // listener method on stop.
+        mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RC_SIGN_IN) {
+            if (resultCode == RESULT_OK) {
+                // User successfully signed in
+            } else if (resultCode == RESULT_CANCELED) {
+                // User canceled the sign-in flow
+            }
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
 }
