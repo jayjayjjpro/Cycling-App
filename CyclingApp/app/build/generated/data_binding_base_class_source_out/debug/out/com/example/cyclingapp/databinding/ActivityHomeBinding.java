@@ -4,38 +4,37 @@ package com.example.cyclingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.cyclingapp.R;
+import com.google.android.material.navigation.NavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final DrawerLayout rootView;
 
   @NonNull
-  public final Button idBtnLogout;
+  public final DrawerLayout drawerLayout;
 
   @NonNull
-  public final TextView idheadTV;
+  public final NavigationView navView;
 
-  private ActivityHomeBinding(@NonNull RelativeLayout rootView, @NonNull Button idBtnLogout,
-      @NonNull TextView idheadTV) {
+  private ActivityHomeBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
+      @NonNull NavigationView navView) {
     this.rootView = rootView;
-    this.idBtnLogout = idBtnLogout;
-    this.idheadTV = idheadTV;
+    this.drawerLayout = drawerLayout;
+    this.navView = navView;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -60,19 +59,15 @@ public final class ActivityHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.idBtnLogout;
-      Button idBtnLogout = ViewBindings.findChildViewById(rootView, id);
-      if (idBtnLogout == null) {
+      DrawerLayout drawerLayout = (DrawerLayout) rootView;
+
+      id = R.id.nav_view;
+      NavigationView navView = ViewBindings.findChildViewById(rootView, id);
+      if (navView == null) {
         break missingId;
       }
 
-      id = R.id.idheadTV;
-      TextView idheadTV = ViewBindings.findChildViewById(rootView, id);
-      if (idheadTV == null) {
-        break missingId;
-      }
-
-      return new ActivityHomeBinding((RelativeLayout) rootView, idBtnLogout, idheadTV);
+      return new ActivityHomeBinding((DrawerLayout) rootView, drawerLayout, navView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
