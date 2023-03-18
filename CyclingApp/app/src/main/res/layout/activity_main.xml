@@ -10,10 +10,9 @@
         android:id="@+id/title_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cycling App"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:gravity="center_horizontal"
-        />
+        android:text="CyclingAppActivitymain"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

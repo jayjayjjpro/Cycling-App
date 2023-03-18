@@ -2807,6 +2807,7 @@ drawable baseline_event_24
 drawable baseline_home_24
 drawable baseline_logout_24
 drawable baseline_map_24
+drawable baseline_person_24
 drawable baseline_upcoming_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3171,6 +3172,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container
 id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
@@ -3340,6 +3342,7 @@ id pin
 id position
 id postLayout
 id pressed
+id profile
 id progress_circular
 id progress_horizontal
 id radio
@@ -3647,6 +3650,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_event
+layout fragment_map
+layout fragment_profile
+layout fragment_upcoming_event
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone
@@ -3922,6 +3929,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string hello_first_fragment
 string hello_second_fragment
 string hide_bottom_view_on_scroll_behavior

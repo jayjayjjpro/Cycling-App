@@ -4,6 +4,7 @@ package com.example.cyclingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -23,12 +24,16 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final DrawerLayout drawerLayout;
 
   @NonNull
+  public final FrameLayout fragmentContainer;
+
+  @NonNull
   public final NavigationView navView;
 
   private ActivityHomeBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
-      @NonNull NavigationView navView) {
+      @NonNull FrameLayout fragmentContainer, @NonNull NavigationView navView) {
     this.rootView = rootView;
     this.drawerLayout = drawerLayout;
+    this.fragmentContainer = fragmentContainer;
     this.navView = navView;
   }
 
@@ -61,13 +66,20 @@ public final class ActivityHomeBinding implements ViewBinding {
     missingId: {
       DrawerLayout drawerLayout = (DrawerLayout) rootView;
 
+      id = R.id.fragment_container;
+      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
+        break missingId;
+      }
+
       id = R.id.nav_view;
       NavigationView navView = ViewBindings.findChildViewById(rootView, id);
       if (navView == null) {
         break missingId;
       }
 
-      return new ActivityHomeBinding((DrawerLayout) rootView, drawerLayout, navView);
+      return new ActivityHomeBinding((DrawerLayout) rootView, drawerLayout, fragmentContainer,
+          navView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
