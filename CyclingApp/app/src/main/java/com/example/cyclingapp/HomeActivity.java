@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -37,6 +38,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+        //following code is for NAVBAR
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         drawerToggle = new ActionBarDrawerToggle(this,drawerLayout, R.string.open,R.string.close);
@@ -44,18 +47,36 @@ public class HomeActivity extends AppCompatActivity {
         drawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //For now, we will use Event fragment as our home page
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new EventFragment()).commit();
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home: {
                         Toast.makeText(HomeActivity.this, "Home Selected", Toast.LENGTH_SHORT).show();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new EventFragment()).commit();
                         break;
                     }
                     case R.id.event: {
                         Toast.makeText(HomeActivity.this, "Event Selected", Toast.LENGTH_SHORT).show();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new EventFragment()).commit();
                         break;
 
+                    }
+                    case R.id.profile: {
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
+                        break;
+                    }
+
+                    case R.id.upcoming:{
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new UpcomingEventFragment()).commit();
+                        break;
+                    }
+                    case R.id.map:{
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
+                        break;
                     }
                     case R.id.logout:{
                         AuthUI.getInstance().signOut(HomeActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -79,35 +100,10 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // button for logout and initializing our button.
-        /*Button logoutBtn = findViewById(R.id.idBtnLogout);
+        //end of NAVBAR code
 
-        // adding onclick listener for our logout button.
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                // below line is for getting instance
-                // for AuthUi and after that calling a
-                // sign out method from Firebase.
-                AuthUI.getInstance()
-                        .signOut(HomeActivity.this)
 
-                        // after sign out is executed we are redirecting
-                        // our user to MainActivity where our login flow is being displayed.
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            public void onComplete(@NonNull Task<Void> task) {
-
-                                // below method is used after logout from device.
-                                Toast.makeText(HomeActivity.this, "User Signed Out", Toast.LENGTH_SHORT).show();
-
-                                // below line is to go to MainActivity via an intent.
-                                Intent i = new Intent(HomeActivity.this, MainActivity.class);
-                                startActivity(i);
-                            }
-                        });
-            }
-        });*/
     }
 
     public void onBackPressed(){
