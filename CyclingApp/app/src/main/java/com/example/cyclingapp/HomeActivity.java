@@ -25,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     ActionBarDrawerToggle drawerToggle;
 
 
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(drawerToggle.onOptionsItemSelected(item)){
@@ -101,6 +102,12 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         //end of NAVBAR code
+
+
+
+
+
+
 
 
 

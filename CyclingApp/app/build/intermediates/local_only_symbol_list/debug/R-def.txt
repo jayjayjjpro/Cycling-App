@@ -21,6 +21,7 @@ drawable onimai
 id action_settings
 id drawer_layout
 id event
+id eventListView
 id fragment_container
 id home
 id logout
@@ -31,6 +32,7 @@ id profile
 id title_textview
 id upcoming
 layout activity_home
+layout activity_list_view
 layout activity_main
 layout content_main
 layout fragment_event

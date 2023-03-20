@@ -4,25 +4,32 @@ package com.example.cyclingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.cyclingapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentEventBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final LinearLayout rootView;
 
-  private FragmentEventBinding(@NonNull RelativeLayout rootView) {
+  @NonNull
+  public final ListView eventListView;
+
+  private FragmentEventBinding(@NonNull LinearLayout rootView, @NonNull ListView eventListView) {
     this.rootView = rootView;
+    this.eventListView = eventListView;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +50,19 @@ public final class FragmentEventBinding implements ViewBinding {
 
   @NonNull
   public static FragmentEventBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.eventListView;
+      ListView eventListView = ViewBindings.findChildViewById(rootView, id);
+      if (eventListView == null) {
+        break missingId;
+      }
 
-    return new FragmentEventBinding((RelativeLayout) rootView);
+      return new FragmentEventBinding((LinearLayout) rootView, eventListView);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

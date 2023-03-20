@@ -3155,6 +3155,7 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id event
+id eventListView
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3630,6 +3631,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_home
+layout activity_list_view
 layout activity_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

@@ -40,6 +40,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.CyclingApp" >
         <activity
+            android:name="com.example.cyclingapp.ListView"
+            android:exported="false" />
+        <activity
             android:name="com.example.cyclingapp.HomeActivity"
             android:exported="false" />
         <activity

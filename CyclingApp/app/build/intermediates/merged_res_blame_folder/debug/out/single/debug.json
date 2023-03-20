@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-51:\\layout\\activity_home.xml"
     },
     {
+        "merged": "com.example.cyclingapp-merged_res-49:/layout_fragment_event.xml.flat",
+        "source": "com.example.cyclingapp-main-51:/layout/fragment_event.xml"
+    },
+    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-49:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-51:\\mipmap-xhdpi\\ic_launcher.webp"
     },
@@ -72,10 +76,6 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-51:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.cyclingapp-merged_res-49:/layout_fragment_profile.xml.flat",
-        "source": "com.example.cyclingapp-main-51:/layout/fragment_profile.xml"
-    },
-    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-51:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -102,10 +102,6 @@
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-49:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-51:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.cyclingapp-merged_res-49:/layout_fragment_upcoming_event.xml.flat",
-        "source": "com.example.cyclingapp-main-51:/layout/fragment_upcoming_event.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-49:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
@@ -138,6 +134,10 @@
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-49:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-51:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-49:\\layout_activity_list_view.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-51:\\layout\\activity_list_view.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-49:\\xml_data_extraction_rules.xml.flat",
