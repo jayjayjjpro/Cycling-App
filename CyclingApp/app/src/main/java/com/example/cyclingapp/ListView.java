@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class ListView extends AppCompatActivity {
+    //list view is for listing out the stuff on events page
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
+
 
 
 
@@ -79,6 +81,11 @@ public class HomeActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
                         break;
                     }
+                    case R.id.setRoute:{
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new setRouteFragment()).commit();
+                        break;
+
+                    }
                     case R.id.logout:{
                         AuthUI.getInstance().signOut(HomeActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
                             public void onComplete(@NonNull Task<Void> task) {
@@ -97,6 +104,7 @@ public class HomeActivity extends AppCompatActivity {
                         Intent i = new Intent(HomeActivity.this, MainActivity.class);
                         startActivity(i);
                     }
+
                 }return false;
             }
         });

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cyclingapp-mergeDebugResources-47:/values-pl/values-pl.xml",
+            "outputFile": "com.example.cyclingapp-mergeDebugResources-48:/values-pl/values-pl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\819a63d85c5a67661ee7f71b3b9a987d\\transformed\\play-services-basement-18.1.0\\res\\values-pl\\values.xml",

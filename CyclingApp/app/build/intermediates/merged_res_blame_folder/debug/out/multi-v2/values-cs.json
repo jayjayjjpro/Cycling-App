@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cyclingapp-mergeDebugResources-47:/values-cs/values-cs.xml",
+            "outputFile": "com.example.cyclingapp-mergeDebugResources-48:/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\2439be89299c1b9263a65d0e93edd73b\\transformed\\core-1.9.0\\res\\values-cs\\values-cs.xml",

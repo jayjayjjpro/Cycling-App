@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\Xcoga\.gradle\caches\transforms-3\b8cc39385e91394a65562907e1704e73\transformed\viewbinding-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-ui:2.4.1] C:\Users\Xcoga\.gradle\caches\transforms-3\2bad06953cceffb298bd7a65b2be9940\transformed\navigation-ui-2.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:2:1-119:12
@@ -17,6 +17,7 @@ MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] C:\Users\Xcoga\.gradle\
 MERGED from [com.firebaseui:firebase-ui-storage:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\ecd079ba2a904655d15dbc4e183a9525\transformed\firebase-ui-storage-8.0.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:17:1-73:12
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:17:1-44:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\3bb4c0b99d58949f2fd51bdfde51b3b2\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\Xcoga\.gradle\caches\transforms-3\81350b552b5df211a38aa9710e94692a\transformed\fragment-ktx-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\8aac2234a0448f66954ac3e85cd96e78\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
@@ -92,27 +93,55 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Xcoga\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Xcoga\.gradle\caches\transforms-3\747bf2fcc484f8254e573ab53ee8cf75\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Xcoga\.gradle\caches\transforms-3\b3b8c9731d3097b8a44b3996e8650c39\transformed\grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:1-33:12
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-42:12
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-database:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\ebde1fc881d352e0a6b98007e14a951a\transformed\firebase-ui-database-8.0.2\AndroidManifest.xml:9:5-67
+MERGED from [com.firebaseui:firebase-ui-database:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\ebde1fc881d352e0a6b98007e14a951a\transformed\firebase-ui-database-8.0.2\AndroidManifest.xml:9:5-67
+MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\fb8de38743ad451c083ff76f19469e9e\transformed\firebase-ui-firestore-8.0.2\AndroidManifest.xml:9:5-67
+MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\fb8de38743ad451c083ff76f19469e9e\transformed\firebase-ui-firestore-8.0.2\AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.1] C:\Users\Xcoga\.gradle\caches\transforms-3\bd9f709fa10862ef5428ea7f86d24bac\transformed\firebase-firestore-23.0.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.1] C:\Users\Xcoga\.gradle\caches\transforms-3\bd9f709fa10862ef5428ea7f86d24bac\transformed\firebase-firestore-23.0.1\AndroidManifest.xml:14:5-67
+	android:name
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:5:5-31:19
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:9:5-40:19
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:25:5-117:19
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:25:5-117:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Xcoga\.gradle\caches\transforms-3\426a5e272f91196d3b48969144fadbdf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
@@ -123,6 +152,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:26:5-71:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\8aac2234a0448f66954ac3e85cd96e78\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\8aac2234a0448f66954ac3e85cd96e78\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:29:5-37:19
@@ -164,57 +195,63 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Xcoga\.gradle
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\Xcoga\.gradle\caches\transforms-3\2439be89299c1b9263a65d0e93edd73b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:14:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:12:9-54
 	tools:targetApi
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:13:9-29
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:12:9-48
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:16:9-48
 	android:dataExtractionRules
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:7:9-65
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:11:9-65
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:19:9-21:47
+	android:value
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:21:13-44
+	android:name
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:20:13-58
 activity#com.example.cyclingapp.ListView
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:14:9-16:40
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:16:13-37
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:15:13-37
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:24:13-37
 activity#com.example.cyclingapp.HomeActivity
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:17:9-19:40
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:26:9-28:40
 	android:exported
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:18:13-41
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:27:13-41
 activity#com.example.cyclingapp.MainActivity
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:20:9-30:20
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:29:9-39:20
 	android:label
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:23:13-45
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:32:13-45
 	android:exported
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:22:13-36
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:31:13-36
 	android:theme
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:24:13-64
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:33:13-64
 	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:21:13-41
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:30:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:37:27-74
 uses-sdk
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\Xcoga\.gradle\caches\transforms-3\b8cc39385e91394a65562907e1704e73\transformed\viewbinding-7.4.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\Xcoga\.gradle\caches\transforms-3\b8cc39385e91394a65562907e1704e73\transformed\viewbinding-7.4.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-ui:2.4.1] C:\Users\Xcoga\.gradle\caches\transforms-3\2bad06953cceffb298bd7a65b2be9940\transformed\navigation-ui-2.4.1\AndroidManifest.xml:20:5-22:41
@@ -241,6 +278,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\3bb4c0b99d58949f2fd51bdfde51b3b2\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\3bb4c0b99d58949f2fd51bdfde51b3b2\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\Xcoga\.gradle\caches\transforms-3\81350b552b5df211a38aa9710e94692a\transformed\fragment-ktx-1.4.1\AndroidManifest.xml:20:5-22:41
@@ -391,22 +430,24 @@ MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Xcoga\.gradle\caches\transfor
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Xcoga\.gradle\caches\transforms-3\b3b8c9731d3097b8a44b3996e8650c39\transformed\grpc-android-1.28.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:10:5-79
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-firestore:23.0.1] C:\Users\Xcoga\.gradle\caches\transforms-3\bd9f709fa10862ef5428ea7f86d24bac\transformed\firebase-firestore-23.0.1\AndroidManifest.xml:13:5-79
@@ -415,24 +456,10 @@ MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Xcoga\.gradle\caches\transfor
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Xcoga\.gradle\caches\transforms-3\b3b8c9731d3097b8a44b3996e8650c39\transformed\grpc-android-1.28.0\AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:10:22-76
-uses-permission#android.permission.INTERNET
-ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:11:5-67
-MERGED from [com.firebaseui:firebase-ui-database:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\ebde1fc881d352e0a6b98007e14a951a\transformed\firebase-ui-database-8.0.2\AndroidManifest.xml:9:5-67
-MERGED from [com.firebaseui:firebase-ui-database:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\ebde1fc881d352e0a6b98007e14a951a\transformed\firebase-ui-database-8.0.2\AndroidManifest.xml:9:5-67
-MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\fb8de38743ad451c083ff76f19469e9e\transformed\firebase-ui-firestore-8.0.2\AndroidManifest.xml:9:5-67
-MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\fb8de38743ad451c083ff76f19469e9e\transformed\firebase-ui-firestore-8.0.2\AndroidManifest.xml:9:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-firestore:23.0.1] C:\Users\Xcoga\.gradle\caches\transforms-3\bd9f709fa10862ef5428ea7f86d24bac\transformed\firebase-firestore-23.0.1\AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-firestore:23.0.1] C:\Users\Xcoga\.gradle\caches\transforms-3\bd9f709fa10862ef5428ea7f86d24bac\transformed\firebase-firestore-23.0.1\AndroidManifest.xml:14:5-67
-	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:11:22-64
 queries
 ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:15:5-23:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
 intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:http
 ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:16:9-22:18
 action#android.intent.action.VIEW
@@ -673,6 +700,22 @@ ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle
 		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:34:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:33:17-109
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
 meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
 ADDED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:33:13-35:85
 	android:value
