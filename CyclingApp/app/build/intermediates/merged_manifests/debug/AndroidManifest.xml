@@ -52,6 +52,9 @@
             android:value="@string/map_key" />
 
         <activity
+            android:name="com.example.cyclingapp.CreateEventActivity"
+            android:label="Create Event" />
+        <activity
             android:name="com.example.cyclingapp.ListView"
             android:exported="false" />
         <activity

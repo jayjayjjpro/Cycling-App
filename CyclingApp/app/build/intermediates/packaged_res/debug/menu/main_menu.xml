@@ -28,6 +28,9 @@
         <item android:id="@+id/setRoute"
             android:title = "Set Route"
             />
+        <item
+            android:id="@+id/create_event"
+            android:title="Create Event" />
     </group>
 
 </menu>

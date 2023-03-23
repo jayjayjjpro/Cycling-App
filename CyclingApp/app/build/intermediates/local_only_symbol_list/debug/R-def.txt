@@ -21,9 +21,14 @@ drawable onimai
 id action_settings
 id bt_clear
 id bt_draw
+id create_event
+id create_event_button
 id drawer_layout
 id event
 id eventListView
+id event_location_input
+id event_name_input
+id event_start_time_input
 id fragment_container
 id google_map
 id home
@@ -36,6 +41,7 @@ id seek_width
 id setRoute
 id title_textview
 id upcoming
+layout activity_create_event
 layout activity_home
 layout activity_list_view
 layout activity_main

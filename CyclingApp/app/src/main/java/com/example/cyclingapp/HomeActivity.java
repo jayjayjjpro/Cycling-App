@@ -86,6 +86,10 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
                     }
+                    case R.id.create_event: {
+                        openCreateEventActivity();
+                        break;
+                    }
                     case R.id.logout:{
                         AuthUI.getInstance().signOut(HomeActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
                             public void onComplete(@NonNull Task<Void> task) {
@@ -105,7 +109,7 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(i);
                     }
 
-                }return false;
+                }return false;  //want to change to return true then the nav bar will close after clicking
             }
         });
 
@@ -128,5 +132,10 @@ public class HomeActivity extends AppCompatActivity {
         else{
             super.onBackPressed();
         }
+    }
+
+    private void openCreateEventActivity() {
+        Intent intent = new Intent(HomeActivity.this, CreateEventActivity.class);
+        startActivity(intent);
     }
 }
