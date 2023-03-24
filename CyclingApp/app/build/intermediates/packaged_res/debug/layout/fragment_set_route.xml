@@ -43,15 +43,21 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.5"
+                android:layout_weight="0.7"
                 android:id="@+id/bt_draw"
-                android:text="draw polyline"/>
+                android:text="Draw route"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:id = "@+id/bt_clear"
                 android:text = "clear"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:id = "@+id/bt_confirmRoute"
+                android:text = "Confirm route"/>
 
         </LinearLayout>
 

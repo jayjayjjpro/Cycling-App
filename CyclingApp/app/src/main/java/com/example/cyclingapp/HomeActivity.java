@@ -86,6 +86,11 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
                     }
+                    case R.id.viewRoute:{
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new viewRouteFragment()).commit();
+                        break;
+
+                    }
                     case R.id.logout:{
                         AuthUI.getInstance().signOut(HomeActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
                             public void onComplete(@NonNull Task<Void> task) {
