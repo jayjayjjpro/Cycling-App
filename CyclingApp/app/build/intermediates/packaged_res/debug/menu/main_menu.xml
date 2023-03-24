@@ -13,6 +13,10 @@
             android:icon="@drawable/baseline_event_24"
             android:title="event"
             />
+        <item android:id="@+id/createEvent"
+            android:icon="@drawable/baseline_event_note_24"
+            android:title= "Create Event"
+            />
         <item android:id="@+id/upcoming"
             android:icon="@drawable/baseline_upcoming_24"
             android:title="Upcoming Events"
@@ -28,6 +32,8 @@
         <item android:id="@+id/setRoute"
             android:title = "Set Route"
             />
+        <item android:id="@+id/viewRoute"
+            android:title = "view route"/>
     </group>
 
 </menu>

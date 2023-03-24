@@ -24,15 +24,19 @@ public final class FragmentSetRouteBinding implements ViewBinding {
   public final Button btClear;
 
   @NonNull
+  public final Button btConfirmRoute;
+
+  @NonNull
   public final Button btDraw;
 
   @NonNull
   public final SeekBar seekWidth;
 
   private FragmentSetRouteBinding(@NonNull RelativeLayout rootView, @NonNull Button btClear,
-      @NonNull Button btDraw, @NonNull SeekBar seekWidth) {
+      @NonNull Button btConfirmRoute, @NonNull Button btDraw, @NonNull SeekBar seekWidth) {
     this.rootView = rootView;
     this.btClear = btClear;
+    this.btConfirmRoute = btConfirmRoute;
     this.btDraw = btDraw;
     this.seekWidth = seekWidth;
   }
@@ -70,6 +74,12 @@ public final class FragmentSetRouteBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bt_confirmRoute;
+      Button btConfirmRoute = ViewBindings.findChildViewById(rootView, id);
+      if (btConfirmRoute == null) {
+        break missingId;
+      }
+
       id = R.id.bt_draw;
       Button btDraw = ViewBindings.findChildViewById(rootView, id);
       if (btDraw == null) {
@@ -82,7 +92,8 @@ public final class FragmentSetRouteBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSetRouteBinding((RelativeLayout) rootView, btClear, btDraw, seekWidth);
+      return new FragmentSetRouteBinding((RelativeLayout) rootView, btClear, btConfirmRoute, btDraw,
+          seekWidth);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

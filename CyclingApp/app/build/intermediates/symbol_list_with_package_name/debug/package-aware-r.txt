@@ -2829,6 +2829,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_event_24
+drawable baseline_event_note_24
 drawable baseline_home_24
 drawable baseline_logout_24
 drawable baseline_map_24
@@ -3078,6 +3079,7 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id bt_clear
+id bt_confirmRoute
 id bt_draw
 id btn_holder
 id buttonPanel
@@ -3127,6 +3129,7 @@ id country_list
 id country_list_layout
 id country_list_popup_anchor
 id cradle
+id createEvent
 id cross_device_linking_body
 id currentState
 id custom
@@ -3532,6 +3535,7 @@ id up
 id upcoming
 id useLogo
 id vertical_only
+id viewRoute
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3690,6 +3694,7 @@ layout fragment_map
 layout fragment_profile
 layout fragment_set_route
 layout fragment_upcoming_event
+layout fragment_view_route
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone
