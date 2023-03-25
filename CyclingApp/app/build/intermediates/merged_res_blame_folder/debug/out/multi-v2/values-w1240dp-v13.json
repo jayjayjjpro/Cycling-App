@@ -4,7 +4,7 @@
             "outputFile": "com.example.cyclingapp-mergeDebugResources-48:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

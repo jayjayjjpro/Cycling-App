@@ -5,9 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.cyclingapp.R;
@@ -20,11 +20,12 @@ public final class FragmentEventBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ListView eventListView;
+  public final RecyclerView eventsRecyclerView;
 
-  private FragmentEventBinding(@NonNull LinearLayout rootView, @NonNull ListView eventListView) {
+  private FragmentEventBinding(@NonNull LinearLayout rootView,
+      @NonNull RecyclerView eventsRecyclerView) {
     this.rootView = rootView;
-    this.eventListView = eventListView;
+    this.eventsRecyclerView = eventsRecyclerView;
   }
 
   @Override
@@ -54,13 +55,13 @@ public final class FragmentEventBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.eventListView;
-      ListView eventListView = ViewBindings.findChildViewById(rootView, id);
-      if (eventListView == null) {
+      id = R.id.events_recycler_view;
+      RecyclerView eventsRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (eventsRecyclerView == null) {
         break missingId;
       }
 
-      return new FragmentEventBinding((LinearLayout) rootView, eventListView);
+      return new FragmentEventBinding((LinearLayout) rootView, eventsRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

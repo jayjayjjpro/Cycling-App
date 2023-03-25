@@ -6,19 +6,19 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+8-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+9-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:5-67
-11-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:22-64
+11-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:5-79
-12-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:22-76
+12-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:5-79
+12-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:5-81
-13-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:22-78
+13-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:5-81
+13-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:22-78
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Used to check if a browser is available before launching phone auth -->
 14-->[com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:10:5-79
 14-->[com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:10:22-76
@@ -64,70 +64,70 @@
 36-->[androidx.core:core:1.9.0] C:\Users\jayja\.gradle\caches\transforms-3\2439be89299c1b9263a65d0e93edd73b\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 37
 38    <application
-38-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:9:5-43:19
+38-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:9:5-43:19
 39        android:allowBackup="true"
-39-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:10:9-35
+39-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:10:9-35
 40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 40-->[androidx.core:core:1.9.0] C:\Users\jayja\.gradle\caches\transforms-3\2439be89299c1b9263a65d0e93edd73b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 41        android:dataExtractionRules="@xml/data_extraction_rules"
-41-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:11:9-65
+41-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:11:9-65
 42        android:debuggable="true"
 43        android:extractNativeLibs="false"
 44        android:fullBackupContent="@xml/backup_rules"
-44-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:12:9-54
+44-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:12:9-54
 45        android:icon="@mipmap/ic_launcher"
-45-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:13:9-43
+45-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:13:9-43
 46        android:label="@string/app_name"
-46-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:14:9-41
+46-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:14:9-41
 47        android:supportsRtl="true"
-47-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:15:9-35
+47-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:15:9-35
 48        android:testOnly="true"
 49        android:theme="@style/Theme.CyclingApp" >
-49-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:16:9-48
+49-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:16:9-48
 50        <meta-data
-50-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:19:9-21:47
+50-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:19:9-21:47
 51            android:name="com.google.android.geo.API_KEY"
-51-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:20:13-58
+51-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:20:13-58
 52            android:value="@string/map_key" />
-52-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:21:13-44
+52-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:21:13-44
 53
 54        <activity
-54-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:23:9-25:44
+54-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:23:9-25:44
 55            android:name="com.example.cyclingapp.CreateEventActivity"
-55-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:24:13-48
+55-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:24:13-48
 56            android:label="Create Event" />
-56-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:25:13-41
+56-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:25:13-41
 57        <activity
-57-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:26:9-28:40
+57-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:26:9-28:40
 58            android:name="com.example.cyclingapp.ListView"
-58-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:27:13-37
+58-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:27:13-37
 59            android:exported="false" />
-59-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:28:13-37
+59-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:28:13-37
 60        <activity
-60-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:29:9-31:40
+60-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:29:9-31:40
 61            android:name="com.example.cyclingapp.HomeActivity"
-61-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:30:13-41
+61-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:30:13-41
 62            android:exported="false" />
-62-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:31:13-37
+62-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:31:13-37
 63        <activity
-63-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:32:9-42:20
+63-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:32:9-42:20
 64            android:name="com.example.cyclingapp.MainActivity"
-64-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:33:13-41
+64-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:33:13-41
 65            android:exported="true"
-65-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:34:13-36
+65-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:34:13-36
 66            android:label="@string/app_name"
-66-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:35:13-45
+66-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:35:13-45
 67            android:theme="@style/Theme.CyclingApp.NoActionBar" >
-67-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:36:13-64
+67-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:36:13-64
 68            <intent-filter>
-68-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:37:13-41:29
+68-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:37:13-41:29
 69                <action android:name="android.intent.action.MAIN" />
-69-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:38:17-69
-69-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:38:25-66
+69-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:38:17-69
+69-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:38:25-66
 70
 71                <category android:name="android.intent.category.LAUNCHER" />
-71-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:40:17-77
-71-->D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:40:27-74
+71-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:40:17-77
+71-->D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:40:27-74
 72            </intent-filter>
 73        </activity>
 74

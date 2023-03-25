@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\jayja\.gradle\caches\transforms-3\b8cc39385e91394a65562907e1704e73\transformed\viewbinding-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-ui:2.4.1] C:\Users\jayja\.gradle\caches\transforms-3\2bad06953cceffb298bd7a65b2be9940\transformed\navigation-ui-2.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:2:1-119:12
@@ -93,27 +93,27 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\jayja\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\jayja\.gradle\caches\transforms-3\747bf2fcc484f8254e573ab53ee8cf75\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\jayja\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\jayja\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:11:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:11:5-67
 MERGED from [com.firebaseui:firebase-ui-database:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\ebde1fc881d352e0a6b98007e14a951a\transformed\firebase-ui-database-8.0.2\AndroidManifest.xml:9:5-67
@@ -131,17 +131,17 @@ MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\jayja\.grad
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\jayja\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\jayja\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:5-79
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:5-81
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:22-78
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:9:5-43:19
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:9:5-43:19
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:25:5-117:19
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:25:5-117:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\jayja\.gradle\caches\transforms-3\426a5e272f91196d3b48969144fadbdf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
@@ -195,69 +195,69 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\jayja\.gradle
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\jayja\.gradle\caches\transforms-3\2439be89299c1b9263a65d0e93edd73b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:14:9-41
 	android:fullBackupContent
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:12:9-54
 	tools:targetApi
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:17:9-29
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:16:9-48
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:16:9-48
 	android:dataExtractionRules
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:11:9-65
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:11:9-65
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:19:9-21:47
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:19:9-21:47
 	android:value
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:21:13-44
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:21:13-44
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:20:13-58
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:20:13-58
 activity#com.example.cyclingapp.CreateEventActivity
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:23:9-25:44
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:23:9-25:44
 	android:label
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:25:13-41
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:25:13-41
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:24:13-48
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:24:13-48
 activity#com.example.cyclingapp.ListView
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:26:9-28:40
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:26:9-28:40
 	android:exported
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:28:13-37
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:27:13-37
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:27:13-37
 activity#com.example.cyclingapp.HomeActivity
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:29:9-31:40
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:29:9-31:40
 	android:exported
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:31:13-37
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:30:13-41
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:30:13-41
 activity#com.example.cyclingapp.MainActivity
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:32:9-42:20
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:32:9-42:20
 	android:label
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:35:13-45
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:35:13-45
 	android:exported
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:34:13-36
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:34:13-36
 	android:theme
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:36:13-64
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:36:13-64
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:33:13-41
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:33:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:37:13-41:29
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:37:13-41:29
 action#android.intent.action.MAIN
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:38:17-69
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:40:17-77
+ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:40:27-74
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:40:27-74
 uses-sdk
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\jayja\.gradle\caches\transforms-3\b8cc39385e91394a65562907e1704e73\transformed\viewbinding-7.4.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\jayja\.gradle\caches\transforms-3\b8cc39385e91394a65562907e1704e73\transformed\viewbinding-7.4.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-ui:2.4.1] C:\Users\jayja\.gradle\caches\transforms-3\2bad06953cceffb298bd7a65b2be9940\transformed\navigation-ui-2.4.1\AndroidManifest.xml:20:5-22:41
@@ -436,16 +436,16 @@ MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\jayja\.gradle\caches\transfor
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\jayja\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\jayja\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\jayja\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
-		INJECTED from D:\git\SC2006-app\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\git\SC2006-app_createEvents\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\jayja\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:10:5-79
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\jayja\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:24:5-79

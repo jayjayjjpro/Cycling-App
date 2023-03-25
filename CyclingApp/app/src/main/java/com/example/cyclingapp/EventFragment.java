@@ -50,12 +50,12 @@ public class EventFragment extends Fragment implements AdapterView.OnItemClickLi
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         String[] city = {"Mumbai","Delhi","Bangalore","Chennai"};
-        ListView listView = (ListView) view.findViewById(R.id.eventListView);
+       // ListView listView = (ListView) view.findViewById(R.id.eventListView);
         ArrayAdapter<String> adapter= new ArrayAdapter<>(getActivity(),
                 android.R.layout.simple_list_item_1,city);
 
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(this);
+       // listView.setAdapter(adapter);
+       // listView.setOnItemClickListener(this);
         /**
 
         //code for retrieving from firebase.

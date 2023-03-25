@@ -24,22 +24,27 @@ public final class ActivityCreateEventBinding implements ViewBinding {
   public final Button createEventButton;
 
   @NonNull
+  public final Button eventDateButton;
+
+  @NonNull
   public final EditText eventLocationInput;
 
   @NonNull
   public final EditText eventNameInput;
 
   @NonNull
-  public final EditText eventStartTimeInput;
+  public final Button eventTimeButton;
 
   private ActivityCreateEventBinding(@NonNull ScrollView rootView,
-      @NonNull Button createEventButton, @NonNull EditText eventLocationInput,
-      @NonNull EditText eventNameInput, @NonNull EditText eventStartTimeInput) {
+      @NonNull Button createEventButton, @NonNull Button eventDateButton,
+      @NonNull EditText eventLocationInput, @NonNull EditText eventNameInput,
+      @NonNull Button eventTimeButton) {
     this.rootView = rootView;
     this.createEventButton = createEventButton;
+    this.eventDateButton = eventDateButton;
     this.eventLocationInput = eventLocationInput;
     this.eventNameInput = eventNameInput;
-    this.eventStartTimeInput = eventStartTimeInput;
+    this.eventTimeButton = eventTimeButton;
   }
 
   @Override
@@ -75,6 +80,12 @@ public final class ActivityCreateEventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.event_date_button;
+      Button eventDateButton = ViewBindings.findChildViewById(rootView, id);
+      if (eventDateButton == null) {
+        break missingId;
+      }
+
       id = R.id.event_location_input;
       EditText eventLocationInput = ViewBindings.findChildViewById(rootView, id);
       if (eventLocationInput == null) {
@@ -87,14 +98,14 @@ public final class ActivityCreateEventBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.event_start_time_input;
-      EditText eventStartTimeInput = ViewBindings.findChildViewById(rootView, id);
-      if (eventStartTimeInput == null) {
+      id = R.id.event_time_button;
+      Button eventTimeButton = ViewBindings.findChildViewById(rootView, id);
+      if (eventTimeButton == null) {
         break missingId;
       }
 
       return new ActivityCreateEventBinding((ScrollView) rootView, createEventButton,
-          eventLocationInput, eventNameInput, eventStartTimeInput);
+          eventDateButton, eventLocationInput, eventNameInput, eventTimeButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

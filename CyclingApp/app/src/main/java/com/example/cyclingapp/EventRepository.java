@@ -63,4 +63,6 @@ public class EventRepository {
     public Task<Void> deleteEventById(String eventId) {
         return eventsCollection.document(eventId).delete();
     }
+
+
 }

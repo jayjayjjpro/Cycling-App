@@ -8,16 +8,16 @@
         "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\activity_list_view.xml"
     },
     {
-        "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\fragment_upcoming_event.xml",
-        "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\fragment_upcoming_event.xml"
-    },
-    {
-        "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\header.xml",
-        "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\header.xml"
-    },
-    {
         "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\content_main.xml",
         "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\content_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\activity_create_event.xml",
+        "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\activity_create_event.xml"
+    },
+    {
+        "merged": "com.example.cyclingapp-mergeDebugResources-49:/layout/fragment_event.xml",
+        "source": "com.example.cyclingapp-main-52:/layout/fragment_event.xml"
     },
     {
         "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\fragment_set_route.xml",
@@ -28,16 +28,24 @@
         "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\fragment_event.xml"
     },
     {
-        "merged": "com.example.cyclingapp-mergeDebugResources-49:/layout/activity_create_event.xml",
-        "source": "com.example.cyclingapp-main-52:/layout/activity_create_event.xml"
-    },
-    {
         "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\activity_main.xml",
         "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\fragment_profile.xml",
         "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.cyclingapp-mergeDebugResources-49:/layout/activity_events_list.xml",
+        "source": "com.example.cyclingapp-main-52:/layout/activity_events_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\fragment_upcoming_event.xml",
+        "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\fragment_upcoming_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\header.xml",
+        "source": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\header.xml"
     },
     {
         "merged": "C:\\Users\\jayja\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\activity_home.xml",

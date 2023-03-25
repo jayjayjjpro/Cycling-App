@@ -3989,7 +3989,7 @@
                     }
                 },
                 {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -5543,7 +5543,7 @@
             "outputFile": "com.example.cyclingapp-merged_res-50:/values-w600dp-v13_values-w600dp-v13.arsc.flat",
             "map": [
                 {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -6859,7 +6859,7 @@
             "outputFile": "com.example.cyclingapp-merged_res-50:/values-w1240dp-v13_values-w1240dp-v13.arsc.flat",
             "map": [
                 {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -8988,25 +8988,6 @@
             "outputFile": "com.example.cyclingapp-merged_res-50:/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "27,2,21,16,23",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "1327,102,985,821,1087",
-                        "endLines": "38,14,21,19,23",
-                        "endColumns": "12,12,98,12,88",
-                        "endOffsets": "2033,813,1079,977,1171"
-                    },
-                    "to": {
-                        "startLines": "6485,6527,6540,6541,6545",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "453835,456479,457062,457160,457318",
-                        "endLines": "6496,6539,6540,6544,6545",
-                        "endColumns": "12,12,97,12,87",
-                        "endOffsets": "454266,457057,457155,457313,457401"
-                    }
-                },
-                {
                     "source": "C:\\Users\\jayja\\.gradle\\caches\\transforms-3\\53eddd6329fdb6b26740629d5c2caf16\\transformed\\navigation-runtime-2.4.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,10,13",
@@ -9062,6 +9043,42 @@
                     }
                 },
                 {
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "7,2,3,4,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "293,57,105,153,201,247,336",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "330,99,147,195,241,287,373"
+                    },
+                    "to": {
+                        "startLines": "627,903,904,905,916,917,920",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "31914,51705,51752,51799,52543,52588,52754",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "31951,51747,51794,51841,52583,52628,52791"
+                    }
+                },
+                {
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "27,2,21,16,23",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "1327,102,985,821,1087",
+                        "endLines": "38,14,21,19,23",
+                        "endColumns": "12,12,98,12,88",
+                        "endOffsets": "2033,813,1079,977,1171"
+                    },
+                    "to": {
+                        "startLines": "6485,6527,6540,6541,6545",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "453835,456479,457062,457160,457318",
+                        "endLines": "6496,6539,6540,6544,6545",
+                        "endColumns": "12,12,97,12,87",
+                        "endOffsets": "454266,457057,457155,457313,457401"
+                    }
+                },
+                {
                     "source": "C:\\Users\\jayja\\.gradle\\caches\\transforms-3\\2439be89299c1b9263a65d0e93edd73b\\transformed\\core-1.9.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,89,90,94,95,96,97,103,113,146,167,200",
@@ -9100,23 +9117,6 @@
                     }
                 },
                 {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\dimens.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "41",
-                        "endOffsets": "54"
-                    },
-                    "to": {
-                        "startLines": "1067",
-                        "startColumns": "4",
-                        "startOffsets": "62491",
-                        "endColumns": "41",
-                        "endOffsets": "62528"
-                    }
-                },
-                {
                     "source": "C:\\Users\\jayja\\.gradle\\caches\\transforms-3\\a64a74aa26142f816503c02afc50465a\\transformed\\transition-1.4.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -9131,23 +9131,6 @@
                         "startOffsets": "108780,108820,110120,110302,110357,111961,112015,112067,112116,112177",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "108815,108862,110158,110352,110399,112010,112062,112111,112172,112222"
-                    }
-                },
-                {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "7,2,3,4,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "293,57,105,153,201,247,336",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "330,99,147,195,241,287,373"
-                    },
-                    "to": {
-                        "startLines": "627,903,904,905,916,917,920",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "31914,51705,51752,51799,52543,52588,52754",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "31951,51747,51794,51841,52583,52628,52791"
                     }
                 },
                 {
@@ -9170,6 +9153,23 @@
                     }
                 },
                 {
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "41",
+                        "endOffsets": "54"
+                    },
+                    "to": {
+                        "startLines": "1067",
+                        "startColumns": "4",
+                        "startOffsets": "62491",
+                        "endColumns": "41",
+                        "endOffsets": "62528"
+                    }
+                },
+                {
                     "source": "C:\\Users\\jayja\\.gradle\\caches\\transforms-3\\2b43fbb59c3368c3f0bb441f03f5f39d\\transformed\\startup-runtime-1.1.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -9184,23 +9184,6 @@
                         "startOffsets": "119491",
                         "endColumns": "82",
                         "endOffsets": "119569"
-                    }
-                },
-                {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "2,1,6,12,9,17,18,7,14,5,15,13,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "66,17,235,651,451,871,942,294,783,178,822,716,522",
-                        "endColumns": "52,47,57,63,69,69,82,96,37,55,45,65,71",
-                        "endOffsets": "114,60,288,710,516,936,1020,386,816,229,863,777,589"
-                    },
-                    "to": {
-                        "startLines": "1862,1864,1876,1910,2019,2020,2021,2036,2129,2130,2136,2144,2148",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "119438,119574,121238,124939,141314,141384,141454,143309,157181,157219,158077,158762,159247",
-                        "endColumns": "52,47,57,63,69,69,82,96,37,55,45,65,71",
-                        "endOffsets": "119486,119617,121291,124998,141379,141449,141532,143401,157214,157270,158118,158823,159314"
                     }
                 },
                 {
@@ -9237,6 +9220,23 @@
                         "endLines": "1689,1726,1763,11408,11412",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "108775,110704,112618,716409,716558"
+                    }
+                },
+                {
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "2,1,6,12,9,17,18,7,14,5,15,13,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "66,17,235,651,451,871,942,294,783,178,822,716,522",
+                        "endColumns": "52,47,57,63,69,69,82,96,37,55,45,65,71",
+                        "endOffsets": "114,60,288,710,516,936,1020,386,816,229,863,777,589"
+                    },
+                    "to": {
+                        "startLines": "1862,1864,1876,1910,2019,2020,2021,2036,2129,2130,2136,2144,2148",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "119438,119574,121238,124939,141314,141384,141454,143309,157181,157219,158077,158762,159247",
+                        "endColumns": "52,47,57,63,69,69,82,96,37,55,45,65,71",
+                        "endOffsets": "119486,119617,121291,124998,141379,141449,141532,143401,157214,157270,158118,158823,159314"
                     }
                 },
                 {
@@ -9333,6 +9333,23 @@
                     }
                 },
                 {
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,715",
+                        "endColumns": "143,81,103,108,119,100,77",
+                        "endOffsets": "194,276,380,489,609,710,788"
+                    },
+                    "to": {
+                        "startLines": "1896,2014,2015,2016,2017,2018,2137",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "123697,140798,140880,140984,141093,141213,158123",
+                        "endColumns": "143,81,103,108,119,100,77",
+                        "endOffsets": "123836,140875,140979,141088,141208,141309,158196"
+                    }
+                },
+                {
                     "source": "C:\\Users\\jayja\\.gradle\\caches\\transforms-3\\a654babe9528cd2c4db0a3fa6d2f7345\\transformed\\glide-4.11.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -9421,23 +9438,6 @@
                         "endLines": "12448,12454,12460,12463,12615",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "754577,754821,755068,755201,760006"
-                    }
-                },
-                {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,715",
-                        "endColumns": "143,81,103,108,119,100,77",
-                        "endOffsets": "194,276,380,489,609,710,788"
-                    },
-                    "to": {
-                        "startLines": "1896,2014,2015,2016,2017,2018,2137",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "123697,140798,140880,140984,141093,141213,158123",
-                        "endColumns": "143,81,103,108,119,100,77",
-                        "endOffsets": "123836,140875,140979,141088,141208,141309,158196"
                     }
                 },
                 {
@@ -12940,7 +12940,7 @@
                     }
                 },
                 {
-                    "source": "D:\\git\\SC2006-app\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-land\\dimens.xml",
+                    "source": "D:\\git\\SC2006-app_createEvents\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-land\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
