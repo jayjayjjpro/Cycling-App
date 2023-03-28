@@ -24,9 +24,17 @@ id bt_clear
 id bt_confirmRoute
 id bt_draw
 id createEvent
+id create_event_button
 id drawer_layout
 id event
 id eventListView
+id event_date_button
+id event_location
+id event_location_input
+id event_name
+id event_name_input
+id event_start_time
+id event_time_button
 id fragment_container
 id google_map
 id home
@@ -40,6 +48,8 @@ id setRoute
 id title_textview
 id upcoming
 id viewRoute
+layout activity_create_event
+layout activity_events_list
 layout activity_home
 layout activity_list_view
 layout activity_main

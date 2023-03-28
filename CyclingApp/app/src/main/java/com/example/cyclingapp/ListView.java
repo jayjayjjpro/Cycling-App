@@ -1,8 +1,8 @@
 package com.example.cyclingapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ListView extends AppCompatActivity {
     //list view is for listing out the stuff on events page

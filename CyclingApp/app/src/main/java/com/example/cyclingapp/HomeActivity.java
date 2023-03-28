@@ -1,17 +1,12 @@
 package com.example.cyclingapp;
-import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.SeekBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -91,6 +86,11 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
                     }
+
+                    case R.id.createEvent: {
+                        openCreateEventActivity();
+                        break;
+                    }
                     case R.id.logout:{
                         AuthUI.getInstance().signOut(HomeActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
                             public void onComplete(@NonNull Task<Void> task) {
@@ -133,5 +133,10 @@ public class HomeActivity extends AppCompatActivity {
         else{
             super.onBackPressed();
         }
+    }
+
+    private void openCreateEventActivity() {
+        Intent intent = new Intent(HomeActivity.this, CreateEventActivity.class);
+        startActivity(intent);
     }
 }

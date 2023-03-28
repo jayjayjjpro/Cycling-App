@@ -6,6 +6,7 @@
     <string name="open">Open Navigation Drawer</string>
     <string name="close">Close Navigation Drawer</string>
     <string name="map_key" translatable="false">AIzaSyCxezDwteDBrUqxQoUY05a7yXIWHBtkgME</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_route_fragment">RouteFragment</string>
     <!-- Strings used for fragments for navigation -->

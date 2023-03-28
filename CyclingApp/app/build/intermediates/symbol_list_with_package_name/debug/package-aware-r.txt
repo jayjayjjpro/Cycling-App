@@ -3130,6 +3130,7 @@ id country_list_layout
 id country_list_popup_anchor
 id cradle
 id createEvent
+id create_event_button
 id cross_device_linking_body
 id currentState
 id custom
@@ -3186,6 +3187,13 @@ id enterAlways
 id enterAlwaysCollapsed
 id event
 id eventListView
+id event_date_button
+id event_location
+id event_location_input
+id event_name
+id event_name_input
+id event_start_time
+id event_time_button
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3667,6 +3675,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_create_event
+layout activity_events_list
 layout activity_home
 layout activity_list_view
 layout activity_main
