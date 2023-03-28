@@ -36,6 +36,8 @@ id event_name_input
 id event_start_time
 id event_time_button
 id fragment_container
+id fragment_container_create_event
+id go_back
 id google_map
 id home
 id logout

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,16 +36,25 @@ public final class ActivityCreateEventBinding implements ViewBinding {
   @NonNull
   public final Button eventTimeButton;
 
+  @NonNull
+  public final FrameLayout fragmentContainerCreateEvent;
+
+  @NonNull
+  public final Button goBack;
+
   private ActivityCreateEventBinding(@NonNull ScrollView rootView,
       @NonNull Button createEventButton, @NonNull Button eventDateButton,
       @NonNull EditText eventLocationInput, @NonNull EditText eventNameInput,
-      @NonNull Button eventTimeButton) {
+      @NonNull Button eventTimeButton, @NonNull FrameLayout fragmentContainerCreateEvent,
+      @NonNull Button goBack) {
     this.rootView = rootView;
     this.createEventButton = createEventButton;
     this.eventDateButton = eventDateButton;
     this.eventLocationInput = eventLocationInput;
     this.eventNameInput = eventNameInput;
     this.eventTimeButton = eventTimeButton;
+    this.fragmentContainerCreateEvent = fragmentContainerCreateEvent;
+    this.goBack = goBack;
   }
 
   @Override
@@ -104,8 +114,21 @@ public final class ActivityCreateEventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.fragment_container_create_event;
+      FrameLayout fragmentContainerCreateEvent = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainerCreateEvent == null) {
+        break missingId;
+      }
+
+      id = R.id.go_back;
+      Button goBack = ViewBindings.findChildViewById(rootView, id);
+      if (goBack == null) {
+        break missingId;
+      }
+
       return new ActivityCreateEventBinding((ScrollView) rootView, createEventButton,
-          eventDateButton, eventLocationInput, eventNameInput, eventTimeButton);
+          eventDateButton, eventLocationInput, eventNameInput, eventTimeButton,
+          fragmentContainerCreateEvent, goBack);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

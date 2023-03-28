@@ -1,6 +1,8 @@
 package com.example.cyclingapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +18,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,20 +32,31 @@ import java.util.List;
 import java.util.TimeZone;
 
 
-public class CreateEventActivity extends AppCompatActivity {
+public class CreateEventActivity extends AppCompatActivity implements OnDataPass {
 
     private EventRepository eventRepository;
     private EditText eventNameInput;
     private EditText eventLocationInput;
     private EditText eventStartTimeInput;
     private Button createEventButton;
+    private Button backButton;
 
     private Button eventDateButton;
     private Button eventTimeButton;
     private Calendar eventDateTime;
+    private Button setRouteButton;
+    private List<LatLng> latLngList_here;
 
     private Calendar selectedDate;
     private Calendar selectedTime;
+
+    //these 2 variables are to check if user has set date and time
+    //TODO to add code to check if user sets date and time properly.
+    //TODO Right now, user can click but not set date and time and create an event
+    //TODO add code to make sure user confirms route before creating event.
+    private int date_check = 0;
+    private int time_check = 0;
+
 
     // private EditText eventDateInput;
     //private EditText eventTimeInput;
@@ -60,10 +76,16 @@ public class CreateEventActivity extends AppCompatActivity {
 
         eventDateButton = findViewById(R.id.event_date_button);
         eventTimeButton = findViewById(R.id.event_time_button);
+        backButton = findViewById(R.id.go_back);
         eventDateTime = Calendar.getInstance();
 
         selectedDate = Calendar.getInstance();
         selectedTime = Calendar.getInstance();
+
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_create_event
+                ,new setRouteFragment()).commit();
+
 
 
         //Set a click listener for time and date
@@ -89,6 +111,14 @@ public class CreateEventActivity extends AppCompatActivity {
                 createEvent();
             }
         });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openHomeActivity();
+            }
+        });
     }
     //for date and time
     private void showDatePickerDialog() {
@@ -107,7 +137,9 @@ public class CreateEventActivity extends AppCompatActivity {
                 eventDateTime.get(Calendar.MONTH),
                 eventDateTime.get(Calendar.DAY_OF_MONTH)
         );
+
         datePickerDialog.show();
+        if(datePickerDialog!= null) date_check = 1;
     }
 
     private void showTimePickerDialog() {
@@ -126,10 +158,14 @@ public class CreateEventActivity extends AppCompatActivity {
                 true
         );
         timePickerDialog.show();
+        if(timePickerDialog!= null) time_check = 1;
     }
 
 
     private void createEvent() {
+        if (date_check==0 || time_check==0) return;
+
+
         // Get user input for event name, location, and start time
         String eventName = eventNameInput.getText().toString();
         String eventLocation = eventLocationInput.getText().toString();
@@ -153,6 +189,8 @@ public class CreateEventActivity extends AppCompatActivity {
 
         // Create a new event object with the user input and user ID
         Events event = new Events(null, eventName, eventStartTime, eventLocation, creatorId, participants);
+        event.setEventLatLngLst(latLngList_here);
+
 
         // Add the event to the repository
         eventRepository.addEvent(event)
@@ -171,5 +209,19 @@ public class CreateEventActivity extends AppCompatActivity {
                         Toast.makeText(CreateEventActivity.this, "Failed to create event", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+    private void openHomeActivity() {
+        Intent intent = new Intent(CreateEventActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+
+    @Override
+    public void onDataPass(List<com.google.android.gms.maps.model.LatLng> latLngList) {
+        latLngList_here = latLngList;
+        for (int i=0;i<latLngList.size();i++){
+            Log.d("receive LatLngList",latLngList_here.get(i).toString());
+        }
+
     }
 }
