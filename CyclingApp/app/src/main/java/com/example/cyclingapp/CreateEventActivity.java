@@ -1,5 +1,7 @@
 package com.example.cyclingapp;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,6 +59,12 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
     private int date_check = 0;
     private int time_check = 0;
 
+    private int name_check = 0;
+    private int location_desc_check = 0;
+
+    private int latLnginput_check = 0;
+
+
 
     // private EditText eventDateInput;
     //private EditText eventTimeInput;
@@ -106,6 +114,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
 
         // Set a click listener for the create event button
         createEventButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 createEvent();
@@ -131,6 +140,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
                         eventDateTime.set(Calendar.MONTH, month);
                         eventDateTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                         eventDateButton.setText(String.format("%04d-%02d-%02d", year, month + 1, dayOfMonth));
+                        date_check=1;
                     }
                 },
                 eventDateTime.get(Calendar.YEAR),
@@ -139,7 +149,6 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
         );
 
         datePickerDialog.show();
-        if(datePickerDialog!= null) date_check = 1;
     }
 
     private void showTimePickerDialog() {
@@ -151,6 +160,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
                         eventDateTime.set(Calendar.HOUR_OF_DAY, hourOfDay);
                         eventDateTime.set(Calendar.MINUTE, minute);
                         eventTimeButton.setText(String.format("%02d:%02d", hourOfDay, minute));
+                        time_check=1;
                     }
                 },
                 eventDateTime.get(Calendar.HOUR_OF_DAY),
@@ -158,30 +168,35 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
                 true
         );
         timePickerDialog.show();
-        if(timePickerDialog!= null) time_check = 1;
     }
 
 
     private void createEvent() {
-        if (date_check==0 || time_check==0) return;
+        name_check = 0;
+        location_desc_check = 0;
 
-
-        // Get user input for event name, location, and start time
         String eventName = eventNameInput.getText().toString();
         String eventLocation = eventLocationInput.getText().toString();
+        Log.d("check eventnameINput",eventName);
+
+        if (eventName.length()>=1)name_check = 1;
+        if (eventLocation.length()>=1)location_desc_check = 1;
+
+
+
+        if (date_check==0 || time_check==0 || latLnginput_check==0 || location_desc_check ==0 ||name_check==0) {
+            Toast.makeText(getApplicationContext(),"Please fill in all fields!",Toast. LENGTH_SHORT).show();
+            return;
+        }
+
+
+
        // String eventStartTimeString = eventStartTimeInput.getText().toString();
         //Date eventStartTime;
         TimeZone singaporeTimeZone = TimeZone.getTimeZone("Asia/Singapore");
         eventDateTime.setTimeZone(singaporeTimeZone);
         Date eventStartTime = eventDateTime.getTime();
 
-        // Convert the start time string to a Date object
-       /* try {
-            eventStartTime = new Date(Long.parseLong(eventStartTimeString));
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid start time format", Toast.LENGTH_SHORT).show();
-            return;
-        }*/
 
         // Get the actual user ID from Firebase Authentication
         String creatorId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -223,5 +238,9 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
             Log.d("receive LatLngList",latLngList_here.get(i).toString());
         }
 
+
+    }
+    public void checkDataPass(int check){
+        latLnginput_check = check;
     }
 }

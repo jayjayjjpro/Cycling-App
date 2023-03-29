@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface OnDataPass {
     void onDataPass(List<LatLng> loc);
+    void checkDataPass(int check);
 }
