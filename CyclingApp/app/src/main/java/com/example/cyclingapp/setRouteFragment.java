@@ -1,6 +1,7 @@
 package com.example.cyclingapp;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +13,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.internal.ICameraUpdateFactoryDelegate;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -32,8 +36,24 @@ public class setRouteFragment extends Fragment /**implements OnMapReadyCallback,
     List<LatLng> latLngList = new ArrayList<>();
     List<Marker> markerList = new ArrayList<>();
 
+    LatLng singaporeLatLng = new LatLng(1.3521,103.8198);
+    float zoomLevel = 13;
+
+
     static int first_time_count = 1;
     static int draw_complete = 0;
+    private OnDataPass dataPasser;
+
+
+
+
+    @Override
+    public void onAttach(Context context){
+        super.onAttach(context);
+        dataPasser = (OnDataPass) context;
+    }
+
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -81,26 +101,10 @@ public class setRouteFragment extends Fragment /**implements OnMapReadyCallback,
                     Toast.makeText(getActivity(),"Please Draw Line before confirm!",Toast. LENGTH_SHORT).show();
                 }
                 else{
-                    //TODO send latLngList arraylist to database. Note that Markerlist is not necessary
+                    //dataPasser is to pass data to another activity
+                    dataPasser.onDataPass(latLngList);
+                    dataPasser.checkDataPass(1);
                 }
-
-                // debugging code to see the values in latLngList and markerList
-                //delete once database stuff is working here
-                /*
-                if (latLngList.size()!=0){
-                    for(int i=0;i<latLngList.size();i++){
-                        LatLng location = latLngList.get(i);
-                        String location_string = location.toString();
-                        Log.d("location_value",location_string);
-                    }
-                }
-                if (markerList.size()!=0){
-                    for(int i=0;i<markerList.size();i++){
-                        Marker marker = markerList.get(i);
-                        String marker_string = marker.toString();
-                        Log.d("location_value",marker_string);
-                    }
-                }*/
 
             }
         });
@@ -120,6 +124,7 @@ public class setRouteFragment extends Fragment /**implements OnMapReadyCallback,
                 markerList.clear();
                 seekWidth.setProgress(3);
                 draw_complete = 0;
+                dataPasser.checkDataPass(0);
             }
         });
 
@@ -159,6 +164,9 @@ public class setRouteFragment extends Fragment /**implements OnMapReadyCallback,
     public void onMapReady(@NonNull GoogleMap googleMap) {
 
         gMap = googleMap;
+
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(singaporeLatLng, zoomLevel);
+        gMap.moveCamera(cameraUpdate);
         gMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(@NonNull LatLng latLng) {

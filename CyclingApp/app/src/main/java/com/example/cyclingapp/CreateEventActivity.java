@@ -1,6 +1,10 @@
 package com.example.cyclingapp;
 
+import static android.app.PendingIntent.getActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +20,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,20 +34,37 @@ import java.util.List;
 import java.util.TimeZone;
 
 
-public class CreateEventActivity extends AppCompatActivity {
+public class CreateEventActivity extends AppCompatActivity implements OnDataPass {
 
     private EventRepository eventRepository;
     private EditText eventNameInput;
     private EditText eventLocationInput;
     private EditText eventStartTimeInput;
     private Button createEventButton;
+    private Button backButton;
 
     private Button eventDateButton;
     private Button eventTimeButton;
     private Calendar eventDateTime;
+    private Button setRouteButton;
+    private List<LatLng> latLngList_here;
 
     private Calendar selectedDate;
     private Calendar selectedTime;
+
+    //these 2 variables are to check if user has set date and time
+    //TODO to add code to check if user sets date and time properly.
+    //TODO Right now, user can click but not set date and time and create an event
+    //TODO add code to make sure user confirms route before creating event.
+    private int date_check = 0;
+    private int time_check = 0;
+
+    private int name_check = 0;
+    private int location_desc_check = 0;
+
+    private int latLnginput_check = 0;
+
+
 
     // private EditText eventDateInput;
     //private EditText eventTimeInput;
@@ -60,10 +84,16 @@ public class CreateEventActivity extends AppCompatActivity {
 
         eventDateButton = findViewById(R.id.event_date_button);
         eventTimeButton = findViewById(R.id.event_time_button);
+        backButton = findViewById(R.id.go_back);
         eventDateTime = Calendar.getInstance();
 
         selectedDate = Calendar.getInstance();
         selectedTime = Calendar.getInstance();
+
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_create_event
+                ,new setRouteFragment()).commit();
+
 
 
         //Set a click listener for time and date
@@ -84,9 +114,18 @@ public class CreateEventActivity extends AppCompatActivity {
 
         // Set a click listener for the create event button
         createEventButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 createEvent();
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openHomeActivity();
             }
         });
     }
@@ -101,12 +140,14 @@ public class CreateEventActivity extends AppCompatActivity {
                         eventDateTime.set(Calendar.MONTH, month);
                         eventDateTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                         eventDateButton.setText(String.format("%04d-%02d-%02d", year, month + 1, dayOfMonth));
+                        date_check=1;
                     }
                 },
                 eventDateTime.get(Calendar.YEAR),
                 eventDateTime.get(Calendar.MONTH),
                 eventDateTime.get(Calendar.DAY_OF_MONTH)
         );
+
         datePickerDialog.show();
     }
 
@@ -119,6 +160,7 @@ public class CreateEventActivity extends AppCompatActivity {
                         eventDateTime.set(Calendar.HOUR_OF_DAY, hourOfDay);
                         eventDateTime.set(Calendar.MINUTE, minute);
                         eventTimeButton.setText(String.format("%02d:%02d", hourOfDay, minute));
+                        time_check=1;
                     }
                 },
                 eventDateTime.get(Calendar.HOUR_OF_DAY),
@@ -130,22 +172,31 @@ public class CreateEventActivity extends AppCompatActivity {
 
 
     private void createEvent() {
-        // Get user input for event name, location, and start time
+        name_check = 0;
+        location_desc_check = 0;
+
         String eventName = eventNameInput.getText().toString();
         String eventLocation = eventLocationInput.getText().toString();
+        Log.d("check eventnameINput",eventName);
+
+        if (eventName.length()>=1)name_check = 1;
+        if (eventLocation.length()>=1)location_desc_check = 1;
+
+
+
+        if (date_check==0 || time_check==0 || latLnginput_check==0 || location_desc_check ==0 ||name_check==0) {
+            Toast.makeText(getApplicationContext(),"Please fill in all fields!",Toast. LENGTH_SHORT).show();
+            return;
+        }
+
+
+
        // String eventStartTimeString = eventStartTimeInput.getText().toString();
         //Date eventStartTime;
         TimeZone singaporeTimeZone = TimeZone.getTimeZone("Asia/Singapore");
         eventDateTime.setTimeZone(singaporeTimeZone);
         Date eventStartTime = eventDateTime.getTime();
 
-        // Convert the start time string to a Date object
-       /* try {
-            eventStartTime = new Date(Long.parseLong(eventStartTimeString));
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid start time format", Toast.LENGTH_SHORT).show();
-            return;
-        }*/
 
         // Get the actual user ID from Firebase Authentication
         String creatorId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -153,6 +204,8 @@ public class CreateEventActivity extends AppCompatActivity {
 
         // Create a new event object with the user input and user ID
         Events event = new Events(null, eventName, eventStartTime, eventLocation, creatorId, participants);
+        event.setEventLatLngLst(latLngList_here);
+
 
         // Add the event to the repository
         eventRepository.addEvent(event)
@@ -171,5 +224,23 @@ public class CreateEventActivity extends AppCompatActivity {
                         Toast.makeText(CreateEventActivity.this, "Failed to create event", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+    private void openHomeActivity() {
+        Intent intent = new Intent(CreateEventActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+
+    @Override
+    public void onDataPass(List<com.google.android.gms.maps.model.LatLng> latLngList) {
+        latLngList_here = latLngList;
+        for (int i=0;i<latLngList.size();i++){
+            Log.d("receive LatLngList",latLngList_here.get(i).toString());
+        }
+
+
+    }
+    public void checkDataPass(int check){
+        latLnginput_check = check;
     }
 }

@@ -1,5 +1,7 @@
 package com.example.cyclingapp;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.Date;
 import java.util.List;
 
@@ -11,8 +13,11 @@ public class Events {
     private String creatorId;
     private List<String> participants; //ID from Users
 
+    private List<LatLng> eventLatLngLst = null;
+
     //Constructor
-    public Events(String id, String name, Date startTime, String location, String creatorId, List<String> participants) {
+    public Events(String id, String name, Date startTime, String location, String creatorId,
+                  List<String> participants) {
         this.id = id;
         this.name = name;
         this.startTime = startTime;
@@ -70,4 +75,8 @@ public class Events {
     public void setParticipants(List<String> participants) {
         this.participants = participants;
     }
+
+    public List<LatLng> getEventLatLngLst(){return eventLatLngLst;}
+
+    public void setEventLatLngLst(List<LatLng>eventLatLngLst){ this.eventLatLngLst = eventLatLngLst;}
 }
