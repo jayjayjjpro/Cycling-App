@@ -1,21 +1,27 @@
 package com.example.cyclingapp;
 
+import androidx.annotation.Nullable;
+
 import com.google.android.gms.maps.model.LatLng;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 import java.util.List;
 
 public class Events {
+
     private String id;
     private String name;
     private Date startTime;
     private String location;
     private String creatorId;
     private List<String> participants; //ID from Users
-
-    private List<LatLng> eventLatLngLst = null;
+    private List<SubLatLng> eventLatLngLst = null;
 
     //Constructor
+    public Events() {
+        // Default constructor required for calls to DataSnapshot.getValue(Events.class)
+    }
     public Events(String id, String name, Date startTime, String location, String creatorId,
                   List<String> participants) {
         this.id = id;
@@ -25,6 +31,7 @@ public class Events {
         this.creatorId = creatorId;
         this.participants = participants;
     }
+
 
     //Getter and Setter
 
@@ -76,7 +83,7 @@ public class Events {
         this.participants = participants;
     }
 
-    public List<LatLng> getEventLatLngLst(){return eventLatLngLst;}
+    public List<SubLatLng> getEventLatLngLst(){return eventLatLngLst;}
 
-    public void setEventLatLngLst(List<LatLng>eventLatLngLst){ this.eventLatLngLst = eventLatLngLst;}
+    public void setEventLatLngLst(List<SubLatLng>eventLatLngLst){ this.eventLatLngLst = eventLatLngLst;}
 }

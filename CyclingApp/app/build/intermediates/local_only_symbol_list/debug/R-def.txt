@@ -46,7 +46,6 @@ id nav_host_fragment_content_main
 id nav_view
 id profile
 id seek_width
-id setRoute
 id title_textview
 id upcoming
 id viewRoute

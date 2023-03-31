@@ -19,6 +19,7 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\ca
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:2:1-26:12
+MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\3bb4c0b99d58949f2fd51bdfde51b3b2\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\Xcoga\.gradle\caches\transforms-3\81350b552b5df211a38aa9710e94692a\transformed\fragment-ktx-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\8aac2234a0448f66954ac3e85cd96e78\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
@@ -91,7 +92,6 @@ MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Xcoga\.gradle\
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\ec40ad1693ede2dfd3403e99ff6b8656\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\d492b92f51af4e2e246560c7333d2293\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Xcoga\.gradle\caches\transforms-3\747bf2fcc484f8254e573ab53ee8cf75\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
 INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml:2:1-45:12
@@ -288,6 +288,8 @@ MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.g
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\3bb4c0b99d58949f2fd51bdfde51b3b2\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\3bb4c0b99d58949f2fd51bdfde51b3b2\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\Xcoga\.gradle\caches\transforms-3\81350b552b5df211a38aa9710e94692a\transformed\fragment-ktx-1.4.1\AndroidManifest.xml:20:5-22:41
@@ -432,8 +434,6 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Xcoga\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\d492b92f51af4e2e246560c7333d2293\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Xcoga\.gradle\caches\transforms-3\747bf2fcc484f8254e573ab53ee8cf75\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Xcoga\.gradle\caches\transforms-3\747bf2fcc484f8254e573ab53ee8cf75\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
-MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\f062c890bc9bc08c24999f0bea718abc\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 INJECTED from C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\src\main\AndroidManifest.xml
@@ -456,10 +456,10 @@ MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.g
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
 	android:name
 		ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:10:22-76
 queries
