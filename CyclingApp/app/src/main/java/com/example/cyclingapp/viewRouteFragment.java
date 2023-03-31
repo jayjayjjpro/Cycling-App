@@ -27,6 +27,7 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
     Polyline polyline = null;
     //SeekBar seekWidth;
     List<LatLng> latLngList = new ArrayList<>();
+    List<SubLatLng> subLatLngList = new ArrayList<>();
 
 
     @Nullable
@@ -51,16 +52,17 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
 
         //This is to test the for loop. For loop will be used for data from database
         //TODO get latLngList from event database and delete the below dummy values for debugging
-        LatLng latLng = new LatLng(19.48397357816699,10.392014980316162);
-        LatLng latLng2 = new LatLng(22,20);
-        latLngList.add(latLng);
-        latLngList.add(latLng2);
+        SubLatLng test1 = new SubLatLng("19.48397357816699","10.392014980316162");
+        SubLatLng test2 = new SubLatLng("22","20");
+
+        subLatLngList.add(test1);
+        subLatLngList.add(test2);
 
 
-
-
-        for (int i=0;i<latLngList.size();i++){
-            LatLng value = latLngList.get(i);
+        for (int i=0;i<subLatLngList.size();i++){
+            SubLatLng temp = subLatLngList.get(i);
+            LatLng value = new LatLng(Double.parseDouble(temp.getLatitude()), Double.parseDouble(temp.getLongtitude()));
+            latLngList.add(value);
             MarkerOptions markerOptions = new MarkerOptions().position(value);
             if (i==0){
                 //Orange color for starting point
