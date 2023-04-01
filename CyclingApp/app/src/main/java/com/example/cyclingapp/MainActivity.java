@@ -1,5 +1,9 @@
 package com.example.cyclingapp;
 
+//Newly added
+import com.example.cyclingapp.User;
+import com.example.cyclingapp.UserRepository;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +12,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    //NEWLY ADDED
+// Add UserRepository instance
+    private UserRepository userRepository;
+
 
     // variable for Firebase Auth
     private FirebaseAuth mFirebaseAuth;
@@ -39,15 +51,16 @@ public class MainActivity extends AppCompatActivity {
             // authentication builder in our app.
             new AuthUI.IdpConfig.GoogleBuilder().build());
 
-            // below line is used for adding phone
-            // authentication builder in our app.
-         // new AuthUI.IdpConfig.PhoneBuilder().build());
+    // below line is used for adding phone
+    // authentication builder in our app.
+    // new AuthUI.IdpConfig.PhoneBuilder().build());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //Initialize the USERREPOSITORY
+        userRepository = new UserRepository();
         // below line is for getting instance
         // for our firebase auth
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -58,22 +71,41 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("ResourceType")
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-
-                // we are calling method for on authentication state changed.
-                // below line is used for getting current user which is
-                // authenticated previously.
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-
-                // checking if the user
-                // is null or not.
                 if (user != null) {
-                    // if the user is already authenticated then we will
-                    // redirect our user to next screen which is our home screen.
-                    // we are redirecting to new screen via an intent.
+                    userRepository.getUserById(user.getUid())
+                            .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                @Override
+                                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                    if (!documentSnapshot.exists()) {
+
+
+                                        User newUser = new User(user.getUid(), user.getDisplayName(), user.getEmail());
+                                        userRepository.addUser(newUser)
+                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                        // Handle success
+                                                    }
+                                                })
+                                                .addOnFailureListener(new OnFailureListener() {
+                                                    @Override
+                                                    public void onFailure(@NonNull Exception e) {
+                                                        // Handle failure
+                                                    }
+                                                });
+                                    }
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    // Handle failure
+                                }
+                            });
+
                     Intent i = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(i);
-                    // we are calling finish method to kill or
-                    // mainactivity which is displaying our login ui.
                     finish();
                 } else {
                     Intent intent = AuthUI.getInstance().createSignInIntentBuilder()
@@ -86,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+
     }
 
     @Override
@@ -115,5 +148,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 
 }

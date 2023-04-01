@@ -1,9 +1,15 @@
 package com.example.cyclingapp;
 
+import java.util.List;
+
 public class User {
     private String id;
     private String displayName;
     private String email;
+
+    private List<String> completedEvents;
+
+    private List<String> joinedEvents;
 
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
@@ -13,6 +19,8 @@ public class User {
         this.id = id;
         this.displayName = displayName;
         this.email = email;
+        this.completedEvents = completedEvents;
+        this.joinedEvents = joinedEvents;
     }
 
     public String getId() {
@@ -37,5 +45,21 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<String> getCompletedEvents() {
+        return completedEvents;
+    }
+
+    public void setCompletedEvents(List<String> completedEvents) {
+        this.completedEvents = completedEvents;
+    }
+
+    public List<String> getJoinedEvents() {
+        return joinedEvents;
+    }
+
+    public void setJoinedEvents(List<String> joinedEvents) {
+        this.joinedEvents = joinedEvents;
     }
 }
