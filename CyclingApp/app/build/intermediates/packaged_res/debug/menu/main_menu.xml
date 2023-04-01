@@ -29,9 +29,6 @@
             android:icon="@drawable/baseline_logout_24"
             android:title="Logout"
             />
-        <item android:id="@+id/setRoute"
-            android:title = "Set Route"
-            />
         <item android:id="@+id/viewRoute"
             android:title = "view route"/>
     </group>

@@ -41,22 +41,25 @@
             android:orientation="horizontal"
             android:layout_marginTop="10dp">
             <Button
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:id="@+id/bt_draw"
+                android:textSize="12sp"
                 android:text="Draw route"/>
             <Button
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:id = "@+id/bt_clear"
+                android:textSize="12sp"
                 android:text = "clear"/>
             <Button
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8"
                 android:id = "@+id/bt_confirmRoute"
+                android:textSize="12sp"
                 android:text = "Confirm route"/>
 
         </LinearLayout>

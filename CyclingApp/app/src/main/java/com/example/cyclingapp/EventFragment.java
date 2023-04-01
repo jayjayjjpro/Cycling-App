@@ -1,6 +1,7 @@
 package com.example.cyclingapp;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,24 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.google.firebase.database.DatabaseReference;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,7 +40,11 @@ import com.google.firebase.database.DatabaseReference;
  */
 public class EventFragment extends Fragment implements AdapterView.OnItemClickListener{
 
-    DatabaseReference mRef;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    CollectionReference usersRef = db.collection("users");
+    CollectionReference eventsRef = db.collection("events");
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,55 +54,31 @@ public class EventFragment extends Fragment implements AdapterView.OnItemClickLi
         return view;
     }
 
+
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        String[] city = {"Mumbai","Delhi","Bangalore","Chennai"};
         ListView listView = (ListView) view.findViewById(R.id.eventListView);
-        ArrayAdapter<String> adapter= new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_list_item_1,city);
 
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(this);
-        /**
-
-        //code for retrieving from firebase.
-        //remember to add the String Path in getReference argument!
-        mRef = FirebaseDatabase.getInstance().getReference();
-
-        mRef.addChildEventListener(new ChildEventListener(){
+        eventsRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                String value = snapshot.getValue(String.class);
-                myArrayList.add(value);
-                adapter.notifyDataSetChanged();
-            }
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                List<Events> eventsList = new ArrayList<>();
+                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                    Events event = documentSnapshot.toObject(Events.class);
+                    eventsList.add(event);
+                }
 
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+                // Update your UI with the eventsList
+                ArrayAdapter<Events> adapter= new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, eventsList);
+                listView.setAdapter(adapter);
             }
         });
-         **/
 
 
 
-
+        listView.setOnItemClickListener(this);
 
     }
 

@@ -48,14 +48,12 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
     private Calendar eventDateTime;
     private Button setRouteButton;
     private List<LatLng> latLngList_here;
+    private List<SubLatLng> subLatLngList = new ArrayList<SubLatLng>();
 
     private Calendar selectedDate;
     private Calendar selectedTime;
 
     //these 2 variables are to check if user has set date and time
-    //TODO to add code to check if user sets date and time properly.
-    //TODO Right now, user can click but not set date and time and create an event
-    //TODO add code to make sure user confirms route before creating event.
     private int date_check = 0;
     private int time_check = 0;
 
@@ -204,7 +202,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
 
         // Create a new event object with the user input and user ID
         Events event = new Events(null, eventName, eventStartTime, eventLocation, creatorId, participants);
-        event.setEventLatLngLst(latLngList_here);
+        event.setEventLatLngLst(subLatLngList);
 
 
         // Add the event to the repository
@@ -234,8 +232,22 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
     @Override
     public void onDataPass(List<com.google.android.gms.maps.model.LatLng> latLngList) {
         latLngList_here = latLngList;
+        String lat;
+        Double lat_num;
+        String lng;
+        Double lng_num;
+        SubLatLng temp;
+
         for (int i=0;i<latLngList.size();i++){
             Log.d("receive LatLngList",latLngList_here.get(i).toString());
+            lat_num = latLngList.get(i).latitude;
+            lat = lat_num.toString();
+            Log.d("lat",lat);
+            lng_num = latLngList.get(i).longitude;
+            lng = lng_num.toString();
+            Log.d("lng",lng);
+            temp = new SubLatLng(lat,lng);
+            subLatLngList.add(temp);
         }
 
 
