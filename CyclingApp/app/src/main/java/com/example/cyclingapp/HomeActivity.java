@@ -105,7 +105,8 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(i);
                     }
 
-                }return false;
+                }drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
             }
         });
 
