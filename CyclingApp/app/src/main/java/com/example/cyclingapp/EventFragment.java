@@ -90,6 +90,9 @@ public class EventFragment extends Fragment implements AdapterView.OnItemClickLi
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(getActivity(),eventsList.get(position).getName(),Toast.LENGTH_SHORT).show();
+
+
+        //Code for user to join event
         String participantId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         Log.e("participant id",participantId);
         Events event = eventsList.get(position);
