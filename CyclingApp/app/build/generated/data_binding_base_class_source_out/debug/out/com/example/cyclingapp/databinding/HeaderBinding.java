@@ -5,19 +5,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.cyclingapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class HeaderBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
 
-  private HeaderBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final TextView userID;
+
+  @NonNull
+  public final TextView username;
+
+  private HeaderBinding(@NonNull LinearLayout rootView, @NonNull TextView userID,
+      @NonNull TextView username) {
     this.rootView = rootView;
+    this.userID = userID;
+    this.username = username;
   }
 
   @Override
@@ -43,10 +55,25 @@ public final class HeaderBinding implements ViewBinding {
 
   @NonNull
   public static HeaderBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.userID;
+      TextView userID = ViewBindings.findChildViewById(rootView, id);
+      if (userID == null) {
+        break missingId;
+      }
 
-    return new HeaderBinding((LinearLayout) rootView);
+      id = R.id.username;
+      TextView username = ViewBindings.findChildViewById(rootView, id);
+      if (username == null) {
+        break missingId;
+      }
+
+      return new HeaderBinding((LinearLayout) rootView, userID, username);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

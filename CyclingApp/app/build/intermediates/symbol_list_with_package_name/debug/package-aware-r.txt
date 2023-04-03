@@ -3543,6 +3543,8 @@ id up
 id upcoming
 id upcomingEventListView
 id useLogo
+id userID
+id username
 id vertical_only
 id viewRoute
 id view_offset_helper

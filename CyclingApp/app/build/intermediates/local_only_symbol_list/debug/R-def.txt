@@ -48,6 +48,8 @@ id seek_width
 id title_textview
 id upcoming
 id upcomingEventListView
+id userID
+id username
 id viewRoute
 layout activity_create_event
 layout activity_home
