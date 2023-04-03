@@ -20,18 +20,21 @@ public class Events {
     private List<String> participants; //ID from Users
     private List<SubLatLng> eventLatLngLst = null;
 
+    private String status;
+
     //Constructor
     public Events() {
         // Default constructor required for calls to DataSnapshot.getValue(Events.class)
     }
     public Events(String id, String name, Date startTime, String location, String creatorId,
-                  List<String> participants) {
+                  List<String> participants, String status) {
         this.id = id;
         this.name = name;
         this.startTime = startTime;
         this.location = location;
         this.creatorId = creatorId;
         this.participants = participants;
+        this.status = status;
     }
 
 
@@ -102,4 +105,12 @@ public class Events {
     public List<SubLatLng> getEventLatLngLst(){return eventLatLngLst;}
 
     public void setEventLatLngLst(List<SubLatLng>eventLatLngLst){ this.eventLatLngLst = eventLatLngLst;}
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

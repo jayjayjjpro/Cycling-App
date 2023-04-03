@@ -26,6 +26,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -37,6 +38,8 @@ import java.util.TimeZone;
 public class CreateEventActivity extends AppCompatActivity implements OnDataPass {
 
     private EventRepository eventRepository;
+    private UserRepository userRepository;
+
     private EditText eventNameInput;
     private EditText eventLocationInput;
     private EditText eventStartTimeInput;
@@ -75,6 +78,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
 
         // Initialize the event repository and UI components
         eventRepository = new EventRepository();
+        userRepository = new UserRepository();
         eventNameInput = findViewById(R.id.event_name_input);
         eventLocationInput = findViewById(R.id.event_location_input);
        // eventStartTimeInput = findViewById(R.id.event_start_time_input);
@@ -201,7 +205,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
         List<String> participants = new ArrayList<>();
 
         // Create a new event object with the user input and user ID
-        Events event = new Events(null, eventName, eventStartTime, eventLocation, creatorId, participants);
+        Events event = new Events(null, eventName, eventStartTime, eventLocation, creatorId, participants,"not_started");
         event.setEventLatLngLst(subLatLngList);
         event.addParticipants(creatorId);
 
@@ -211,6 +215,25 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
+                        // Get the user document
+                        userRepository.getUserById(creatorId)
+                                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                    @Override
+                                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                        User user = documentSnapshot.toObject(User.class);
+                                        if (user != null) {
+                                            // Update the user's createdEvents list and save it back to Firestore
+                                            List<String> createdEvents = user.getCreatedEvents();
+                                            if (createdEvents == null) {
+                                                createdEvents = new ArrayList<>();
+                                            }
+                                            createdEvents.add(event.getId());
+                                            user.setCreatedEvents(createdEvents);
+                                            userRepository.updateUser(user);
+                                        }
+                                    }
+                                });
+
                         // Show a success message and close the activity
                         Toast.makeText(CreateEventActivity.this, "Event created successfully", Toast.LENGTH_SHORT).show();
                         finish();

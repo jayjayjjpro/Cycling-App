@@ -11,6 +11,7 @@ public class User {
 
     private List<String> joinedEvents;
 
+    private List<String> createdEvents;
 
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
@@ -22,6 +23,7 @@ public class User {
         this.email = email;
         this.completedEvents = completedEvents;
         this.joinedEvents = joinedEvents;
+        this.createdEvents = createdEvents;
     }
 
     public String getId() {
@@ -65,4 +67,12 @@ public class User {
     }
 
     public void addJoinedEvents(String newJoinEvent){this.joinedEvents.add(newJoinEvent);}
+
+    public List<String> getCreatedEvents() {
+        return createdEvents;
+    }
+
+    public void setCreatedEvents(List<String> createdEvents) {
+        this.createdEvents = createdEvents;
+    }
 }
