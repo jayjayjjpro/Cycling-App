@@ -17,6 +17,8 @@ import androidx.fragment.app.Fragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -39,10 +41,13 @@ import java.util.Map;
  * create an instance of this fragment.
  */
 public class EventFragment extends Fragment implements AdapterView.OnItemClickListener{
+    EventRepository eventRepository = new EventRepository();
+    UserRepository userRepository = new UserRepository();
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     CollectionReference usersRef = db.collection("users");
     CollectionReference eventsRef = db.collection("events");
+    List<Events> eventsList = new ArrayList<>();
 
 
 
@@ -64,14 +69,14 @@ public class EventFragment extends Fragment implements AdapterView.OnItemClickLi
         eventsRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                List<Events> eventsList = new ArrayList<>();
+                eventsList = new ArrayList<>();
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                     Events event = documentSnapshot.toObject(Events.class);
                     eventsList.add(event);
                 }
 
                 // Update your UI with the eventsList
-                ArrayAdapter<Events> adapter= new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, eventsList);
+                EventsAdapter adapter= new EventsAdapter(getActivity(),eventsList);
                 listView.setAdapter(adapter);
             }
         });
@@ -84,18 +89,20 @@ public class EventFragment extends Fragment implements AdapterView.OnItemClickLi
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if(position==0){
-            Toast.makeText(getActivity(),"Mumbai",Toast.LENGTH_SHORT).show();
-        }
-        if(position==1){
-            Toast.makeText(getActivity(),"Delhi",Toast.LENGTH_SHORT).show();
-        }
-        if(position==2){
-            Toast.makeText(getActivity(),"Bangalore",Toast.LENGTH_SHORT).show();
-        }
-        if(position==3){
-            Toast.makeText(getActivity(),"Chennai",Toast.LENGTH_SHORT).show();
-        }
+        Toast.makeText(getActivity(),eventsList.get(position).getName(),Toast.LENGTH_SHORT).show();
+
+
+        //Code for user to join event
+        String participantId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        Log.e("participant id",participantId);
+        Events event = eventsList.get(position);
+        //event.addParticipants(participantId);
+        //eventRepository.updateEvent(event);
+        userRepository.addUserToEvent(participantId,event.getId());
+
+
+
+        //TODO add code here to open up description of event
 
     }
 }

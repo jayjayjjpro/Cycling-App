@@ -3187,12 +3187,11 @@ id enterAlways
 id enterAlwaysCollapsed
 id event
 id eventListView
+id eventLocation
+id eventName
 id event_date_button
-id event_location
 id event_location_input
-id event_name
 id event_name_input
-id event_start_time
 id event_time_button
 id exitUntilCollapsed
 id expand_activities_button
@@ -3677,9 +3676,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_create_event
-layout activity_events_list
 layout activity_home
-layout activity_list_view
 layout activity_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3733,6 +3730,7 @@ layout fui_welcome_back_email_link_prompt_layout
 layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
 layout header
+layout item_event
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
