@@ -1,5 +1,7 @@
 package com.example.cyclingapp;
 
+import android.util.Log;
+
 import androidx.annotation.Nullable;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -85,11 +87,13 @@ public class Events {
 
     public boolean checkParticipantDuplicate(String participant){
         for (int i=0;i<participants.size();i++){
-            if (participants.get(i)==participant)
+            if (participants.get(i).equals(participant)){
                 return true;
+            }
         }
         return false;
     }
+
 
     public void addParticipants(String participant){
         if (checkParticipantDuplicate(participant)==false) this.participants.add(participant);

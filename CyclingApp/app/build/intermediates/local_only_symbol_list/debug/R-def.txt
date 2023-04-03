@@ -47,6 +47,7 @@ id profile
 id seek_width
 id title_textview
 id upcoming
+id upcomingEventListView
 id viewRoute
 layout activity_create_event
 layout activity_home

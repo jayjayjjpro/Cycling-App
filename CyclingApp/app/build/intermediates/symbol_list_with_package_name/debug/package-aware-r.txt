@@ -3541,6 +3541,7 @@ id uniform
 id unlabeled
 id up
 id upcoming
+id upcomingEventListView
 id useLogo
 id vertical_only
 id viewRoute
