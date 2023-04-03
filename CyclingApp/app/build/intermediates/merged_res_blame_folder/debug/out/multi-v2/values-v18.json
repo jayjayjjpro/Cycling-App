@@ -4,7 +4,7 @@
             "outputFile": "com.example.cyclingapp-mergeDebugResources-48:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jayja\\.gradle\\caches\\transforms-3\\d1d116c9e2084b3cab9bcc56eb3bf809\\transformed\\appcompat-1.6.0\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\d1d116c9e2084b3cab9bcc56eb3bf809\\transformed\\appcompat-1.6.0\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

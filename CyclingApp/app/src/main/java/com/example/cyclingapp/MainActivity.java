@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                                                     @Override
                                                     public void onSuccess(Void aVoid) {
                                                         // Handle success
-                                                    }
+                                                  }
                                                 })
                                                 .addOnFailureListener(new OnFailureListener() {
                                                     @Override
@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                                                     }
                                                 });
                                     }
+
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
