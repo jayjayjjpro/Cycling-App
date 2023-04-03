@@ -4,7 +4,7 @@
             "outputFile": "com.example.cyclingapp-mergeDebugResources-48:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\426a5e272f91196d3b48969144fadbdf\\transformed\\material-1.8.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\jayja\\.gradle\\caches\\transforms-3\\426a5e272f91196d3b48969144fadbdf\\transformed\\material-1.8.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\d1d116c9e2084b3cab9bcc56eb3bf809\\transformed\\appcompat-1.6.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\jayja\\.gradle\\caches\\transforms-3\\d1d116c9e2084b3cab9bcc56eb3bf809\\transformed\\appcompat-1.6.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

@@ -96,5 +96,13 @@ public class EventRepository {
             }
         });
     }
+    //update event status
+    public Task<Void> updateStatus(String eventId, String status) {
+        return eventsCollection.document(eventId).update("status", status);
+    }
+
+
+
+
 
 }

@@ -61,4 +61,9 @@ public class UserRepository {
     }
 
 
+    public Task<Void> updateUser(User user) {
+        return usersCollection.document(user.getId()).set(user);
+    }
+
+
 }
