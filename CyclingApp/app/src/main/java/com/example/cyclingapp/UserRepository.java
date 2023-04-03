@@ -2,6 +2,7 @@ package com.example.cyclingapp;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.firestore.CollectionReference;
@@ -36,6 +37,8 @@ public class UserRepository {
     public Task<DocumentSnapshot> getUserById(@NonNull String userId) {
         return usersCollection.document(userId).get();
     }
+
+
 
     //for join events
     //add user to event by updating join events in user collection and userid to events collection participants

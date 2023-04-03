@@ -66,6 +66,7 @@ public class UpcomingEventFragment extends Fragment implements AdapterView.OnIte
                 // Update your UI with the eventsList
                 EventsAdapter adapter= new EventsAdapter(getActivity(),eventsList);
                 listView.setAdapter(adapter);
+
             }
         });
 

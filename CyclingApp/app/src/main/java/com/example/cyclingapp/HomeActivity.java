@@ -1,7 +1,11 @@
 package com.example.cyclingapp;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -12,16 +16,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 public class HomeActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
-
-
-
+    User current_user = null;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -33,6 +38,8 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -44,6 +51,8 @@ public class HomeActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUsernameAndID();
+
 
         //For now, we will use Event fragment as our home page
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new EventFragment()).commit();
@@ -134,5 +143,30 @@ public class HomeActivity extends AppCompatActivity {
     private void openCreateEventActivity() {
         Intent intent = new Intent(HomeActivity.this, CreateEventActivity.class);
         startActivity(intent);
+    }
+
+    private void setUsernameAndID(){
+        String participantId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        UserRepository userRepository = new UserRepository();
+        Task<DocumentSnapshot> documentSnapshot = userRepository.getUserById(participantId);
+
+        View headerView = navigationView.getHeaderView(0);
+        TextView usernameTextView = headerView.findViewById(R.id.username);
+        TextView userIDTextView = headerView.findViewById(R.id.userID);
+
+        documentSnapshot.addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+                    User user = documentSnapshot.toObject(User.class);
+                    // Do something with the User object
+                    current_user = user;
+                    usernameTextView.setText(current_user.getDisplayName());
+                    userIDTextView.setText("userID: " + current_user.getId());
+                    Log.d("user",current_user.getDisplayName());
+                }
+            }
+        });
     }
 }
