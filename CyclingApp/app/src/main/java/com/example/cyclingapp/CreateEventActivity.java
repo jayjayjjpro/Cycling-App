@@ -203,6 +203,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
         // Create a new event object with the user input and user ID
         Events event = new Events(null, eventName, eventStartTime, eventLocation, creatorId, participants);
         event.setEventLatLngLst(subLatLngList);
+        event.addParticipants(creatorId);
 
 
         // Add the event to the repository
