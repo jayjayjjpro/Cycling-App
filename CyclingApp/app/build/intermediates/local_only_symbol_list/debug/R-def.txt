@@ -28,12 +28,11 @@ id create_event_button
 id drawer_layout
 id event
 id eventListView
+id eventLocation
+id eventName
 id event_date_button
-id event_location
 id event_location_input
-id event_name
 id event_name_input
-id event_start_time
 id event_time_button
 id fragment_container
 id fragment_container_create_event
@@ -50,9 +49,7 @@ id title_textview
 id upcoming
 id viewRoute
 layout activity_create_event
-layout activity_events_list
 layout activity_home
-layout activity_list_view
 layout activity_main
 layout content_main
 layout fragment_event
@@ -62,6 +59,7 @@ layout fragment_set_route
 layout fragment_upcoming_event
 layout fragment_view_route
 layout header
+layout item_event
 menu main_menu
 menu test2
 mipmap ic_launcher

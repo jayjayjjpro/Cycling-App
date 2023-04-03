@@ -83,6 +83,18 @@ public class Events {
         this.participants = participants;
     }
 
+    public boolean checkParticipantDuplicate(String participant){
+        for (int i=0;i<participants.size();i++){
+            if (participants.get(i)==participant)
+                return true;
+        }
+        return false;
+    }
+
+    public void addParticipants(String participant){
+        if (checkParticipantDuplicate(participant)==false) this.participants.add(participant);
+    }
+
     public List<SubLatLng> getEventLatLngLst(){return eventLatLngLst;}
 
     public void setEventLatLngLst(List<SubLatLng>eventLatLngLst){ this.eventLatLngLst = eventLatLngLst;}

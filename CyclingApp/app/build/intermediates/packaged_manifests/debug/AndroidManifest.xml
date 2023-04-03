@@ -55,9 +55,6 @@
             android:name="com.example.cyclingapp.CreateEventActivity"
             android:label="Create Event" />
         <activity
-            android:name="com.example.cyclingapp.ListView"
-            android:exported="false" />
-        <activity
             android:name="com.example.cyclingapp.HomeActivity"
             android:exported="false" />
         <activity
