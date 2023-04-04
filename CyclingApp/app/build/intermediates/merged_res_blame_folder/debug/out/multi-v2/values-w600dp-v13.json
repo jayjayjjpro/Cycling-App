@@ -4,13 +4,13 @@
             "outputFile": "com.example.cyclingapp-mergeDebugResources-48:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\git\\Cycling_App_v1.1.1\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "source": "/Users/shikha/AndroidStudioProjects/SC2006-Project8/CyclingApp/app/src/main/res/values-w600dp/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "17",
+                        "startOffsets": "16",
                         "endColumns": "41",
-                        "endOffsets": "54"
+                        "endOffsets": "53"
                     },
                     "to": {
                         "startLines": "2",
