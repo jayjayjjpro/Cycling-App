@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         // below line is for getting instance
         // for our firebase auth
         mFirebaseAuth = FirebaseAuth.getInstance();
-
         // below line is used for calling auth listener
         // for our Firebase authentication.
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {

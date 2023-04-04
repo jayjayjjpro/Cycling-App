@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cyclingapp-mergeDebugResources-48:/values-w1240dp-v13/values-w1240dp-v13.xml",
+            "outputFile": "com.example.cyclingapp-mergeDebugResources-50:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\git\\Cycling_App_v1.1.1\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "C:\\Users\\Taeyoung Kim\\AndroidStudioProjects\\CyclingApp\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
