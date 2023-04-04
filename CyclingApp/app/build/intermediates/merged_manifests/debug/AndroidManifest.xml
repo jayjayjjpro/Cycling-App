@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Used to check if a browser is available before launching phone auth -->
     <!-- See ui/phone/PhoneNumberVerificationHandler.isBrowserAvailable() -->
     <queries>
@@ -54,6 +55,15 @@
         <activity
             android:name="com.example.cyclingapp.CreateEventActivity"
             android:label="Create Event" />
+        <activity
+            android:name="com.example.cyclingapp.CurrentEvent"
+            android:label="Current Event" />
+        <activity
+            android:name="com.example.cyclingapp.EventDetails"
+            android:label="Event Details" />
+        <activity
+            android:name="com.example.cyclingapp.EventDetails2"
+            android:label="Event Details" />
         <activity
             android:name="com.example.cyclingapp.HomeActivity"
             android:exported="false" />

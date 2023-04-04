@@ -1,5 +1,7 @@
 package com.example.cyclingapp;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -37,10 +39,10 @@ import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link EventFragment#newInstance} factory method to
+ * Use the {@link EventFragment# newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EventFragment extends Fragment implements AdapterView.OnItemClickListener{
+public class EventFragment extends Fragment {
     EventRepository eventRepository = new EventRepository();
     UserRepository userRepository = new UserRepository();
 
@@ -50,7 +52,6 @@ public class EventFragment extends Fragment implements AdapterView.OnItemClickLi
     List<Events> eventsList = new ArrayList<>();
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -58,7 +59,6 @@ public class EventFragment extends Fragment implements AdapterView.OnItemClickLi
         View view = inflater.inflate(R.layout.fragment_event, container, false);
         return view;
     }
-
 
 
     @Override
@@ -76,33 +76,28 @@ public class EventFragment extends Fragment implements AdapterView.OnItemClickLi
                 }
 
                 // Update your UI with the eventsList
-                EventsAdapter adapter= new EventsAdapter(getActivity(),eventsList);
+                EventsAdapter adapter = new EventsAdapter(getActivity(), eventsList);
                 listView.setAdapter(adapter);
             }
         });
 
 
+        //listView.setOnItemClickListener(this);
 
-        listView.setOnItemClickListener(this);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Toast.makeText(getActivity(), eventsList.get(position).getName(), Toast.LENGTH_SHORT).show();
 
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(getActivity(),eventsList.get(position).getName(),Toast.LENGTH_SHORT).show();
-
-
-        //Code for user to join event
-        String participantId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        Log.e("participant id",participantId);
-        Events event = eventsList.get(position);
-        //event.addParticipants(participantId);
-        //eventRepository.updateEvent(event);
-        userRepository.addUserToEvent(participantId,event.getId());
-
-
-
-        //TODO add code here to open up description of event
+                Events event = eventsList.get(position);
+                String eventName = event.getName();
+                String eventID = event.getId();
+                Log.d("Event Details", "Event Clicked: ", new RuntimeException(eventName));
+                Intent eventDetails = new Intent(getContext(), EventDetails.class);
+                eventDetails.putExtra("event_id", eventID);
+                startActivity(eventDetails);
+            }
+        });
 
     }
 }

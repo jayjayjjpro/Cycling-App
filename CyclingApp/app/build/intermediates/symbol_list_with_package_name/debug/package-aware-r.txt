@@ -3091,6 +3091,8 @@ id button_resend_email
 id button_sign_in
 id cache_measures
 id callMeasure
+id calories
+id caloriesTextView
 id cancel_action
 id cancel_button
 id carryVelocity
@@ -3132,11 +3134,16 @@ id cradle
 id createEvent
 id create_event_button
 id cross_device_linking_body
+id currentEventName
 id currentState
 id custom
 id customPanel
 id cut
 id dark
+id date
+id date2
+id dateInfo
+id dateInfo2
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3157,6 +3164,9 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id distance
+id distanceRemaining
+id distanceTextView
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3189,6 +3199,7 @@ id event
 id eventListView
 id eventLocation
 id eventName
+id eventName2
 id event_date_button
 id event_location_input
 id event_name_input
@@ -3254,6 +3265,7 @@ id invisible_frame
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id joinEvent
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3267,7 +3279,11 @@ id line3
 id linear
 id listMode
 id list_item
+id locInfo
+id locInfo2
 id locale
+id locationInfo
+id locationInfo2
 id logo
 id logout
 id ltr
@@ -3370,6 +3386,10 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id partInfo
+id partInfo2
+id participants
+id participants2
 id password
 id password_layout
 id password_toggle
@@ -3390,6 +3410,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id remainingDistanceTextView
 id resend_barrier
 id resend_code
 id reverseSawtooth
@@ -3473,6 +3494,7 @@ id src_in
 id src_over
 id standard
 id start
+id startEvent
 id startHorizontal
 id startToEnd
 id startVertical
@@ -3517,6 +3539,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id ticker
 id time
+id timeElapsedTextView
 id title
 id titleDividerNoCustom
 id title_template
@@ -3555,6 +3578,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id weightInfo
 id welcome_back_email_link_body
 id welcome_back_idp_button
 id welcome_back_idp_prompt
@@ -3684,6 +3708,7 @@ layout activity_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout content_main
+layout current_event
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3700,6 +3725,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout event_details
+layout event_details2
 layout fragment_event
 layout fragment_map
 layout fragment_profile

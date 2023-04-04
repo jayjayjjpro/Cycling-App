@@ -1,5 +1,7 @@
 package com.example.cyclingapp;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,15 +27,14 @@ import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link UpcomingEventFragment#newInstance} factory method to
+ * Use the {@link UpcomingEventFragment# newInstance} factory method to
  * create an instance of this fragment.
  */
-public class UpcomingEventFragment extends Fragment implements AdapterView.OnItemClickListener{
+public class UpcomingEventFragment extends Fragment{
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     CollectionReference eventsRef = db.collection("events");
     List<Events> eventsList = new ArrayList<>();
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,7 +50,7 @@ public class UpcomingEventFragment extends Fragment implements AdapterView.OnIte
         super.onViewCreated(view, savedInstanceState);
         ListView listView = (ListView) view.findViewById(R.id.upcomingEventListView);
         String participantId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        Log.d("participandId",participantId);
+        Log.d("participantId",participantId);
 
         eventsRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
@@ -66,21 +67,28 @@ public class UpcomingEventFragment extends Fragment implements AdapterView.OnIte
                 // Update your UI with the eventsList
                 EventsAdapter adapter= new EventsAdapter(getActivity(),eventsList);
                 listView.setAdapter(adapter);
-
             }
         });
 
-        listView.setOnItemClickListener(this);
+        //listView.setOnItemClickListener(this);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Toast.makeText(getActivity(), eventsList.get(position).getName(), Toast.LENGTH_SHORT).show();
+                Events event = eventsList.get(position);
+                String eventName = event.getName();
+                String eventID = event.getId();
+                Log.d("Event Details", "Event Clicked: ", new RuntimeException(eventName));
+                Intent eventDetails = new Intent(getContext(), EventDetails2.class);
+                eventDetails.putExtra("event_id", eventID);
+                startActivity(eventDetails);
+            }
+        });
 
 
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(getActivity(), eventsList.get(position).getName(), Toast.LENGTH_SHORT).show();
-        //TODO add the view event description when user clicks on event
-    }
 
 
 
