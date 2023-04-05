@@ -97,6 +97,7 @@ menu main_menu
 menu test2
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw cycling_path_network_kml
 string action_settings
 string app_name
 string close

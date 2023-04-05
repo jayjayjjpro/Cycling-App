@@ -2826,6 +2826,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable amu_bubble_mask
+drawable amu_bubble_shadow
 drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_event_24
@@ -3050,6 +3052,7 @@ id aligned
 id all
 id allStates
 id always
+id amu_text
 id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
@@ -3580,6 +3583,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id webview
 id weightInfo
 id welcome_back_email_link_body
 id welcome_back_idp_button
@@ -3587,6 +3591,7 @@ id welcome_back_idp_prompt
 id welcome_back_password_body
 id west
 id wide
+id window
 id withText
 id with_icon
 id withinBounds
@@ -3707,6 +3712,9 @@ layout abc_tooltip
 layout activity_create_event
 layout activity_home
 layout activity_main
+layout amu_info_window
+layout amu_text_bubble
+layout amu_webview
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout content_main
@@ -3839,6 +3847,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 plurals fui_error_weak_password
 plurals mtrl_badge_content_description
+raw cycling_path_network_kml
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -4417,6 +4426,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style Dexter_Internal_Theme_Transparent
 style FirebaseUI
 style FirebaseUI_AuthMethodPicker
 style FirebaseUI_AuthMethodPicker_ButtonHolder
@@ -5288,6 +5298,9 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style amu_Bubble_TextAppearance_Dark
+style amu_Bubble_TextAppearance_Light
+style amu_ClusterIcon_TextAppearance
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
