@@ -1,6 +1,8 @@
 package com.example.cyclingapp;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -27,7 +31,10 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
     Polyline polyline = null;
     //SeekBar seekWidth;
     List<LatLng> latLngList = new ArrayList<>();
-    List<SubLatLng> subLatLngList = new ArrayList<>();
+    static List<SubLatLng> subLatLngList = new ArrayList<>();
+
+    LatLng eventLocation;
+    float zoomLevel = 13;
 
 
     @Nullable
@@ -35,12 +42,17 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+
         View view = inflater.inflate(R.layout.fragment_view_route, container, false);
-        // Inflate the layout for this fragment
+        List<SubLatLng>test = (List<SubLatLng>) getArguments().getSerializable("SublatLngLst");
+        subLatLngList = test;
+
 
         SupportMapFragment supportMapFragment = (SupportMapFragment)
                 this.getChildFragmentManager().findFragmentById(R.id.google_map);
         supportMapFragment.getMapAsync(this);
+
+
 
         return view;
     }
@@ -48,20 +60,16 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
+        int first_count = 1;
         gMap = googleMap;
-
-        //This is to test the for loop. For loop will be used for data from database
-        //TODO get latLngList from event database and delete the below dummy values for debugging
-        SubLatLng test1 = new SubLatLng("19.48397357816699","10.392014980316162");
-        SubLatLng test2 = new SubLatLng("22","20");
-
-        subLatLngList.add(test1);
-        subLatLngList.add(test2);
-
 
         for (int i=0;i<subLatLngList.size();i++){
             SubLatLng temp = subLatLngList.get(i);
-            LatLng value = new LatLng(Double.parseDouble(temp.getLatitude()), Double.parseDouble(temp.getLongtitude()));
+            Log.d("lat",temp.getLatitude());
+            Double lat = Double.parseDouble(temp.getLatitude());
+            Double lng = Double.parseDouble(temp.getLongtitude());
+            LatLng value = new LatLng(lat,lng);
+            if (first_count++ ==1) eventLocation = value;
             latLngList.add(value);
             MarkerOptions markerOptions = new MarkerOptions().position(value);
             if (i==0){
@@ -74,11 +82,19 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
             }
         }
 
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(eventLocation, zoomLevel);
+        gMap.moveCamera(cameraUpdate);
+
 
 
         PolylineOptions polylineOptions = new PolylineOptions().addAll(latLngList).clickable(true);
         polyline = gMap.addPolyline(polylineOptions);
+
     }
+
+
+
+
 
 
 }

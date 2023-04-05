@@ -5,6 +5,7 @@ import static androidx.fragment.app.FragmentManager.TAG;
 import static java.security.AccessController.getContext;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cyclingapp.databinding.FragmentViewRouteBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
@@ -28,10 +30,15 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class EventDetails extends AppCompatActivity {
+import kotlin.jvm.internal.TypeReference;
+
+public class EventDetails extends AppCompatActivity  {
 
     private FirebaseFirestore db;
     private TextView eventNameTextView;
@@ -39,7 +46,13 @@ public class EventDetails extends AppCompatActivity {
     private TextView dateTextView;
     private TextView participantsTextView;
     private Button joinButton;
+    private Button backButton;
     private String eventId;
+
+
+
+
+
 
 
     @Override
@@ -55,9 +68,13 @@ public class EventDetails extends AppCompatActivity {
         eventLocationTextView = findViewById(R.id.locInfo);
         dateTextView = findViewById(R.id.dateInfo);
         participantsTextView = findViewById(R.id.partInfo);
+        backButton = findViewById(R.id.back);
 
         // Retrieve the event ID from the intent extras
         eventId = getIntent().getStringExtra("event_id");;
+
+
+
 
         if(eventId != null) {
 
@@ -75,10 +92,33 @@ public class EventDetails extends AppCompatActivity {
                             Timestamp startTime = documentSnapshot.getTimestamp("startTime");
                             List<String> participants = (List<String>) documentSnapshot.get("participants");
 
+                            //turning hashmap into sublatlng here
+                            List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
+                            ArrayList<SubLatLng> temp = new ArrayList<>();
+                            for (HashMap<String, String> entry : rawRoute) {
+                                String latitude = entry.get("latitude");
+                                String longitude = entry.get("longtitude");
+                                Log.d("latitude",latitude);
+                                Log.d("longitude",longitude);
+                                temp.add(new SubLatLng(latitude, longitude));
+                            }
+
+                            //pass data to view route fragment
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("SublatLngLst",temp);
+                            viewRouteFragment fragobj = new viewRouteFragment();
+                            Log.d("checkBundle",bundle.toString());
+                            fragobj.setArguments(bundle);
+
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view_route
+                                    ,fragobj).commit();
+
+
+
+
                             // Format the startTime as a string
                             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
                             String dateString = dateFormat.format(startTime.toDate());
-
 
                             // Set the UI elements with the event details
                             eventNameTextView.setText(eventName);
@@ -149,6 +189,28 @@ public class EventDetails extends AppCompatActivity {
             Toast.makeText(EventDetails.this, "Invalid event ID", Toast.LENGTH_SHORT).show();
 
         }
+
+        //Go back to main page
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openHomeActivity();
+            }
+        });
+
+
+
     }
+
+    private void openHomeActivity() {
+        Intent intent = new Intent(EventDetails.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
+
 }
 
