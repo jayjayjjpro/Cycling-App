@@ -1,8 +1,9 @@
 package com.example.cyclingapp;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class SubLatLng {
+public class SubLatLng implements Serializable {
     private String latitude;
     private String longtitude;
 

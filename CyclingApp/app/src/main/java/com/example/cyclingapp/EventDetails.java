@@ -18,6 +18,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cyclingapp.databinding.FragmentViewRouteBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
@@ -52,6 +53,8 @@ public class EventDetails extends AppCompatActivity  {
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,8 +73,8 @@ public class EventDetails extends AppCompatActivity  {
         // Retrieve the event ID from the intent extras
         eventId = getIntent().getStringExtra("event_id");;
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view_route
-                ,new viewRouteFragment()).commit();
+
+
 
         if(eventId != null) {
 
@@ -89,20 +92,28 @@ public class EventDetails extends AppCompatActivity  {
                             Timestamp startTime = documentSnapshot.getTimestamp("startTime");
                             List<String> participants = (List<String>) documentSnapshot.get("participants");
 
-                            //Oh good lord, finally got this working
+                            //TODO somehow longitude is not being retrieved from firebase!
                             List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
-                            List<SubLatLng> route = new ArrayList<>();
+                            ArrayList<SubLatLng> temp = new ArrayList<>();
                             for (HashMap<String, String> entry : rawRoute) {
                                 String latitude = entry.get("latitude");
-                                String longitude = entry.get("longitude");
-                                route.add(new SubLatLng(latitude, longitude));
+                                String longitude = entry.get("longtitude");
+                                Log.d("latitude",latitude);
+                                Log.d("longitude",longitude);
+                                temp.add(new SubLatLng(latitude, longitude));
                             }
-                            //TODO pass data to view route fragment
 
+                            //pass data to view route fragment
+                            //Log.d("is array copied",temp.get(0).getLatitude());
+                            //Log.d("dont tell me its not copied", temp.get(0).getLatitude());
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("SublatLngLst",temp);
+                            viewRouteFragment fragobj = new viewRouteFragment();
+                            Log.d("checkBundle",bundle.toString());
+                            fragobj.setArguments(bundle);
 
-
-
-
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view_route
+                                    ,fragobj).commit();
 
 
 
@@ -189,6 +200,9 @@ public class EventDetails extends AppCompatActivity  {
                 openHomeActivity();
             }
         });
+
+
+
     }
 
     private void openHomeActivity() {
