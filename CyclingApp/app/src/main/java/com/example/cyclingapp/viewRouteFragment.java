@@ -42,12 +42,10 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //TODO why am i not getting longtitude? Why am i only getting latitude?
 
         View view = inflater.inflate(R.layout.fragment_view_route, container, false);
         List<SubLatLng>test = (List<SubLatLng>) getArguments().getSerializable("SublatLngLst");
         subLatLngList = test;
-        Log.d("is sublatlnglst received",subLatLngList.get(0).getLatitude());
 
 
         SupportMapFragment supportMapFragment = (SupportMapFragment)

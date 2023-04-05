@@ -77,7 +77,6 @@ id upcoming
 id upcomingEventListView
 id userID
 id username
-id viewRoute
 id weightInfo
 layout activity_create_event
 layout activity_home

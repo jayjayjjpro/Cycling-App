@@ -92,7 +92,7 @@ public class EventDetails extends AppCompatActivity  {
                             Timestamp startTime = documentSnapshot.getTimestamp("startTime");
                             List<String> participants = (List<String>) documentSnapshot.get("participants");
 
-                            //TODO somehow longitude is not being retrieved from firebase!
+                            //turning hashmap into sublatlng here
                             List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
                             ArrayList<SubLatLng> temp = new ArrayList<>();
                             for (HashMap<String, String> entry : rawRoute) {
@@ -104,8 +104,6 @@ public class EventDetails extends AppCompatActivity  {
                             }
 
                             //pass data to view route fragment
-                            //Log.d("is array copied",temp.get(0).getLatitude());
-                            //Log.d("dont tell me its not copied", temp.get(0).getLatitude());
                             Bundle bundle = new Bundle();
                             bundle.putSerializable("SublatLngLst",temp);
                             viewRouteFragment fragobj = new viewRouteFragment();

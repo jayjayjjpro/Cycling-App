@@ -85,11 +85,6 @@ public class HomeActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
                         break;
                     }
-                    case R.id.viewRoute:{
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new viewRouteFragment()).commit();
-                        break;
-
-                    }
 
                     case R.id.createEvent: {
                         openCreateEventActivity();
