@@ -26,7 +26,7 @@
             android:id="@+id/locationInfo"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="25dp"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -37,7 +37,7 @@
             android:id = "@+id/locInfo"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:layout_centerInParent = "true" />
 
@@ -52,7 +52,7 @@
             android:id="@+id/date"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="25dp"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -63,7 +63,7 @@
             android:id = "@+id/dateInfo"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -77,7 +77,7 @@
             android:id="@+id/participants"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="25dp"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -87,7 +87,7 @@
             android:id = "@+id/partInfo"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:layout_centerInParent = "true" />
 
