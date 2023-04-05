@@ -20,6 +20,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable onimai
 id action_settings
+id back
 id bt_clear
 id bt_confirmRoute
 id bt_draw
@@ -47,6 +48,7 @@ id event_name_input
 id event_time_button
 id fragment_container
 id fragment_container_create_event
+id fragment_container_view_route
 id go_back
 id google_map
 id home

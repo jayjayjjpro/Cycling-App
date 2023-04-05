@@ -1,5 +1,7 @@
 package com.example.cyclingapp;
 
+import java.util.HashMap;
+
 public class SubLatLng {
     private String latitude;
     private String longtitude;
@@ -11,6 +13,11 @@ public class SubLatLng {
     public SubLatLng(String lat,String lng){
         this.latitude = lat;
         this.longtitude = lng;
+    }
+
+    public SubLatLng(HashMap<String,Object> hashMap){
+        this.latitude = (String) hashMap.get("latitude");
+        this.longtitude = (String) hashMap.get("longtitude");
     }
 
     public String getLatitude(){

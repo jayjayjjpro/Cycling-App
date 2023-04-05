@@ -1,5 +1,6 @@
 package com.example.cyclingapp;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,6 +80,10 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
         PolylineOptions polylineOptions = new PolylineOptions().addAll(latLngList).clickable(true);
         polyline = gMap.addPolyline(polylineOptions);
     }
+
+
+
+
 
 
 }

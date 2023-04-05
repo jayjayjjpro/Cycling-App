@@ -5,6 +5,7 @@ import static androidx.fragment.app.FragmentManager.TAG;
 import static java.security.AccessController.getContext;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,10 +29,15 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class EventDetails extends AppCompatActivity {
+import kotlin.jvm.internal.TypeReference;
+
+public class EventDetails extends AppCompatActivity  {
 
     private FirebaseFirestore db;
     private TextView eventNameTextView;
@@ -39,7 +45,11 @@ public class EventDetails extends AppCompatActivity {
     private TextView dateTextView;
     private TextView participantsTextView;
     private Button joinButton;
+    private Button backButton;
     private String eventId;
+
+
+
 
 
     @Override
@@ -55,9 +65,13 @@ public class EventDetails extends AppCompatActivity {
         eventLocationTextView = findViewById(R.id.locInfo);
         dateTextView = findViewById(R.id.dateInfo);
         participantsTextView = findViewById(R.id.partInfo);
+        backButton = findViewById(R.id.back);
 
         // Retrieve the event ID from the intent extras
         eventId = getIntent().getStringExtra("event_id");;
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view_route
+                ,new viewRouteFragment()).commit();
 
         if(eventId != null) {
 
@@ -75,10 +89,27 @@ public class EventDetails extends AppCompatActivity {
                             Timestamp startTime = documentSnapshot.getTimestamp("startTime");
                             List<String> participants = (List<String>) documentSnapshot.get("participants");
 
+                            //Oh good lord, finally got this working
+                            List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
+                            List<SubLatLng> route = new ArrayList<>();
+                            for (HashMap<String, String> entry : rawRoute) {
+                                String latitude = entry.get("latitude");
+                                String longitude = entry.get("longitude");
+                                route.add(new SubLatLng(latitude, longitude));
+                            }
+                            //TODO pass data to view route fragment
+
+
+
+
+
+
+
+
+
                             // Format the startTime as a string
                             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
                             String dateString = dateFormat.format(startTime.toDate());
-
 
                             // Set the UI elements with the event details
                             eventNameTextView.setText(eventName);
@@ -149,6 +180,25 @@ public class EventDetails extends AppCompatActivity {
             Toast.makeText(EventDetails.this, "Invalid event ID", Toast.LENGTH_SHORT).show();
 
         }
+
+        //Go back to main page
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openHomeActivity();
+            }
+        });
     }
+
+    private void openHomeActivity() {
+        Intent intent = new Intent(EventDetails.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
+
 }
 

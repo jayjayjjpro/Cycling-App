@@ -101,5 +101,20 @@
         android:layout_marginLeft="125dp"
         android:layout_alignParentBottom="true"
         android:text = "Join Event"/>
+    <Button
+        android:id="@+id/back"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="125dp"
+        android:layout_alignParentBottom="true"
+        android:text = "back"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container_view_route">
+
+    </FrameLayout>
 
 </LinearLayout>

@@ -38,7 +38,7 @@ public class EventDetails2 extends AppCompatActivity {
     private TextView eventLocationTextView;
     private TextView dateTextView;
     private TextView participantsTextView;
-    private Button joinButton;
+    private Button backButton;
     private String eventId;
 
 
@@ -55,9 +55,11 @@ public class EventDetails2 extends AppCompatActivity {
         eventLocationTextView = findViewById(R.id.locInfo2);
         dateTextView = findViewById(R.id.dateInfo2);
         participantsTextView = findViewById(R.id.partInfo2);
+        backButton = findViewById(R.id.back);
 
         // Retrieve the event ID from the intent extras
         eventId = getIntent().getStringExtra("event_id");;
+
 
 
         // Query Firestore for the event details using the event ID
@@ -86,7 +88,20 @@ public class EventDetails2 extends AppCompatActivity {
                         participantsTextView.setText(Integer.toString(participants.size()));
                     }
                 });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                openHomeActivity();
+            }
+        });
+
+
+    }
+
+    private void openHomeActivity() {
+        Intent intent = new Intent(EventDetails2.this, HomeActivity.class);
+        startActivity(intent);
     }
 }
 
