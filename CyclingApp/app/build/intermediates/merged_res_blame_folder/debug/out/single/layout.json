@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.example.cyclingapp-mergeDebugResources-49:/layout/event_details2.xml",
+        "source": "com.example.cyclingapp-main-52:/layout/event_details2.xml"
+    },
+    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\fragment_view_route.xml",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\fragment_view_route.xml"
     },
@@ -10,10 +14,6 @@
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\event_details2.xml",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-52:\\layout\\event_details2.xml"
-    },
-    {
-        "merged": "com.example.cyclingapp-mergeDebugResources-49:/layout/event_details.xml",
-        "source": "com.example.cyclingapp-main-52:/layout/event_details.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-49:\\layout\\activity_create_event.xml",

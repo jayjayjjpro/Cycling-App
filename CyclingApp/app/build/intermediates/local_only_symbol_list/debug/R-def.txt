@@ -49,6 +49,7 @@ id event_time_button
 id fragment_container
 id fragment_container_create_event
 id fragment_container_view_route
+id fragment_container_view_route2
 id go_back
 id google_map
 id home

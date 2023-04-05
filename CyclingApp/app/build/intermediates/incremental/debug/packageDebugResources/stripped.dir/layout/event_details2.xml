@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/eventName"
+        android:id="@+id/eventName2"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/locationInfo"
+            android:id="@+id/locationInfo2"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop="10dp"
@@ -34,7 +34,7 @@
             android:text = "Location: "/>
 
         <TextView
-            android:id = "@+id/locInfo"
+            android:id = "@+id/locInfo2"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop="10dp"
@@ -49,7 +49,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/date"
+            android:id="@+id/date2"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop="10dp"
@@ -60,7 +60,7 @@
             android:text = "Date: "/>
 
         <TextView
-            android:id = "@+id/dateInfo"
+            android:id = "@+id/dateInfo2"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop="10dp"
@@ -74,7 +74,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/participants"
+            android:id="@+id/participants2"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop="10dp"
@@ -84,28 +84,20 @@
             android:text = "Participants: "/>
 
         <TextView
-            android:id = "@+id/partInfo"
+            android:id = "@+id/partInfo2"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:layout_centerInParent = "true" />
 
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/joinEvent"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="125dp"
-        android:layout_alignParentBottom="true"
-        android:text = "Join Event"/>
+    </LinearLayout>
     <Button
         android:id="@+id/back"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="125dp"
         android:layout_alignParentBottom="true"
         android:text = "back"/>
@@ -113,7 +105,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragment_container_view_route">
+        android:id="@+id/fragment_container_view_route2">
 
     </FrameLayout>
 

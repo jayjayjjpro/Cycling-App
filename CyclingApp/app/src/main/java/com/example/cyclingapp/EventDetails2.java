@@ -28,7 +28,9 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class EventDetails2 extends AppCompatActivity {
@@ -75,6 +77,29 @@ public class EventDetails2 extends AppCompatActivity {
                         SimpleDateFormat dataFormat = new SimpleDateFormat("DD/mm/yyyy");
                         Timestamp startTime = documentSnapshot.getTimestamp("startTime");
                         List<String> participants = (List<String>) documentSnapshot.get("participants");
+
+                        //TODO somehow longitude is not being retrieved from firebase!
+                        List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
+                        ArrayList<SubLatLng> temp = new ArrayList<>();
+                        for (HashMap<String, String> entry : rawRoute) {
+                            String latitude = entry.get("latitude");
+                            String longitude = entry.get("longtitude");
+                            Log.d("latitude",latitude);
+                            Log.d("longitude",longitude);
+                            temp.add(new SubLatLng(latitude, longitude));
+                        }
+
+                        //pass data to view route fragment
+                        //Log.d("is array copied",temp.get(0).getLatitude());
+                        //Log.d("dont tell me its not copied", temp.get(0).getLatitude());
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("SublatLngLst",temp);
+                        viewRouteFragment fragobj = new viewRouteFragment();
+                        Log.d("checkBundle",bundle.toString());
+                        fragobj.setArguments(bundle);
+
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view_route2
+                                ,fragobj).commit();
 
                         // Format the startTime as a string
                         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");

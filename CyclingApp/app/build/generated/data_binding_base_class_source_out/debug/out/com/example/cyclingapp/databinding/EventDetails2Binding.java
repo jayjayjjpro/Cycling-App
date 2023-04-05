@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -33,6 +34,9 @@ public final class EventDetails2Binding implements ViewBinding {
   public final TextView eventName2;
 
   @NonNull
+  public final FrameLayout fragmentContainerViewRoute2;
+
+  @NonNull
   public final TextView locInfo2;
 
   @NonNull
@@ -46,13 +50,15 @@ public final class EventDetails2Binding implements ViewBinding {
 
   private EventDetails2Binding(@NonNull LinearLayout rootView, @NonNull Button back,
       @NonNull TextView date2, @NonNull TextView dateInfo2, @NonNull TextView eventName2,
-      @NonNull TextView locInfo2, @NonNull TextView locationInfo2, @NonNull TextView partInfo2,
+      @NonNull FrameLayout fragmentContainerViewRoute2, @NonNull TextView locInfo2,
+      @NonNull TextView locationInfo2, @NonNull TextView partInfo2,
       @NonNull TextView participants2) {
     this.rootView = rootView;
     this.back = back;
     this.date2 = date2;
     this.dateInfo2 = dateInfo2;
     this.eventName2 = eventName2;
+    this.fragmentContainerViewRoute2 = fragmentContainerViewRoute2;
     this.locInfo2 = locInfo2;
     this.locationInfo2 = locationInfo2;
     this.partInfo2 = partInfo2;
@@ -110,6 +116,12 @@ public final class EventDetails2Binding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.fragment_container_view_route2;
+      FrameLayout fragmentContainerViewRoute2 = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainerViewRoute2 == null) {
+        break missingId;
+      }
+
       id = R.id.locInfo2;
       TextView locInfo2 = ViewBindings.findChildViewById(rootView, id);
       if (locInfo2 == null) {
@@ -135,7 +147,7 @@ public final class EventDetails2Binding implements ViewBinding {
       }
 
       return new EventDetails2Binding((LinearLayout) rootView, back, date2, dateInfo2, eventName2,
-          locInfo2, locationInfo2, partInfo2, participants2);
+          fragmentContainerViewRoute2, locInfo2, locationInfo2, partInfo2, participants2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
