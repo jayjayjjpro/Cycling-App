@@ -25,11 +25,15 @@ public final class ItemEventBinding implements ViewBinding {
   @NonNull
   public final TextView eventName;
 
+  @NonNull
+  public final TextView eventStatus;
+
   private ItemEventBinding(@NonNull LinearLayout rootView, @NonNull TextView eventLocation,
-      @NonNull TextView eventName) {
+      @NonNull TextView eventName, @NonNull TextView eventStatus) {
     this.rootView = rootView;
     this.eventLocation = eventLocation;
     this.eventName = eventName;
+    this.eventStatus = eventStatus;
   }
 
   @Override
@@ -71,7 +75,13 @@ public final class ItemEventBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemEventBinding((LinearLayout) rootView, eventLocation, eventName);
+      id = R.id.eventStatus;
+      TextView eventStatus = ViewBindings.findChildViewById(rootView, id);
+      if (eventStatus == null) {
+        break missingId;
+      }
+
+      return new ItemEventBinding((LinearLayout) rootView, eventLocation, eventName, eventStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

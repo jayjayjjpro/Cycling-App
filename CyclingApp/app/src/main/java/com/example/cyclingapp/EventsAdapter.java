@@ -26,10 +26,12 @@ public class EventsAdapter extends ArrayAdapter<Events> {
         // Lookup view for data population
         TextView eventName = (TextView) convertView.findViewById(R.id.eventName);
         TextView eventLocation = (TextView) convertView.findViewById(R.id.eventLocation);
+        TextView eventStatus = (TextView) convertView.findViewById(R.id.eventStatus);
 
         // Populate the data into the template view using the data object
-        eventName.setText(events.getName());
-        eventLocation.setText(events.getLocation());
+        eventName.setText("event name:" + events.getName());
+        eventLocation.setText("Event location:" + events.getLocation());
+        eventStatus.setText("event Status: " + events.getStatus().toString());
 
         // Return the completed view to render on screen
         return convertView;

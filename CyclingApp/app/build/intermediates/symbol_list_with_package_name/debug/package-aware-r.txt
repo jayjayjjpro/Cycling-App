@@ -3204,6 +3204,7 @@ id eventListView
 id eventLocation
 id eventName
 id eventName2
+id eventStatus
 id event_date_button
 id event_location_input
 id event_name_input
