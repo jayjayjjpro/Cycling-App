@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,8 +21,11 @@ import androidx.fragment.app.Fragment;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.Task;
 import com.karumi.dexter.Dexter;
@@ -37,70 +42,65 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 
 
-public class MapFragment extends Fragment {
-    private SupportMapFragment supportMapFragment;
-    private FusedLocationProviderClient fusedLocationProviderClient;
+public class MapFragment extends Fragment implements OnMapReadyCallback {
+
+    static Marker usermarker=null;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if (getActivity() != null) {
-            getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
+
         View view = inflater.inflate(R.layout.fragment_map, container, false);
-
-        supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.google_map);
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireActivity());
-
-        Dexter.withContext(requireContext()).withPermission(Manifest.permission.ACCESS_FINE_LOCATION).withListener(new PermissionListener() {
-            @Override
-            public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
-                getCurrentLocation();
-            }
-
-            @Override
-            public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-                Toast.makeText(requireContext(), "Please enable location permission", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
-                permissionToken.continuePermissionRequest();
-            }
-        }).check();
+        SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.google_map);
+        supportMapFragment.getMapAsync(this::onMapReady);
 
         return view;
     }
 
-    private void getCurrentLocation() {
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap){
+        //Add kml to map
+        Context context = getContext();
+        try {
+            KmlLayer kmlLayer = new KmlLayer(googleMap, R.raw.cycling_path_network_kml, context);
+            kmlLayer.addLayerToMap();
+        } catch (XmlPullParserException | IOException e) {
+            e.printStackTrace();
+        }
+
         if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(requireActivity(), new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, 1);
             return;
         }
 
-        Task<Location> task = fusedLocationProviderClient.getLastLocation();
-        task.addOnSuccessListener(location -> supportMapFragment.getMapAsync(googleMap -> {
-            // Add the KML layer to the map
-            Context context = getContext();
-            if (context != null) {
-                try {
-                    KmlLayer kmlLayer = new KmlLayer(googleMap, R.raw.cycling_path_network_kml, context);
-                    kmlLayer.addLayerToMap();
-                } catch (XmlPullParserException | IOException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                Log.e("MapFragment", "getContext() returned null");
-            }
+        LocationManager locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
 
-            if (location != null) {
-                LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("Current Location!");
-                googleMap.addMarker(markerOptions);
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+        LocationListener locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(@NonNull Location location) {
+                // Get the user's location
+                double latitude = location.getLatitude();
+                double longitude = location.getLongitude();
+
+                // Create a LatLng object for the user's location
+                LatLng userLatLng = new LatLng(latitude, longitude);
+
+                // Add a marker for the user's location
+                if(usermarker!= null)usermarker.remove();
+
+                MarkerOptions marker = new MarkerOptions().position(userLatLng).title("Your Location");
+                usermarker = googleMap.addMarker(marker);
+
+                // Move the camera to the user's location
+                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLatLng, 15f));
             }
-            else {
-                Toast.makeText(requireContext(), "Please enable location permission", Toast.LENGTH_SHORT).show();
-            }
-        }));
+        };
+
+// Request for location updates
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+
+
     }
+
+
+
 }
