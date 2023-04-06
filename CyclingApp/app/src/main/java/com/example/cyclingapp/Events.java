@@ -22,6 +22,8 @@ public class Events {
 
     private Status status;
 
+    private double estimatedDistanceInKM;
+
     enum Status{
         COMPLETED,
         ONGOING,
@@ -118,5 +120,13 @@ public class Events {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public void setEstimatedDistanceInKM(double estimatedDistance){
+        this.estimatedDistanceInKM = estimatedDistance;
+    }
+
+    public double getEstimatedDistanceInKM(){
+        return this.estimatedDistanceInKM;
     }
 }

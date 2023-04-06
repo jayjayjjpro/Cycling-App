@@ -3,6 +3,7 @@ package com.example.cyclingapp;
 import static android.app.PendingIntent.getActivity;
 
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -64,6 +65,8 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
     private int location_desc_check = 0;
 
     private int latLnginput_check = 0;
+
+    private float estimated_distance = 0;
 
 
 
@@ -208,6 +211,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
         Events event = new Events(null, eventName, eventStartTime, eventLocation, creatorId, participants, Events.Status.NOTSTARTED);
         event.setEventLatLngLst(subLatLngList);
         event.addParticipants(creatorId);
+        event.setEstimatedDistanceInKM(estimated_distance);
 
 
         // Add the event to the repository
@@ -261,6 +265,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
         String lng;
         Double lng_num;
         SubLatLng temp;
+        List<Location> locationList = null;
 
         for (int i=0;i<latLngList.size();i++){
             Log.d("receive LatLngList",latLngList_here.get(i).toString());
@@ -272,7 +277,29 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
             Log.d("lng",lng);
             temp = new SubLatLng(lat,lng);
             subLatLngList.add(temp);
+
         }
+
+        for (int i=1;i<latLngList_here.size();i++){
+            LatLng marker1 = latLngList_here.get(i-1);
+            LatLng marker2 = latLngList_here.get(i);
+
+            double lat1 = Math.toRadians(marker1.latitude);
+            double lng1 = Math.toRadians(marker1.longitude);
+            double lat2 = Math.toRadians(marker2.latitude);
+            double lng2 = Math.toRadians(marker2.longitude);
+
+            double dlat = lat2 - lat1;
+            double dlng = lng2 - lng1;
+
+            double a = Math.pow(Math.sin(dlat / 2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(dlng / 2), 2);
+            double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            double distanceInKm = 6371 * c;
+
+            estimated_distance+=distanceInKm;
+        }
+
+
 
 
     }
