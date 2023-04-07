@@ -19,7 +19,7 @@ MERGED from [com.firebaseui:firebase-ui-storage:8.0.2] C:\Users\Xcoga\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:17:1-73:12
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.maps.android:maps-ktx:3.2.0] C:\Users\Xcoga\.gradle\caches\transforms-3\015a225f318089b47d7fdc09cb06bd04\transformed\maps-ktx-3.2.0\AndroidManifest.xml:18:1-25:12
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:15:1-39:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb35308f4b33c8b0c6532b935e7600b7\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
@@ -128,8 +128,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:26:5-67
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
@@ -158,8 +158,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:26:5-71:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:28:5-36:19
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:36:5-42:19
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:29:5-37:19
@@ -310,8 +310,8 @@ MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradl
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.maps.android:maps-ktx:3.2.0] C:\Users\Xcoga\.gradle\caches\transforms-3\015a225f318089b47d7fdc09cb06bd04\transformed\maps-ktx-3.2.0\AndroidManifest.xml:21:5-23:41
 MERGED from [com.google.maps.android:maps-ktx:3.2.0] C:\Users\Xcoga\.gradle\caches\transforms-3\015a225f318089b47d7fdc09cb06bd04\transformed\maps-ktx-3.2.0\AndroidManifest.xml:21:5-23:41
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:20:5-22:41
@@ -488,8 +488,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Xcoga\.gradle\caches\transforms-3\d7c223c53821ea6d607bac5de64bfc75\transformed\firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Xcoga\.gradle\caches\transforms-3\a24dff056cfa8f386c39b217cd50fdd6\transformed\firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
@@ -500,8 +500,8 @@ MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Xcoga\.gradle\caches\transfor
 		ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:10:22-76
 queries
 ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:15:5-23:15
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
-MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
 intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:http
 ADDED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\01265db6ca614ab6ddeddc5352b1df9a\transformed\firebase-ui-auth-8.0.2\AndroidManifest.xml:16:9-22:18
 action#android.intent.action.VIEW
@@ -745,21 +745,21 @@ ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle
 	android:name
 		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Xcoga\.gradle\caches\transforms-3\71d3c5a2924ec218962495d0423e0250\transformed\firebase-database-20.0.4\AndroidManifest.xml:33:17-109
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
 package#com.google.android.apps.maps
-ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
 uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Xcoga\.gradle\caches\transforms-3\dbeaa0fade45b95140196b58f32d3f7d\transformed\play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\Xcoga\.gradle\caches\transforms-3\f2ce22a5049ee6d10fc2f12b6b9a08c9\transformed\play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
 ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Xcoga\.gradle\caches\transforms-3\cb16889dd67afd875d2aae8024e73bdb\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:20:13-22:85
 	android:value

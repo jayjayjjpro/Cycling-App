@@ -3577,6 +3577,7 @@ id useLogo
 id userID
 id username
 id vertical_only
+id viewRouteContainer
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3744,6 +3745,7 @@ layout fragment_map
 layout fragment_profile
 layout fragment_set_route
 layout fragment_upcoming_event
+layout fragment_view_current_event_route
 layout fragment_view_route
 layout fui_activity_invisible
 layout fui_activity_register_email

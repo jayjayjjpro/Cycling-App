@@ -130,7 +130,9 @@ public class EventDetails2 extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openCurrentEvent();
+                Intent eventDetails = new Intent(EventDetails2.this, CurrentEvent.class);
+                eventDetails.putExtra("event_id", eventId);
+                startActivity(eventDetails);
             }
         });
 

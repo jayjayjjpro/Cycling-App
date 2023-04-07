@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -50,12 +51,15 @@ public final class CurrentEventBinding implements ViewBinding {
   @NonNull
   public final TextView timeElapsedTextView;
 
+  @NonNull
+  public final FrameLayout viewRouteContainer;
+
   private CurrentEventBinding(@NonNull LinearLayout rootView, @NonNull TextView calories,
       @NonNull TextView caloriesTextView, @NonNull TextView currentEventName,
       @NonNull TextView distance, @NonNull TextView distanceRemaining,
       @NonNull TextView distanceTextView, @NonNull Button joinEvent,
       @NonNull TextView remainingDistanceTextView, @NonNull TextView time,
-      @NonNull TextView timeElapsedTextView) {
+      @NonNull TextView timeElapsedTextView, @NonNull FrameLayout viewRouteContainer) {
     this.rootView = rootView;
     this.calories = calories;
     this.caloriesTextView = caloriesTextView;
@@ -67,6 +71,7 @@ public final class CurrentEventBinding implements ViewBinding {
     this.remainingDistanceTextView = remainingDistanceTextView;
     this.time = time;
     this.timeElapsedTextView = timeElapsedTextView;
+    this.viewRouteContainer = viewRouteContainer;
   }
 
   @Override
@@ -156,9 +161,15 @@ public final class CurrentEventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.viewRouteContainer;
+      FrameLayout viewRouteContainer = ViewBindings.findChildViewById(rootView, id);
+      if (viewRouteContainer == null) {
+        break missingId;
+      }
+
       return new CurrentEventBinding((LinearLayout) rootView, calories, caloriesTextView,
           currentEventName, distance, distanceRemaining, distanceTextView, joinEvent,
-          remainingDistanceTextView, time, timeElapsedTextView);
+          remainingDistanceTextView, time, timeElapsedTextView, viewRouteContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
