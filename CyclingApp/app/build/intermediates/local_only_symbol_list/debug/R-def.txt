@@ -79,6 +79,7 @@ id upcoming
 id upcomingEventListView
 id userID
 id username
+id viewRouteContainer
 id weightInfo
 layout activity_create_event
 layout activity_home
@@ -92,6 +93,7 @@ layout fragment_map
 layout fragment_profile
 layout fragment_set_route
 layout fragment_upcoming_event
+layout fragment_view_current_event_route
 layout fragment_view_route
 layout header
 layout item_event
