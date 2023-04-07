@@ -142,12 +142,12 @@ public class EventDetails2 extends AppCompatActivity {
         startActivity(intent);
     }
 
-        private void openCurrentEvent() {
-            Intent intent = new Intent(EventDetails2.this, CurrentEvent.class);
-            startActivity(intent);
+    private void openCurrentEvent() {
 
-        }
+        Intent intent = new Intent(EventDetails2.this, CurrentEvent.class);
+        startActivity(intent);
 
+    }
 }
 
 
