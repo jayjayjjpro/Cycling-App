@@ -48,11 +48,14 @@ public final class EventDetails2Binding implements ViewBinding {
   @NonNull
   public final TextView participants2;
 
+  @NonNull
+  public final Button startButton;
+
   private EventDetails2Binding(@NonNull LinearLayout rootView, @NonNull Button back,
       @NonNull TextView date2, @NonNull TextView dateInfo2, @NonNull TextView eventName2,
       @NonNull FrameLayout fragmentContainerViewRoute2, @NonNull TextView locInfo2,
-      @NonNull TextView locationInfo2, @NonNull TextView partInfo2,
-      @NonNull TextView participants2) {
+      @NonNull TextView locationInfo2, @NonNull TextView partInfo2, @NonNull TextView participants2,
+      @NonNull Button startButton) {
     this.rootView = rootView;
     this.back = back;
     this.date2 = date2;
@@ -63,6 +66,7 @@ public final class EventDetails2Binding implements ViewBinding {
     this.locationInfo2 = locationInfo2;
     this.partInfo2 = partInfo2;
     this.participants2 = participants2;
+    this.startButton = startButton;
   }
 
   @Override
@@ -146,8 +150,15 @@ public final class EventDetails2Binding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.startButton;
+      Button startButton = ViewBindings.findChildViewById(rootView, id);
+      if (startButton == null) {
+        break missingId;
+      }
+
       return new EventDetails2Binding((LinearLayout) rootView, back, date2, dateInfo2, eventName2,
-          fragmentContainerViewRoute2, locInfo2, locationInfo2, partInfo2, participants2);
+          fragmentContainerViewRoute2, locInfo2, locationInfo2, partInfo2, participants2,
+          startButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

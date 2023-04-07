@@ -41,7 +41,14 @@ public class EventDetails2 extends AppCompatActivity {
     private TextView dateTextView;
     private TextView participantsTextView;
     private Button backButton;
+    private Button startButton;
     private String eventId;
+
+    enum Status{
+        COMPLETED,
+        STARTED,
+        NOTSTARTED
+    }
 
 
     @Override
@@ -58,10 +65,11 @@ public class EventDetails2 extends AppCompatActivity {
         dateTextView = findViewById(R.id.dateInfo2);
         participantsTextView = findViewById(R.id.partInfo2);
         backButton = findViewById(R.id.back);
+        startButton = findViewById(R.id.startButton);
 
         // Retrieve the event ID from the intent extras
-        eventId = getIntent().getStringExtra("event_id");;
-
+        eventId = getIntent().getStringExtra("event_id");
+        ;
 
 
         // Query Firestore for the event details using the event ID
@@ -84,20 +92,20 @@ public class EventDetails2 extends AppCompatActivity {
                         for (HashMap<String, String> entry : rawRoute) {
                             String latitude = entry.get("latitude");
                             String longitude = entry.get("longtitude");
-                            Log.d("latitude",latitude);
-                            Log.d("longitude",longitude);
+                            Log.d("latitude", latitude);
+                            Log.d("longitude", longitude);
                             temp.add(new SubLatLng(latitude, longitude));
                         }
 
                         //pass data to view route fragment
                         Bundle bundle = new Bundle();
-                        bundle.putSerializable("SublatLngLst",temp);
+                        bundle.putSerializable("SublatLngLst", temp);
                         viewRouteFragment fragobj = new viewRouteFragment();
-                        Log.d("checkBundle",bundle.toString());
+                        Log.d("checkBundle", bundle.toString());
                         fragobj.setArguments(bundle);
 
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view_route2
-                                ,fragobj).commit();
+                                , fragobj).commit();
 
                         // Format the startTime as a string
                         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
@@ -119,6 +127,13 @@ public class EventDetails2 extends AppCompatActivity {
             }
         });
 
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openCurrentEvent();
+            }
+        });
+
 
     }
 
@@ -126,6 +141,23 @@ public class EventDetails2 extends AppCompatActivity {
         Intent intent = new Intent(EventDetails2.this, HomeActivity.class);
         startActivity(intent);
     }
+
+        private void openCurrentEvent() {
+            Intent intent = new Intent(EventDetails2.this, CurrentEvent.class);
+            startActivity(intent);
+
+        }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
