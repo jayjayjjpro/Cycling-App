@@ -24,10 +24,12 @@ public class Events {
 
     private double estimatedDistanceInKM;
 
+
     enum Status{
         COMPLETED,
         ONGOING,
-        NOTSTARTED
+        NOTSTARTED,
+        STARTED
     }
 
     //Constructor
