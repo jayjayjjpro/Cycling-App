@@ -107,7 +107,8 @@ public class viewCurrentEventRoute extends Fragment implements OnMapReadyCallbac
                 if(usermarker!= null)usermarker.remove();
 
                 MarkerOptions marker = new MarkerOptions().position(userLatLng).title("Your Location");
-                usermarker = googleMap.addMarker(marker);
+                usermarker = googleMap.addMarker(marker.icon(BitmapDescriptorFactory.
+                        defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)));
 
                 // Move the camera to the user's location
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLatLng, 15f));
