@@ -4,7 +4,7 @@
             "outputFile": "com.example.cyclingapp-mergeDebugResources-50:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\01265db6ca614ab6ddeddc5352b1df9a\\transformed\\firebase-ui-auth-8.0.2\\res\\values-v26\\values-v26.xml",
+                    "source": "/Users/shikha/.gradle/caches/transforms-3/01265db6ca614ab6ddeddc5352b1df9a/transformed/firebase-ui-auth-8.0.2/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,6,10,14",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\d1d116c9e2084b3cab9bcc56eb3bf809\\transformed\\appcompat-1.6.0\\res\\values-v26\\values-v26.xml",
+                    "source": "/Users/shikha/.gradle/caches/transforms-3/d1d116c9e2084b3cab9bcc56eb3bf809/transformed/appcompat-1.6.0/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

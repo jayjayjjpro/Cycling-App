@@ -3501,6 +3501,7 @@ id src_in
 id src_over
 id standard
 id start
+id startButton
 id startEvent
 id startHorizontal
 id startToEnd
