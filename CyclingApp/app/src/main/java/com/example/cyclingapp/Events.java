@@ -27,7 +27,6 @@ public class Events {
 
     enum Status{
         COMPLETED,
-        ONGOING,
         NOTSTARTED,
         STARTED
     }
