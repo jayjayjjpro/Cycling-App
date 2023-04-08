@@ -162,6 +162,9 @@ public class EventDetails2 extends AppCompatActivity {
                 else if (convertedEventStatus == Status.NOTSTARTED && !currentUserID.equals(creatorID)){
                     Toast.makeText(EventDetails2.this, "Please wait for creator to start event!", Toast.LENGTH_SHORT).show();
                 }
+                else if (convertedEventStatus == Status.COMPLETED ){
+                    Toast.makeText(EventDetails2.this, "You cannot start a completed event!", Toast.LENGTH_SHORT).show();
+                }
 
                 else if (convertedEventStatus == Status.STARTED){
                     Intent eventDetails = new Intent(EventDetails2.this, CurrentEvent.class);

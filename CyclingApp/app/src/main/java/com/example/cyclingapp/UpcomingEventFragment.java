@@ -35,6 +35,11 @@ public class UpcomingEventFragment extends Fragment{
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     CollectionReference eventsRef = db.collection("events");
     List<Events> eventsList = new ArrayList<>();
+    enum Status{
+        COMPLETED,
+        STARTED,
+        NOTSTARTED
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -58,7 +63,7 @@ public class UpcomingEventFragment extends Fragment{
                 eventsList = new ArrayList<>();
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                     Events event = documentSnapshot.toObject(Events.class);
-                    if (event.checkParticipantDuplicate(participantId)==true){
+                    if (event.checkParticipantDuplicate(participantId)==true && !(event.getStatus()== Events.Status.COMPLETED)){
                         eventsList.add(event);
                     }
 
