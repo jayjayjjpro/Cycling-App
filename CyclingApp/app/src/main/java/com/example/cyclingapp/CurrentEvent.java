@@ -35,6 +35,9 @@ public class CurrentEvent extends AppCompatActivity {
     private TextView distanceTextView;
     private TextView remainingTextView;
     private TextView caloriesTextView;
+
+    private TextView eventNameTextView;
+
     private LocationManager locationManager;
     private double totalDistance = 0.0;
     private double remainingDistance = 0.0;
@@ -68,6 +71,7 @@ public class CurrentEvent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.current_event);
         eventRepository = new EventRepository();
+        eventNameTextView = findViewById(R.id.currentEventName);
 
         // Retrieve the event ID from the intent extras
         eventId = getIntent().getStringExtra("event_id");
@@ -87,6 +91,7 @@ public class CurrentEvent extends AppCompatActivity {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         // Get the event details from the document snapshot
                         String eventName = documentSnapshot.getString("name");
+                        Log.d("eventName",eventName);
                         String location = documentSnapshot.getString("location");
                         SimpleDateFormat dataFormat = new SimpleDateFormat("DD/mm/yyyy");
                         Timestamp startTime = documentSnapshot.getTimestamp("startTime");
@@ -94,6 +99,8 @@ public class CurrentEvent extends AppCompatActivity {
                         creatorID = documentSnapshot.getString("creatorId");
                         eventStatus = documentSnapshot.getString("status");
                         convertedEventStatus = Status.valueOf(eventStatus);
+                        eventNameTextView.setText(eventName);
+
 
                         //turning hashmap into sublatlng here
                         List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
