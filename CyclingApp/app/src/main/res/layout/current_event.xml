@@ -16,7 +16,7 @@
         android:layout_marginTop = "15dp"
         android:gravity="top"
         android:textSize="30sp"
-        android:text = "EVENT LOL"
+        android:text = "EVENT NAME"
         android:textStyle="bold" />
 
     <LinearLayout
