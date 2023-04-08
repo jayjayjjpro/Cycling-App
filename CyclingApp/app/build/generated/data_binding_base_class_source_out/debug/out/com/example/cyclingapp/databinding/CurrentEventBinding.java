@@ -40,7 +40,7 @@ public final class CurrentEventBinding implements ViewBinding {
   public final TextView distanceTextView;
 
   @NonNull
-  public final Button joinEvent;
+  public final Button endEvent;
 
   @NonNull
   public final TextView remainingDistanceTextView;
@@ -57,7 +57,7 @@ public final class CurrentEventBinding implements ViewBinding {
   private CurrentEventBinding(@NonNull LinearLayout rootView, @NonNull TextView calories,
       @NonNull TextView caloriesTextView, @NonNull TextView currentEventName,
       @NonNull TextView distance, @NonNull TextView distanceRemaining,
-      @NonNull TextView distanceTextView, @NonNull Button joinEvent,
+      @NonNull TextView distanceTextView, @NonNull Button endEvent,
       @NonNull TextView remainingDistanceTextView, @NonNull TextView time,
       @NonNull TextView timeElapsedTextView, @NonNull FrameLayout viewRouteContainer) {
     this.rootView = rootView;
@@ -67,7 +67,7 @@ public final class CurrentEventBinding implements ViewBinding {
     this.distance = distance;
     this.distanceRemaining = distanceRemaining;
     this.distanceTextView = distanceTextView;
-    this.joinEvent = joinEvent;
+    this.endEvent = endEvent;
     this.remainingDistanceTextView = remainingDistanceTextView;
     this.time = time;
     this.timeElapsedTextView = timeElapsedTextView;
@@ -137,9 +137,9 @@ public final class CurrentEventBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.joinEvent;
-      Button joinEvent = ViewBindings.findChildViewById(rootView, id);
-      if (joinEvent == null) {
+      id = R.id.endEvent;
+      Button endEvent = ViewBindings.findChildViewById(rootView, id);
+      if (endEvent == null) {
         break missingId;
       }
 
@@ -168,7 +168,7 @@ public final class CurrentEventBinding implements ViewBinding {
       }
 
       return new CurrentEventBinding((LinearLayout) rootView, calories, caloriesTextView,
-          currentEventName, distance, distanceRemaining, distanceTextView, joinEvent,
+          currentEventName, distance, distanceRemaining, distanceTextView, endEvent,
           remainingDistanceTextView, time, timeElapsedTextView, viewRouteContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
