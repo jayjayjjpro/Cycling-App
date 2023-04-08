@@ -1,6 +1,7 @@
 package com.example.cyclingapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -8,6 +9,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ import android.Manifest;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -27,7 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class CurrentEvent extends AppCompatActivity implements LocationListener{
+public class CurrentEvent extends AppCompatActivity {
 
     private TextView distanceTextView;
     private TextView remainingTextView;
@@ -42,17 +45,38 @@ public class CurrentEvent extends AppCompatActivity implements LocationListener{
     private String eventId;
     private FirebaseFirestore db;
 
+    private Button endButton;
+
+    private String eventStatus;
+    private Status convertedEventStatus;
+
+    private String currentUserID;
+
+    enum Status{
+        COMPLETED,
+        STARTED,
+        NOTSTARTED
+    }
+
+    private EventRepository eventRepository;
+
+    private String creatorID;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.current_event);
+        eventRepository = new EventRepository();
 
         // Retrieve the event ID from the intent extras
-        eventId = getIntent().getStringExtra("event_id");;
-        Log.d("event ID in currentEvent",eventId);
+        eventId = getIntent().getStringExtra("event_id");
+        ;
+        Log.d("event ID in currentEvent", eventId);
 
         // Initialize the Firebase Firestore instance
         db = FirebaseFirestore.getInstance();
+        endButton = findViewById(R.id.endEvent);
 
         // Query Firestore for the event details using the event ID
         db.collection("events").document(eventId)
@@ -67,6 +91,9 @@ public class CurrentEvent extends AppCompatActivity implements LocationListener{
                         SimpleDateFormat dataFormat = new SimpleDateFormat("DD/mm/yyyy");
                         Timestamp startTime = documentSnapshot.getTimestamp("startTime");
                         List<String> participants = (List<String>) documentSnapshot.get("participants");
+                        creatorID = documentSnapshot.getString("creatorId");
+                        eventStatus = documentSnapshot.getString("status");
+                        convertedEventStatus = Status.valueOf(eventStatus);
 
                         //turning hashmap into sublatlng here
                         List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
@@ -95,65 +122,36 @@ public class CurrentEvent extends AppCompatActivity implements LocationListener{
 
                     }
                 });
+        endButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Get the actual user ID from Firebase Authentication
+                currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                if (convertedEventStatus == Status.STARTED && currentUserID.equals(creatorID) ){
+                    Log.d("converted go back to home","Ran this line");
+                    eventRepository.updateStatus(eventId, EventRepository.Status.COMPLETED);
+                    openHomeActivity();
+                }
+                else if (convertedEventStatus == Status.STARTED && !currentUserID.equals(creatorID)){
+                    Log.d("not creator go back to home","Ran this line");
+                    openHomeActivity();
+                }
+                else {
+                    Log.d("go back to home","Ran this line");
+                    openHomeActivity();
+                }
+            }
+        });
 
 
 
         distanceTextView = findViewById(R.id.distanceTextView);
         remainingTextView = findViewById(R.id.remainingDistanceTextView);
         caloriesTextView = findViewById(R.id.caloriesTextView);
-
-        /*
-
-        // Get a reference to the LocationManager
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-        // Request location updates
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-        } else {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-            startTime = System.currentTimeMillis();
-        }*/
     }
 
-    @Override
-    public void onLocationChanged(Location location) {
-        // Calculate distance travelled
-        double currentLat = location.getLatitude();
-        double currentLng = location.getLongitude();
-        Location currentLocation = new Location("");
-        currentLocation.setLatitude(currentLat);
-        currentLocation.setLongitude(currentLng);
-        if (totalDistance == 0.0) {
-            remainingDistance = 10.0; // Assume a starting distance of 10 km
-        } else {
-            remainingDistance = remainingDistance - currentLocation.distanceTo(previousLocation) / 1000.0;
-        }
-        totalDistance += currentLocation.distanceTo(previousLocation) / 1000.0;
-        previousLocation = currentLocation;
-
-        // Update the UI with the distance travelled and remaining distance
-        distanceTextView.setText(String.format("%.2f km", totalDistance));
-        remainingTextView.setText(String.format("%.2f km", remainingDistance));
-
-        // Calculate calories burned
-        double speed = location.getSpeed();
-        double timeElapsed = (System.currentTimeMillis() - startTime) / 1000.0 / 60.0 / 60.0; // in hours
-        double distanceTravelled = currentLocation.distanceTo(previousLocation) / 1000.0; // in km
-        double MET = 8.0; // Cycling at moderate pace
-        caloriesBurned += (MET * weight * timeElapsed) / 60.0;
-        caloriesBurned += (MET * weight * distanceTravelled); // calculate additional calories burned based on distance travelled
-
-        // Update the UI with the calories burned
-        caloriesTextView.setText(String.format("%.0f", caloriesBurned));
+    private void openHomeActivity() {
+        Intent intent = new Intent(CurrentEvent.this, HomeActivity.class);
+        startActivity(intent);
     }
-
-    @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {}
-
-    @Override
-    public void onProviderEnabled(String provider) {}
-
-    @Override
-    public void onProviderDisabled(String provider) {}
 }
