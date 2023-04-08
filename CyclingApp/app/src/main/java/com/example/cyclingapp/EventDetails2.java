@@ -42,7 +42,16 @@ public class EventDetails2 extends AppCompatActivity {
     private TextView participantsTextView;
     private Button backButton;
     private Button startButton;
+
     private String eventId;
+
+    private String creatorID;
+
+    private String eventStatus;
+
+    private Status convertedEventStatus;
+
+    private String currentUserID;
 
     enum Status{
         COMPLETED,
@@ -55,6 +64,7 @@ public class EventDetails2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_details2);
+        EventRepository eventRepository = new EventRepository();
 
         // Initialize the Firebase Firestore instance
         db = FirebaseFirestore.getInstance();
@@ -66,6 +76,7 @@ public class EventDetails2 extends AppCompatActivity {
         participantsTextView = findViewById(R.id.partInfo2);
         backButton = findViewById(R.id.back);
         startButton = findViewById(R.id.startButton);
+
 
         // Retrieve the event ID from the intent extras
         eventId = getIntent().getStringExtra("event_id");
@@ -85,6 +96,8 @@ public class EventDetails2 extends AppCompatActivity {
                         SimpleDateFormat dataFormat = new SimpleDateFormat("DD/mm/yyyy");
                         Timestamp startTime = documentSnapshot.getTimestamp("startTime");
                         List<String> participants = (List<String>) documentSnapshot.get("participants");
+                        creatorID = documentSnapshot.getString("creatorId");
+                        eventStatus = documentSnapshot.getString("status");
 
                         //turning hashmap into sublatlng here
                         List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
@@ -130,12 +143,43 @@ public class EventDetails2 extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent eventDetails = new Intent(EventDetails2.this, CurrentEvent.class);
-                eventDetails.putExtra("event_id", eventId);
-                startActivity(eventDetails);
+                // Get the actual user ID from Firebase Authentication
+                currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                convertedEventStatus = Status.valueOf(eventStatus);
+                Log.d("convertedEventStatus",convertedEventStatus.toString());
+                Log.d("creatorID, event details2",currentUserID);
+                Log.d("eventCreatorID",creatorID);
+
+                if (convertedEventStatus == Status.NOTSTARTED && currentUserID.equals(creatorID) ){
+
+                    eventRepository.updateStatus(eventId, EventRepository.Status.STARTED);
+                    Intent eventDetails = new Intent(EventDetails2.this, CurrentEvent.class);
+                    eventDetails.putExtra("event_id", eventId);
+                    startActivity(eventDetails);
+
+                }
+
+                else if (convertedEventStatus == Status.NOTSTARTED && !currentUserID.equals(creatorID)){
+                    Toast.makeText(EventDetails2.this, "Please wait for creator to start event!", Toast.LENGTH_SHORT).show();
+                }
+                else if (convertedEventStatus == Status.COMPLETED ){
+                    Toast.makeText(EventDetails2.this, "You cannot start a completed event!", Toast.LENGTH_SHORT).show();
+                }
+
+                else if (convertedEventStatus == Status.STARTED){
+                    Intent eventDetails = new Intent(EventDetails2.this, CurrentEvent.class);
+                    eventDetails.putExtra("event_id", eventId);
+                    startActivity(eventDetails);
+                }
+
+                else{
+                    Intent eventDetails = new Intent(EventDetails2.this, CurrentEvent.class);
+                    eventDetails.putExtra("event_id", eventId);
+                    startActivity(eventDetails);
+                }
+
             }
         });
-
 
     }
 

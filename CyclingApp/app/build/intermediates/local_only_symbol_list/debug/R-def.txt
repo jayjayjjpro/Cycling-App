@@ -37,6 +37,7 @@ id distance
 id distanceRemaining
 id distanceTextView
 id drawer_layout
+id endEvent
 id event
 id eventListView
 id eventLocation

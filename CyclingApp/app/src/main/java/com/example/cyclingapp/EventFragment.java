@@ -50,6 +50,11 @@ public class EventFragment extends Fragment {
     CollectionReference usersRef = db.collection("users");
     CollectionReference eventsRef = db.collection("events");
     List<Events> eventsList = new ArrayList<>();
+    enum Status{
+        COMPLETED,
+        STARTED,
+        NOTSTARTED
+    }
 
 
 
@@ -73,6 +78,7 @@ public class EventFragment extends Fragment {
                 eventsList = new ArrayList<>();
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                     Events event = documentSnapshot.toObject(Events.class);
+                    if (event.getStatus()== Events.Status.COMPLETED) continue;
                     eventsList.add(event);
                 }
 

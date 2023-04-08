@@ -96,8 +96,14 @@ public class EventRepository {
             }
         });
     }
+
+    enum Status{
+        COMPLETED,
+        NOTSTARTED,
+        STARTED
+    }
     //update event status
-    public Task<Void> updateStatus(String eventId, String status) {
+    public Task<Void> updateStatus(String eventId, Status status) {
         return eventsCollection.document(eventId).update("status", status);
     }
 
