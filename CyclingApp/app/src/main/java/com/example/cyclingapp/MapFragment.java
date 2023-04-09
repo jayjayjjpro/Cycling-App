@@ -6,6 +6,8 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -50,8 +52,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_map, container, false);
-        SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.google_map);
-        supportMapFragment.getMapAsync(this::onMapReady);
+        if (isNetworkAvailable()){
+            SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.google_map);
+            supportMapFragment.getMapAsync(this::onMapReady);
+        }
+        else{
+            Toast.makeText(getActivity(), "No internet!", Toast.LENGTH_SHORT).show();
+        }
+
 
         return view;
     }
@@ -72,34 +80,52 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             return;
         }
 
-        LocationManager locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
+        if(isLocationEnabled()){
+            LocationManager locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
 
-        LocationListener locationListener = new LocationListener() {
-            @Override
-            public void onLocationChanged(@NonNull Location location) {
-                // Get the user's location
-                double latitude = location.getLatitude();
-                double longitude = location.getLongitude();
+            LocationListener locationListener = new LocationListener() {
+                @Override
+                public void onLocationChanged(@NonNull Location location) {
+                    // Get the user's location
+                    double latitude = location.getLatitude();
+                    double longitude = location.getLongitude();
 
-                // Create a LatLng object for the user's location
-                LatLng userLatLng = new LatLng(latitude, longitude);
+                    // Create a LatLng object for the user's location
+                    LatLng userLatLng = new LatLng(latitude, longitude);
 
-                // Add a marker for the user's location
-                if(usermarker!= null)usermarker.remove();
+                    // Add a marker for the user's location
+                    if(usermarker!= null)usermarker.remove();
 
-                MarkerOptions marker = new MarkerOptions().position(userLatLng).title("Your Location");
-                usermarker = googleMap.addMarker(marker);
+                    MarkerOptions marker = new MarkerOptions().position(userLatLng).title("Your Location");
+                    usermarker = googleMap.addMarker(marker);
 
-                // Move the camera to the user's location
-                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLatLng, 15f));
-            }
-        };
+                    // Move the camera to the user's location
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLatLng, 15f));
+                }
+            };
 
 // Request for location updates
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+
+        }
+        else{
+            Toast.makeText(getActivity(), "Location not enabled!", Toast.LENGTH_SHORT).show();
+        }
 
 
     }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    private boolean isLocationEnabled() {
+        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+    }
+
 
 
 

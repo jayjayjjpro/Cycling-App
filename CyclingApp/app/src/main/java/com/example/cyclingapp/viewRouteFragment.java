@@ -1,11 +1,14 @@
 package com.example.cyclingapp;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,10 +50,18 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
         List<SubLatLng>test = (List<SubLatLng>) getArguments().getSerializable("SublatLngLst");
         subLatLngList = test;
 
+        if(isNetworkAvailable()){
+            SupportMapFragment supportMapFragment = (SupportMapFragment)
+                    this.getChildFragmentManager().findFragmentById(R.id.google_map);
+            supportMapFragment.getMapAsync(this);
+        }
 
-        SupportMapFragment supportMapFragment = (SupportMapFragment)
-                this.getChildFragmentManager().findFragmentById(R.id.google_map);
-        supportMapFragment.getMapAsync(this);
+        else{
+            Toast.makeText(getActivity(), "No internet!", Toast.LENGTH_SHORT).show();
+        }
+
+
+
 
 
 
@@ -90,6 +101,12 @@ public class viewRouteFragment extends Fragment implements OnMapReadyCallback {
         PolylineOptions polylineOptions = new PolylineOptions().addAll(latLngList).clickable(true);
         polyline = gMap.addPolyline(polylineOptions);
 
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 
