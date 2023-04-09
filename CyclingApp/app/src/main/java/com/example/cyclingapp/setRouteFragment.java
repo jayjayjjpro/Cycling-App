@@ -2,6 +2,8 @@ package com.example.cyclingapp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,66 +69,71 @@ public class setRouteFragment extends Fragment /**implements OnMapReadyCallback,
         btClear = view.findViewById(R.id.bt_clear);
         btConfirm = view.findViewById(R.id.bt_confirmRoute);
 
-        SupportMapFragment supportMapFragment = (SupportMapFragment)
-                getChildFragmentManager().findFragmentById(R.id.google_map);
-        first_time_count = 1;
-        draw_complete = 0;
-        supportMapFragment.getMapAsync(this::onMapReady);
-
-        btDraw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Draw polyline on Map
-                if (polyline!=null)polyline.remove();
-
-
-                //Create polylineOptions
-                PolylineOptions polylineOptions = new PolylineOptions().addAll(latLngList).clickable(true);
-                polyline = gMap.addPolyline(polylineOptions);
+        if(isNetworkAvailable()){
+            SupportMapFragment supportMapFragment = (SupportMapFragment)
+                    getChildFragmentManager().findFragmentById(R.id.google_map);
+            first_time_count = 1;
+            draw_complete = 0;
+            supportMapFragment.getMapAsync(this::onMapReady);
+            btDraw.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Draw polyline on Map
+                    if (polyline!=null)polyline.remove();
 
 
-                setWidth();
+                    //Create polylineOptions
+                    PolylineOptions polylineOptions = new PolylineOptions().addAll(latLngList).clickable(true);
+                    polyline = gMap.addPolyline(polylineOptions);
 
-                String width = polylineOptions.toString();
-                draw_complete = 1;
 
-            }
-        });
+                    setWidth();
 
-        btConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                    String width = polylineOptions.toString();
+                    draw_complete = 1;
 
-                if (draw_complete==0){
-                    Toast.makeText(getActivity(),"Please Draw Line before confirm!",Toast. LENGTH_SHORT).show();
                 }
-                else{
-                    //dataPasser is to pass data to another activity
-                    dataPasser.onDataPass(latLngList);
-                    dataPasser.checkDataPass(1);
+            });
+
+            btConfirm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (draw_complete==0){
+                        Toast.makeText(getActivity(),"Please Draw Line before confirm!",Toast. LENGTH_SHORT).show();
+                    }
+                    else{
+                        //dataPasser is to pass data to another activity
+                        dataPasser.onDataPass(latLngList);
+                        dataPasser.checkDataPass(1);
+                    }
+
                 }
+            });
 
-            }
-        });
-
-        btClear.setOnClickListener(new View.OnClickListener() {
-            //finding LatLng values in array
-            @Override
-            public void onClick(View v) {
-                //Clear All
+            btClear.setOnClickListener(new View.OnClickListener() {
+                //finding LatLng values in array
+                @Override
+                public void onClick(View v) {
+                    //Clear All
 
 
-                if (polyline != null) polyline.remove();
-                for (Marker marker: markerList) marker.remove();
-                first_time_count = 1;
+                    if (polyline != null) polyline.remove();
+                    for (Marker marker: markerList) marker.remove();
+                    first_time_count = 1;
 
-                latLngList.clear();
-                markerList.clear();
-                seekWidth.setProgress(3);
-                draw_complete = 0;
-                dataPasser.checkDataPass(0);
-            }
-        });
+                    latLngList.clear();
+                    markerList.clear();
+                    seekWidth.setProgress(3);
+                    draw_complete = 0;
+                    dataPasser.checkDataPass(0);
+                }
+            });
+
+        }
+        else{
+            Toast.makeText(getActivity(), "No internet!", Toast.LENGTH_SHORT).show();
+        }
 
 
 
@@ -191,6 +198,12 @@ public class setRouteFragment extends Fragment /**implements OnMapReadyCallback,
             }
         });
 
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 

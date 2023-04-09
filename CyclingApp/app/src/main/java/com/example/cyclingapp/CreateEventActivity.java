@@ -2,8 +2,11 @@ package com.example.cyclingapp;
 
 import static android.app.PendingIntent.getActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -101,6 +104,7 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
 
 
 
+
         //Set a click listener for time and date
         eventDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,7 +126,8 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
 
             @Override
             public void onClick(View v) {
-                createEvent();
+                if(isNetworkAvailable())createEvent();
+                else Toast.makeText(getApplicationContext(),"no Internet!",Toast. LENGTH_SHORT).show();
             }
         });
 
@@ -305,5 +310,11 @@ public class CreateEventActivity extends AppCompatActivity implements OnDataPass
     }
     public void checkDataPass(int check){
         latLnginput_check = check;
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }

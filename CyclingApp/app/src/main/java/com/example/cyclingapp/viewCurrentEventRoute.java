@@ -6,11 +6,14 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -61,10 +64,18 @@ public class viewCurrentEventRoute extends Fragment implements OnMapReadyCallbac
         List<SubLatLng>test = (List<SubLatLng>) getArguments().getSerializable("SublatLngLst");
         subLatLngList = test;
 
+        if(isNetworkAvailable()){
+            SupportMapFragment supportMapFragment = (SupportMapFragment)
+                    this.getChildFragmentManager().findFragmentById(R.id.google_map);
+            supportMapFragment.getMapAsync(this);
+        }
 
-        SupportMapFragment supportMapFragment = (SupportMapFragment)
-                this.getChildFragmentManager().findFragmentById(R.id.google_map);
-        supportMapFragment.getMapAsync(this);
+        else{
+            Toast.makeText(getActivity(), "No internet!", Toast.LENGTH_SHORT).show();
+        }
+
+
+
 
 
 
@@ -91,32 +102,40 @@ public class viewCurrentEventRoute extends Fragment implements OnMapReadyCallbac
             return;
         }
 
-        LocationManager locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
+        if(isLocationEnabled()){
+            LocationManager locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
 
-        LocationListener locationListener = new LocationListener() {
-            @Override
-            public void onLocationChanged(@NonNull Location location) {
-                // Get the user's location
-                double latitude = location.getLatitude();
-                double longitude = location.getLongitude();
+            LocationListener locationListener = new LocationListener() {
+                @Override
+                public void onLocationChanged(@NonNull Location location) {
+                    // Get the user's location
+                    double latitude = location.getLatitude();
+                    double longitude = location.getLongitude();
 
-                // Create a LatLng object for the user's location
-                LatLng userLatLng = new LatLng(latitude, longitude);
+                    // Create a LatLng object for the user's location
+                    LatLng userLatLng = new LatLng(latitude, longitude);
 
-                // Add a marker for the user's location
-                if(usermarker!= null)usermarker.remove();
+                    // Add a marker for the user's location
+                    if(usermarker!= null)usermarker.remove();
 
-                MarkerOptions marker = new MarkerOptions().position(userLatLng).title("Your Location");
-                usermarker = googleMap.addMarker(marker.icon(BitmapDescriptorFactory.
-                        defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)));
+                    MarkerOptions marker = new MarkerOptions().position(userLatLng).title("Your Location");
+                    usermarker = googleMap.addMarker(marker.icon(BitmapDescriptorFactory.
+                            defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)));
 
-                // Move the camera to the user's location
-                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLatLng, 15f));
-            }
-        };
+                    // Move the camera to the user's location
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLatLng, 15f));
+                }
+            };
 
 // Request for location updates
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+
+        }
+
+        else{
+            Toast.makeText(getActivity(), "Location not enabled!", Toast.LENGTH_SHORT).show();
+        }
+
 
         for (int i=0;i<subLatLngList.size();i++){
             SubLatLng temp = subLatLngList.get(i);
@@ -140,6 +159,17 @@ public class viewCurrentEventRoute extends Fragment implements OnMapReadyCallbac
         polyline = gMap.addPolyline(polylineOptions);
 
 
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    private boolean isLocationEnabled() {
+        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
 
 

@@ -2,6 +2,8 @@ package com.example.cyclingapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -72,39 +74,53 @@ public class EventFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ListView listView = (ListView) view.findViewById(R.id.eventListView);
 
-        eventsRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-            @Override
-            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                eventsList = new ArrayList<>();
-                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                    Events event = documentSnapshot.toObject(Events.class);
-                    if (event.getStatus()== Events.Status.COMPLETED) continue;
-                    eventsList.add(event);
+        if (isNetworkAvailable()){
+            eventsRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                @Override
+                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                    eventsList = new ArrayList<>();
+                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                        Events event = documentSnapshot.toObject(Events.class);
+                        if (event.getStatus()== Events.Status.COMPLETED) continue;
+                        eventsList.add(event);
+                    }
+
+                    // Update your UI with the eventsList
+                    EventsAdapter adapter = new EventsAdapter(getActivity(), eventsList);
+                    listView.setAdapter(adapter);
                 }
-
-                // Update your UI with the eventsList
-                EventsAdapter adapter = new EventsAdapter(getActivity(), eventsList);
-                listView.setAdapter(adapter);
-            }
-        });
+            });
 
 
-        //listView.setOnItemClickListener(this);
+            //listView.setOnItemClickListener(this);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(getActivity(), eventsList.get(position).getName(), Toast.LENGTH_SHORT).show();
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                    Toast.makeText(getActivity(), eventsList.get(position).getName(), Toast.LENGTH_SHORT).show();
 
-                Events event = eventsList.get(position);
-                String eventName = event.getName();
-                String eventID = event.getId();
-                Log.d("Event Details", "Event Clicked: ", new RuntimeException(eventName));
-                Intent eventDetails = new Intent(getContext(), EventDetails.class);
-                eventDetails.putExtra("event_id", eventID);
-                startActivity(eventDetails);
-            }
-        });
+                    Events event = eventsList.get(position);
+                    String eventName = event.getName();
+                    String eventID = event.getId();
+                    Log.d("Event Details", "Event Clicked: ", new RuntimeException(eventName));
+                    Intent eventDetails = new Intent(getContext(), EventDetails.class);
+                    eventDetails.putExtra("event_id", eventID);
+                    startActivity(eventDetails);
+                }
+            });
+
+        }
+
+        else{
+            Toast.makeText(getActivity(),"no Internet!",Toast. LENGTH_SHORT).show();
+        }
 
     }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 }

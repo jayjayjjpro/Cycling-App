@@ -1,6 +1,9 @@
 package com.example.cyclingapp;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -82,7 +85,8 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.map:{
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
+                        if (isNetworkAvailable()) getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
+                        else Toast.makeText(HomeActivity.this, "No internet!", Toast.LENGTH_SHORT).show();
                         break;
                     }
 
@@ -163,5 +167,11 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }
