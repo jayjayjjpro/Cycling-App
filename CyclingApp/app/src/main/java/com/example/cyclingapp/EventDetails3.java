@@ -1,50 +1,55 @@
 package com.example.cyclingapp;
 
-import android.content.Context;
+import static androidx.fragment.app.FragmentManager.TAG;
+
+import static java.security.AccessController.getContext;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import android.Manifest;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+public class EventDetails3 extends AppCompatActivity {
 
-public class CurrentEvent extends AppCompatActivity {
-
-    private TextView distanceTextView;
-
-
+    private FirebaseFirestore db;
     private TextView eventNameTextView;
-
-
+    private TextView eventLocationTextView;
+    private TextView dateTextView;
+    private TextView participantsTextView;
+    private TextView distanceTextView;
+    private Button backButton;
+    private Button startButton;
 
     private String eventId;
-    private FirebaseFirestore db;
 
-    private Button endButton;
+    private String creatorID;
 
     private String eventStatus;
+
     private Status convertedEventStatus;
 
     private String currentUserID;
@@ -55,26 +60,29 @@ public class CurrentEvent extends AppCompatActivity {
         NOTSTARTED
     }
 
-    private EventRepository eventRepository;
-
-    private String creatorID;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.current_event);
-        eventRepository = new EventRepository();
-        eventNameTextView = findViewById(R.id.currentEventName);
+        setContentView(R.layout.event_details3);
+        EventRepository eventRepository = new EventRepository();
+
+        // Initialize the Firebase Firestore instance
+        db = FirebaseFirestore.getInstance();
+
+        // Get a reference to the UI elements
+        eventNameTextView = findViewById(R.id.eventName3);
+        eventLocationTextView = findViewById(R.id.locInfo3);
+        dateTextView = findViewById(R.id.dateInfo3);
+        participantsTextView = findViewById(R.id.partInfo3);
+        backButton = findViewById(R.id.back3);
+        distanceTextView = findViewById(R.id.distProfile3);
+
 
         // Retrieve the event ID from the intent extras
         eventId = getIntent().getStringExtra("event_id");
         ;
-        Log.d("event ID in currentEvent", eventId);
 
-        // Initialize the Firebase Firestore instance
-        db = FirebaseFirestore.getInstance();
-        endButton = findViewById(R.id.endEvent);
 
         // Query Firestore for the event details using the event ID
         db.collection("events").document(eventId)
@@ -85,22 +93,15 @@ public class CurrentEvent extends AppCompatActivity {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         // Get the event details from the document snapshot
                         String eventName = documentSnapshot.getString("name");
-                        Log.d("eventName",eventName);
                         String location = documentSnapshot.getString("location");
                         SimpleDateFormat dataFormat = new SimpleDateFormat("DD/mm/yyyy");
                         Timestamp startTime = documentSnapshot.getTimestamp("startTime");
                         List<String> participants = (List<String>) documentSnapshot.get("participants");
                         creatorID = documentSnapshot.getString("creatorId");
                         eventStatus = documentSnapshot.getString("status");
-                        convertedEventStatus = Status.valueOf(eventStatus);
-                        eventNameTextView.setText(eventName);
-
-                        distanceTextView = findViewById(R.id.distanceTextView);
-                        Double distance = documentSnapshot.getDouble("estimatedDistanceInKM");
-                        String distanceString = String.format(".%2f", distance);
-                        distanceTextView.setText(distanceString);
-
-
+                        Number distance = documentSnapshot.getDouble("estimatedDistanceInKM");
+                        String distanceString = String.format("%.2f", distance);
+                        distanceTextView.setText(distanceString + " km");
 
                         //turning hashmap into sublatlng here
                         List<HashMap<String, String>> rawRoute = (List<HashMap<String, String>>) documentSnapshot.get("eventLatLngLst");
@@ -116,47 +117,52 @@ public class CurrentEvent extends AppCompatActivity {
                         //pass data to view route fragment
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("SublatLngLst", temp);
-                        viewCurrentEventRoute fragobj = new viewCurrentEventRoute();
+                        viewRouteFragment fragobj = new viewRouteFragment();
                         Log.d("checkBundle", bundle.toString());
                         fragobj.setArguments(bundle);
 
-                        getSupportFragmentManager().beginTransaction().replace(R.id.viewRouteContainer
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view_route3
                                 , fragobj).commit();
 
                         // Format the startTime as a string
                         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
                         String dateString = dateFormat.format(startTime.toDate());
 
+
+                        // Set the UI elements with the event details
+                        eventNameTextView.setText(eventName);
+                        eventLocationTextView.setText(location);
+                        dateTextView.setText(dateString);
+                        participantsTextView.setText(Integer.toString(participants.size()));
                     }
                 });
-        endButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                // Get the actual user ID from Firebase Authentication
-                currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                if (convertedEventStatus == Status.STARTED && currentUserID.equals(creatorID) ){
-                    Log.d("converted go back to home","Ran this line");
-                    eventRepository.updateStatus(eventId, EventRepository.Status.COMPLETED);
-                    openHomeActivity();
-                }
-                else if (convertedEventStatus == Status.STARTED && !currentUserID.equals(creatorID)){
-                    Log.d("not creator go back to home","Ran this line");
-                    openHomeActivity();
-                }
-                else {
-                    Log.d("go back to home","Ran this line");
-                    openHomeActivity();
-                }
+            public void onClick(View v) {
+
+                openHomeActivity();
             }
         });
-
 
 
 
     }
 
     private void openHomeActivity() {
-        Intent intent = new Intent(CurrentEvent.this, HomeActivity.class);
+        Intent intent = new Intent(EventDetails3.this, HomeActivity.class);
         startActivity(intent);
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+

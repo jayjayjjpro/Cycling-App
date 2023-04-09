@@ -40,6 +40,10 @@
             android:label="Event Details" />
 
         <activity
+            android:name=".EventDetails3"
+            android:label="Event Details" />
+
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

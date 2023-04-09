@@ -5,8 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -21,16 +22,29 @@ public final class FragmentProfileBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final Button startEvent;
+  public final Button calProfile;
 
   @NonNull
-  public final EditText weightInfo;
+  public final TextView distProfileInfo;
 
-  private FragmentProfileBinding(@NonNull RelativeLayout rootView, @NonNull Button startEvent,
-      @NonNull EditText weightInfo) {
+  @NonNull
+  public final TextView distanceProfile;
+
+  @NonNull
+  public final ListView profileListView;
+
+  @NonNull
+  public final TextView yourEvents;
+
+  private FragmentProfileBinding(@NonNull RelativeLayout rootView, @NonNull Button calProfile,
+      @NonNull TextView distProfileInfo, @NonNull TextView distanceProfile,
+      @NonNull ListView profileListView, @NonNull TextView yourEvents) {
     this.rootView = rootView;
-    this.startEvent = startEvent;
-    this.weightInfo = weightInfo;
+    this.calProfile = calProfile;
+    this.distProfileInfo = distProfileInfo;
+    this.distanceProfile = distanceProfile;
+    this.profileListView = profileListView;
+    this.yourEvents = yourEvents;
   }
 
   @Override
@@ -60,19 +74,38 @@ public final class FragmentProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.startEvent;
-      Button startEvent = ViewBindings.findChildViewById(rootView, id);
-      if (startEvent == null) {
+      id = R.id.calProfile;
+      Button calProfile = ViewBindings.findChildViewById(rootView, id);
+      if (calProfile == null) {
         break missingId;
       }
 
-      id = R.id.weightInfo;
-      EditText weightInfo = ViewBindings.findChildViewById(rootView, id);
-      if (weightInfo == null) {
+      id = R.id.distProfileInfo;
+      TextView distProfileInfo = ViewBindings.findChildViewById(rootView, id);
+      if (distProfileInfo == null) {
         break missingId;
       }
 
-      return new FragmentProfileBinding((RelativeLayout) rootView, startEvent, weightInfo);
+      id = R.id.distanceProfile;
+      TextView distanceProfile = ViewBindings.findChildViewById(rootView, id);
+      if (distanceProfile == null) {
+        break missingId;
+      }
+
+      id = R.id.profileListView;
+      ListView profileListView = ViewBindings.findChildViewById(rootView, id);
+      if (profileListView == null) {
+        break missingId;
+      }
+
+      id = R.id.yourEvents;
+      TextView yourEvents = ViewBindings.findChildViewById(rootView, id);
+      if (yourEvents == null) {
+        break missingId;
+      }
+
+      return new FragmentProfileBinding((RelativeLayout) rootView, calProfile, distProfileInfo,
+          distanceProfile, profileListView, yourEvents);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

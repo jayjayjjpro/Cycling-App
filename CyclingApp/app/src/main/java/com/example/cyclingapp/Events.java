@@ -123,8 +123,9 @@ public class Events {
         this.status = status;
     }
 
-    public void setEstimatedDistanceInKM(double estimatedDistance){
+    public double setEstimatedDistanceInKM(double estimatedDistance){
         this.estimatedDistanceInKM = estimatedDistance;
+        return estimatedDistance;
     }
 
     public double getEstimatedDistanceInKM(){
