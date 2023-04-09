@@ -3066,6 +3066,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id back
+id back3
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3094,9 +3095,8 @@ id button_next
 id button_resend_email
 id button_sign_in
 id cache_measures
+id calProfile
 id callMeasure
-id calories
-id caloriesTextView
 id cancel_action
 id cancel_button
 id carryVelocity
@@ -3146,8 +3146,10 @@ id cut
 id dark
 id date
 id date2
+id date3
 id dateInfo
 id dateInfo2
+id dateInfo3
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3168,8 +3170,11 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id distProfile3
+id distProfileInfo
 id distance
-id distanceRemaining
+id distance3
+id distanceProfile
 id distanceTextView
 id dragAnticlockwise
 id dragClockwise
@@ -3205,6 +3210,7 @@ id eventListView
 id eventLocation
 id eventName
 id eventName2
+id eventName3
 id eventStatus
 id event_date_button
 id event_location_input
@@ -3231,6 +3237,7 @@ id fragment_container
 id fragment_container_create_event
 id fragment_container_view_route
 id fragment_container_view_route2
+id fragment_container_view_route3
 id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
@@ -3289,9 +3296,11 @@ id listMode
 id list_item
 id locInfo
 id locInfo2
+id locInfo3
 id locale
 id locationInfo
 id locationInfo2
+id locationInfo3
 id logo
 id logout
 id ltr
@@ -3396,8 +3405,10 @@ id parentRelative
 id parent_matrix
 id partInfo
 id partInfo2
+id partInfo3
 id participants
 id participants2
+id participants3
 id password
 id password_layout
 id password_toggle
@@ -3413,12 +3424,12 @@ id position
 id postLayout
 id pressed
 id profile
+id profileListView
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
 id rectangles
-id remainingDistanceTextView
 id resend_barrier
 id resend_code
 id reverseSawtooth
@@ -3503,7 +3514,6 @@ id src_over
 id standard
 id start
 id startButton
-id startEvent
 id startHorizontal
 id startToEnd
 id startVertical
@@ -3548,7 +3558,6 @@ id textinput_prefix_text
 id textinput_suffix_text
 id ticker
 id time
-id timeElapsedTextView
 id title
 id titleDividerNoCustom
 id title_template
@@ -3588,7 +3597,6 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id webview
-id weightInfo
 id welcome_back_email_link_body
 id welcome_back_idp_button
 id welcome_back_idp_prompt
@@ -3604,6 +3612,7 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id yourEvents
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -3741,6 +3750,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout event_details
 layout event_details2
+layout event_details3
 layout fragment_event
 layout fragment_map
 layout fragment_profile
