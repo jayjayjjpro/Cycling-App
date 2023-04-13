@@ -1,8 +1,6 @@
 package com.example.cyclingapp;
 
 //Newly added
-import com.example.cyclingapp.User;
-import com.example.cyclingapp.UserRepository;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -21,7 +19,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginAndAuthentication extends AppCompatActivity {
 
     //NEWLY ADDED
 // Add UserRepository instance
@@ -105,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
 
-                    Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                    Intent i = new Intent(LoginAndAuthentication.this, HomeActivity.class);
                     startActivity(i);
                     finish();
                 } else {
