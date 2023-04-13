@@ -102,14 +102,14 @@ public class HomeActivity extends AppCompatActivity {
                                 Toast.makeText(HomeActivity.this, "User Signed Out", Toast.LENGTH_SHORT).show();
 
                                 // below line is to go to MainActivity via an intent.
-                                Intent i = new Intent(HomeActivity.this, MainActivity.class);
+                                Intent i = new Intent(HomeActivity.this, LoginAndAuthentication.class);
                                 startActivity(i);
                             }
                         });;
                         Toast.makeText(HomeActivity.this, "User Signed Out", Toast.LENGTH_SHORT).show();
 
                         // below line is to go to MainActivity via an intent.
-                        Intent i = new Intent(HomeActivity.this, MainActivity.class);
+                        Intent i = new Intent(HomeActivity.this, LoginAndAuthentication.class);
                         startActivity(i);
                     }
 

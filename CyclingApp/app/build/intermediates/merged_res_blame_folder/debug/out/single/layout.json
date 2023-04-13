@@ -1,78 +1,70 @@
 [
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/activity_create_event.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/activity_create_event.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/activity_home.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/activity_home.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/event_details.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/event_details.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_upcoming_event.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_upcoming_event.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/content_main.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/content_main.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/event_details.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/event_details.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_set_route.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/fragment_set_route.xml"
-    },
-    {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_upcoming_event.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/fragment_upcoming_event.xml"
-    },
-    {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/calorie_calculator.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/calorie_calculator.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/activity_main.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/activity_main.xml"
     },
     {
         "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_profile.xml",
         "source": "com.example.cyclingapp-main-54:/layout/fragment_profile.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_view_current_event_route.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/fragment_view_current_event_route.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_event.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_event.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/activity_home.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/activity_home.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/content_main.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/content_main.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/item_event.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/item_event.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_view_route.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_view_route.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/header.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/header.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/header.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/header.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/event_details3.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/event_details3.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/activity_create_event.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/activity_create_event.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_profile.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/fragment_profile.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/item_event.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/item_event.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/current_event.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/current_event.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_set_route.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_set_route.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_view_route.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/fragment_view_route.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/event_details2.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/event_details2.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/activity_main.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/activity_main.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/event_details3.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/event_details3.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/event_details2.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/event_details2.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_view_current_event_route.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_view_current_event_route.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_map.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/fragment_map.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_map.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_map.xml"
     },
     {
-        "merged": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_event.xml",
-        "source": "/Users/shikha/.gradle/daemon/7.5/com.example.cyclingapp-main-54:/layout/fragment_event.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/current_event.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/current_event.xml"
     }
 ]
