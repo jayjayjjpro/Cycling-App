@@ -14,8 +14,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.Transaction;
 
-import java.util.List;
-
 public class EventRepository {
     private static final String EVENTS_COLLECTION = "events";
     private static final String COMPLETED_EVENTS_COLLECTION = "completedEvents";
@@ -38,7 +36,7 @@ public class EventRepository {
     }
 
     // Get all events
-    public Task<QuerySnapshot> getAllEvents() {
+    public Task<QuerySnapshot> getAllEvents(OnSuccessListener<QuerySnapshot> onSuccessListener) {
         return eventsCollection.get();
     }
 

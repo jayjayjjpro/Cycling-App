@@ -75,6 +75,7 @@ public class EventFragment extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.eventListView);
 
         if (isNetworkAvailable()){
+
             eventsRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                 @Override
                 public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
