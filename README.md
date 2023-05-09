@@ -1,2 +1,2 @@
-
-Cycling App Created with Android Studio and Firebase(FireStore)
+#Cycling App
+Cycling App created with Android Studio and Firebase(FireStore)
