@@ -1,2 +1,2 @@
-# SC2006-Project
-Cycling App
+
+Cycling App Created with Android Studio and Firebase(FireStore)
