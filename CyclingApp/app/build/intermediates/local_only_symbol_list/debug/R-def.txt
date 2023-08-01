@@ -14,12 +14,14 @@ drawable baseline_home_24
 drawable baseline_logout_24
 drawable baseline_map_24
 drawable baseline_person_24
+drawable baseline_person_add_24
 drawable baseline_upcoming_24
 drawable doge
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable onimai
 id action_settings
+id add_user
 id back
 id back3
 id bt_clear
@@ -88,6 +90,7 @@ id upcoming
 id upcomingEventListView
 id userID
 id username
+id usersListView
 id viewRouteContainer
 id yourEvents
 layout activity_create_event
@@ -98,6 +101,7 @@ layout current_event
 layout event_details
 layout event_details2
 layout event_details3
+layout fragment_add_user
 layout fragment_event
 layout fragment_map
 layout fragment_profile
@@ -107,6 +111,7 @@ layout fragment_view_current_event_route
 layout fragment_view_route
 layout header
 layout item_event
+layout item_user
 menu main_menu
 menu test2
 mipmap ic_launcher
