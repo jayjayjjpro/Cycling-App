@@ -13,6 +13,8 @@ public class User {
 
     private List<String> createdEvents;
 
+    private List<User> friendList;
+
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
@@ -75,4 +77,10 @@ public class User {
     public void setCreatedEvents(List<String> createdEvents) {
         this.createdEvents = createdEvents;
     }
+
+    public void setFriendList(List<User> friendList){this.friendList = friendList;}
+
+    public void addFriend(User friend){friendList.add(friend);}
+
+    public void deleteFriend(User friend){friendList.remove(friend);}
 }

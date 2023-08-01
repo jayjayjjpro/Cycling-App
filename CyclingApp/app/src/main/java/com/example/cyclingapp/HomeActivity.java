@@ -94,6 +94,13 @@ public class HomeActivity extends AppCompatActivity {
                         openCreateEventActivity();
                         break;
                     }
+
+                    case R.id.add_user:{
+                        if (isNetworkAvailable()) getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddUser()).commit();
+                        else Toast.makeText(HomeActivity.this, "No internet!", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+
                     case R.id.logout:{
                         AuthUI.getInstance().signOut(HomeActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
                             public void onComplete(@NonNull Task<Void> task) {
