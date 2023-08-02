@@ -2836,7 +2836,6 @@ drawable baseline_home_24
 drawable baseline_logout_24
 drawable baseline_map_24
 drawable baseline_person_24
-drawable baseline_person_add_24
 drawable baseline_upcoming_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3046,7 +3045,6 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id add_user
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3588,7 +3586,6 @@ id upcomingEventListView
 id useLogo
 id userID
 id username
-id usersListView
 id vertical_only
 id viewRouteContainer
 id view_offset_helper
@@ -3754,7 +3751,6 @@ layout design_text_input_start_icon
 layout event_details
 layout event_details2
 layout event_details3
-layout fragment_add_user
 layout fragment_event
 layout fragment_map
 layout fragment_profile
@@ -3790,7 +3786,6 @@ layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
 layout header
 layout item_event
-layout item_user
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
