@@ -23,25 +23,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "27,2,21,16,23",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "1327,102,985,821,1087",
-                        "endLines": "38,14,21,19,23",
-                        "endColumns": "12,12,98,12,88",
-                        "endOffsets": "2033,813,1079,977,1171"
-                    },
-                    "to": {
-                        "startLines": "6494,6536,6549,6550,6554",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "454316,456960,457543,457641,457799",
-                        "endLines": "6505,6548,6549,6553,6554",
-                        "endColumns": "12,12,97,12,87",
-                        "endOffsets": "454747,457538,457636,457794,457882"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\53eddd6329fdb6b26740629d5c2caf16\\transformed\\navigation-runtime-2.4.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,10,13",
@@ -58,6 +39,23 @@
                         "endLines": "1708,9335,12487,12493",
                         "endColumns": "52,24,24,24",
                         "endOffsets": "109708,639903,756417,756659"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006\\Cycling-App\\CyclingApp\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "7,2,3,4,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "293,57,105,153,201,247,336",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "330,99,147,195,241,287,373"
+                    },
+                    "to": {
+                        "startLines": "627,903,904,905,916,917,920",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "31914,51705,51752,51799,52543,52588,52754",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "31951,51747,51794,51841,52583,52628,52791"
                     }
                 },
                 {
@@ -80,23 +78,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "7,2,3,4,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "293,57,105,153,201,247,336",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "330,99,147,195,241,287,373"
-                    },
-                    "to": {
-                        "startLines": "627,903,904,905,916,917,920",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "31914,51705,51752,51799,52543,52588,52754",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "31951,51747,51794,51841,52583,52628,52791"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\fe495a367855b5ef5687bc19d2e9c1bc\\transformed\\constraintlayout-2.1.4\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,9,10,15,16,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,42,43,44,45,55,63,64,65,70,71,76,81,82,83,88,89,94,95,100,101,102,108,109,110,115,121,122,123,124,130,131,132,133,136,139,142,143,146,149,150,151,152,153,156,159,160,161,162,168,173,176,179,180,181,186,187,188,191,194,195,198,201,204,207,208,209,212,215,216,221,222,228,233,236,239,240,241,242,243,244,245,246,247,248,249,250,266,272,273,274,275,276,283,289,290,291,294,299,300,308,309,310,311,312,313,314,315,324,325,326,332,333,339,343,344,345,346,347,356,360,361,362,380,566,694,700,704,874,1026,1039,1055,1080,1103,1106,1109,1112,1141,1168,1185,1271,1279,1292,1308,1312,1342,1355,1359,1369,1379,1423,1436,1440,1443,1459,1500,1535,1542,1559",
@@ -116,23 +97,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\dimens.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "41",
-                        "endOffsets": "54"
-                    },
-                    "to": {
-                        "startLines": "1067",
-                        "startColumns": "4",
-                        "startOffsets": "62491",
-                        "endColumns": "41",
-                        "endOffsets": "62528"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\149ff997c64dc278213698d87c40381f\\transformed\\cardview-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
@@ -149,23 +113,6 @@
                         "endLines": "35,640,641,642,643,1005,1006,1007,2198,5429,5432,5435,10188",
                         "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12,24",
                         "endOffsets": "1687,32902,32964,33026,33090,58507,58564,58618,162759,386013,386139,386267,669321"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "2,1,6,12,9,17,18,7,14,5,15,13,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "66,17,235,651,451,871,942,294,783,178,822,716,522",
-                        "endColumns": "52,47,57,63,69,69,82,96,37,55,45,65,71",
-                        "endOffsets": "114,60,288,710,516,936,1020,386,816,229,863,777,589"
-                    },
-                    "to": {
-                        "startLines": "1863,1865,1877,1911,2020,2021,2022,2037,2130,2131,2137,2145,2149",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "119476,119612,121276,124977,141352,141422,141492,143347,157219,157257,158115,158800,159285",
-                        "endColumns": "52,47,57,63,69,69,82,96,37,55,45,65,71",
-                        "endOffsets": "119524,119655,121329,125036,141417,141487,141570,143439,157252,157308,158156,158861,159352"
                     }
                 },
                 {
@@ -224,23 +171,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006-Project\\CyclingApp\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,715",
-                        "endColumns": "143,81,103,108,119,100,77",
-                        "endOffsets": "194,276,380,489,609,710,788"
-                    },
-                    "to": {
-                        "startLines": "1897,2015,2016,2017,2018,2019,2138",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "123735,140836,140918,141022,141131,141251,158161",
-                        "endColumns": "143,81,103,108,119,100,77",
-                        "endOffsets": "123874,140913,141017,141126,141246,141347,158234"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\757a606e309d3389c27b4490c6e8047d\\transformed\\activity-1.6.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -277,6 +207,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006\\Cycling-App\\CyclingApp\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "27,2,21,16,23",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "1327,102,985,821,1087",
+                        "endLines": "38,14,21,19,23",
+                        "endColumns": "12,12,98,12,88",
+                        "endOffsets": "2033,813,1079,977,1171"
+                    },
+                    "to": {
+                        "startLines": "6494,6536,6549,6550,6554",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "454316,456960,457543,457641,457799",
+                        "endLines": "6505,6548,6549,6553,6554",
+                        "endColumns": "12,12,97,12,87",
+                        "endOffsets": "454747,457538,457636,457794,457882"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\2bad06953cceffb298bd7a65b2be9940\\transformed\\navigation-ui-2.4.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4",
@@ -291,6 +240,23 @@
                         "startOffsets": "112975,157056,157132",
                         "endColumns": "52,75,86",
                         "endOffsets": "113023,157127,157214"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006\\Cycling-App\\CyclingApp\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "2,1,6,12,9,17,18,7,14,5,15,13,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "66,17,235,651,451,871,942,294,783,178,822,716,522",
+                        "endColumns": "52,47,57,63,69,69,82,96,37,55,45,65,71",
+                        "endOffsets": "114,60,288,710,516,936,1020,386,816,229,863,777,589"
+                    },
+                    "to": {
+                        "startLines": "1863,1865,1877,1911,2020,2021,2022,2037,2130,2131,2137,2145,2149",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "119476,119612,121276,124977,141352,141422,141492,143347,157219,157257,158115,158800,159285",
+                        "endColumns": "52,47,57,63,69,69,82,96,37,55,45,65,71",
+                        "endOffsets": "119524,119655,121329,125036,141417,141487,141570,143439,157252,157308,158156,158861,159352"
                     }
                 },
                 {
@@ -493,6 +459,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006\\Cycling-App\\CyclingApp\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,715",
+                        "endColumns": "143,81,103,108,119,100,77",
+                        "endOffsets": "194,276,380,489,609,710,788"
+                    },
+                    "to": {
+                        "startLines": "1897,2015,2016,2017,2018,2019,2138",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "123735,140836,140918,141022,141131,141251,158161",
+                        "endColumns": "143,81,103,108,119,100,77",
+                        "endOffsets": "123874,140913,141017,141126,141246,141347,158234"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Xcoga\\.gradle\\caches\\transforms-3\\2b43fbb59c3368c3f0bb441f03f5f39d\\transformed\\startup-runtime-1.1.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -617,6 +600,23 @@
                         "endLines": "90,9206,11159,11243",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "4740,635261,706301,710817"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006\\Cycling-App\\CyclingApp\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "41",
+                        "endOffsets": "54"
+                    },
+                    "to": {
+                        "startLines": "1067",
+                        "startColumns": "4",
+                        "startOffsets": "62491",
+                        "endColumns": "41",
+                        "endOffsets": "62528"
                     }
                 },
                 {

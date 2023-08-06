@@ -2836,7 +2836,6 @@ drawable baseline_home_24
 drawable baseline_logout_24
 drawable baseline_map_24
 drawable baseline_person_24
-drawable baseline_person_add_24
 drawable baseline_upcoming_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3754,7 +3753,7 @@ layout design_text_input_start_icon
 layout event_details
 layout event_details2
 layout event_details3
-layout fragment_add_user
+layout fragment_add_friend
 layout fragment_event
 layout fragment_map
 layout fragment_profile

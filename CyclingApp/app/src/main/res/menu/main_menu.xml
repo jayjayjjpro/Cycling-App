@@ -27,7 +27,7 @@
             />
         <item android:id="@+id/add_user"
             android:icon="@drawable/baseline_map_24"
-            android:title="Add user"
+            android:title="Add friend"
             />
         <item android:id="@+id/logout"
             android:icon="@drawable/baseline_logout_24"
