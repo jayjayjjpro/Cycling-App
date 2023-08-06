@@ -63,6 +63,7 @@ id go_back
 id google_map
 id home
 id joinEvent
+id leaveEvent
 id locInfo
 id locInfo2
 id locInfo3

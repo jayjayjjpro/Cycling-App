@@ -109,6 +109,13 @@
         android:layout_marginLeft="125dp"
         android:layout_alignParentBottom="true"
         android:text = "back"/>
+    <Button
+        android:id="@+id/leaveEvent"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="125dp"
+        android:text="Leave Event" />
 
     <FrameLayout
         android:layout_width="match_parent"
