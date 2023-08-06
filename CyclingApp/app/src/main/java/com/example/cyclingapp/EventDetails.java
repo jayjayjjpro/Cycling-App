@@ -51,7 +51,8 @@ public class EventDetails extends AppCompatActivity  {
     private Button backButton;
     private String eventId;
 
-
+    private Button leaveButton;
+    private EventRepository eventRepository;
 
 
 
@@ -127,7 +128,35 @@ public class EventDetails extends AppCompatActivity  {
                                 participantsTextView.setText(Integer.toString(participants.size()));
                             }
                         });
+                // Initialize the EventRepository
+                eventRepository = new EventRepository();
 
+                // Find the leave button and set up a click listener
+                leaveButton = findViewById(R.id.leaveEvent);
+                leaveButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        FirebaseAuth auth = FirebaseAuth.getInstance();
+                        String userId = auth.getCurrentUser().getUid();
+
+                        // Call the leaveEvent method from the EventRepository
+                        eventRepository.leaveEvent(eventId, userId)
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Toast.makeText(EventDetails.this, "Left event successfully", Toast.LENGTH_SHORT).show();
+                                        // You can update the UI here if needed (e.g., decrement participant count)
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(EventDetails.this, "Failed to leave event", Toast.LENGTH_SHORT).show();
+                                        Log.e(TAG, "Error leaving event", e);
+                                    }
+                                });
+                    }
+                });
                 joinButton = findViewById(R.id.joinEvent);
 
                 joinButton.setOnClickListener(new View.OnClickListener() {
