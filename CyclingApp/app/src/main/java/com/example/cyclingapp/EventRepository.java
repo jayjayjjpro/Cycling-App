@@ -105,25 +105,6 @@ public class EventRepository {
         return eventsCollection.document(eventId).update("status", status);
     }
 
-    //Leave Event
-    public Task<Void> leaveEvent(String eventId, String userId) {
-        DocumentReference eventRef = eventsCollection.document(eventId);
-        DocumentReference userRef = usersCollection.document(userId);
-
-        // Create a batch to ensure both the event and user documents are updated atomically
-        return FirebaseFirestore.getInstance().runTransaction(new Transaction.Function<Void>() {
-            @Override
-            public Void apply(Transaction transaction) throws FirebaseFirestoreException {
-                // Remove user from the event's participants
-                transaction.update(eventRef, "participants", FieldValue.arrayRemove(userId));
-
-                // Remove event from the user's joinedEvents (assuming the user document is structured this way)
-                transaction.update(userRef, "joinedEvents", FieldValue.arrayRemove(eventId));
-
-                return null; // Return null as we're not returning any data
-            }
-        });
-    }
 
 
 

@@ -40,9 +40,6 @@ public final class EventDetailsBinding implements ViewBinding {
   public final Button joinEvent;
 
   @NonNull
-  public final Button leaveEvent;
-
-  @NonNull
   public final TextView locInfo;
 
   @NonNull
@@ -57,8 +54,8 @@ public final class EventDetailsBinding implements ViewBinding {
   private EventDetailsBinding(@NonNull LinearLayout rootView, @NonNull Button back,
       @NonNull TextView date, @NonNull TextView dateInfo, @NonNull TextView eventName,
       @NonNull FrameLayout fragmentContainerViewRoute, @NonNull Button joinEvent,
-      @NonNull Button leaveEvent, @NonNull TextView locInfo, @NonNull TextView locationInfo,
-      @NonNull TextView partInfo, @NonNull TextView participants) {
+      @NonNull TextView locInfo, @NonNull TextView locationInfo, @NonNull TextView partInfo,
+      @NonNull TextView participants) {
     this.rootView = rootView;
     this.back = back;
     this.date = date;
@@ -66,7 +63,6 @@ public final class EventDetailsBinding implements ViewBinding {
     this.eventName = eventName;
     this.fragmentContainerViewRoute = fragmentContainerViewRoute;
     this.joinEvent = joinEvent;
-    this.leaveEvent = leaveEvent;
     this.locInfo = locInfo;
     this.locationInfo = locationInfo;
     this.partInfo = partInfo;
@@ -136,12 +132,6 @@ public final class EventDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.leaveEvent;
-      Button leaveEvent = ViewBindings.findChildViewById(rootView, id);
-      if (leaveEvent == null) {
-        break missingId;
-      }
-
       id = R.id.locInfo;
       TextView locInfo = ViewBindings.findChildViewById(rootView, id);
       if (locInfo == null) {
@@ -167,8 +157,7 @@ public final class EventDetailsBinding implements ViewBinding {
       }
 
       return new EventDetailsBinding((LinearLayout) rootView, back, date, dateInfo, eventName,
-          fragmentContainerViewRoute, joinEvent, leaveEvent, locInfo, locationInfo, partInfo,
-          participants);
+          fragmentContainerViewRoute, joinEvent, locInfo, locationInfo, partInfo, participants);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
