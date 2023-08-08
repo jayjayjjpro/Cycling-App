@@ -27,6 +27,7 @@
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">cycling-app-c62b3</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="title_activity_messaging">MessagingActivity</string>
     <string name="title_activity_route_fragment">RouteFragment</string>
     <style name="Theme" parent="Theme.AppCompat.Light.NoActionBar">
         

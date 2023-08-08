@@ -50,6 +50,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.CyclingApp" >
+        <activity
+            android:name="com.example.cyclingapp.MessagingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cyclingapp.ChooseFriendToMessageActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" />

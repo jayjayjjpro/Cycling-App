@@ -2830,12 +2830,15 @@ drawable amu_bubble_mask
 drawable amu_bubble_shadow
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_add_circle_24
 drawable baseline_event_24
 drawable baseline_event_note_24
 drawable baseline_home_24
 drawable baseline_logout_24
 drawable baseline_map_24
+drawable baseline_message_24
 drawable baseline_person_24
+drawable baseline_person_add_24
 drawable baseline_upcoming_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -2978,6 +2981,7 @@ id BOTTOM_START
 id CTRL
 id FUNCTION
 id META
+id Message
 id NO_DEBUG
 id SHIFT
 id SHOW_ALL
@@ -3109,6 +3113,8 @@ id center_vertical
 id chain
 id chain2
 id chains
+id chatroomID
+id chatroomListView
 id checkbox
 id checked
 id chronometer
@@ -3233,6 +3239,7 @@ id fitXY
 id fixed
 id flip
 id floating
+id floatingActionButton
 id forever
 id fragment_container
 id fragment_container_create_event
@@ -3242,6 +3249,7 @@ id fragment_container_view_route3
 id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
+id friend_list
 id frost
 id fullscreen_header
 id ghost_view
@@ -3285,6 +3293,9 @@ id joinEvent
 id jumpToEnd
 id jumpToStart
 id labeled
+id lastMessageSenderID
+id lastMessageSenderUsername
+id lastMessageTimestamp
 id layout
 id left
 id leftToRight
@@ -3724,9 +3735,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_choose_friend_to_message
 layout activity_create_event
 layout activity_home
 layout activity_main
+layout activity_messaging
 layout amu_info_window
 layout amu_text_bubble
 layout amu_webview
@@ -3754,7 +3767,9 @@ layout event_details
 layout event_details2
 layout event_details3
 layout fragment_add_friend
+layout fragment_chatrooms
 layout fragment_event
+layout fragment_friend_list
 layout fragment_map
 layout fragment_profile
 layout fragment_set_route
@@ -3788,6 +3803,7 @@ layout fui_welcome_back_email_link_prompt_layout
 layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
 layout header
+layout item_chat_room
 layout item_event
 layout item_user
 layout m3_alert_dialog
@@ -4160,6 +4176,7 @@ string second_fragment_label
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string title_activity_messaging
 string title_activity_route_fragment
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

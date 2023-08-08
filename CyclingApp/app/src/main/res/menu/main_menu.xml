@@ -26,8 +26,16 @@
             android:title="Map"
             />
         <item android:id="@+id/add_user"
-            android:icon="@drawable/baseline_map_24"
+            android:icon="@drawable/baseline_person_add_24"
             android:title="Add friend"
+            />
+        <item android:id="@+id/friend_list"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Friend list"
+            />
+        <item android:id = "@+id/Message"
+            android:icon="@drawable/baseline_message_24"
+            android:title="Message"
             />
         <item android:id="@+id/logout"
             android:icon="@drawable/baseline_logout_24"

@@ -1,11 +1,7 @@
 [
     {
-        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_add_friend.xml",
-        "source": "com.example.cyclingapp-main-54:/layout/fragment_add_friend.xml"
-    },
-    {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\item_user.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\item_user.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/activity_messaging.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/activity_messaging.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_add_user.xml",
@@ -20,6 +16,66 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\content_main.xml"
     },
     {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\item_chat_room.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\item_chat_room.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_friend_list.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_friend_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_add_friend.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_add_friend.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\event_details3.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\event_details3.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\header.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\header.xml"
+    },
+    {
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_second.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\activity_create_event.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\activity_create_event.xml"
+    },
+    {
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_chatrooms.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_chatrooms.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_message.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_event.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_view_route.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_view_route.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\current_event.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\current_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\item_user.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\item_user.xml"
+    },
+    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_upcoming_event.xml",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_upcoming_event.xml"
     },
@@ -32,48 +88,24 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\event_details2.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\activity_home.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\activity_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\event_details3.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\event_details3.xml"
-    },
-    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_set_route.xml",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_set_route.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\header.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\header.xml"
+        "merged": "com.example.cyclingapp-mergeDebugResources-51:/layout/fragment_first.xml",
+        "source": "com.example.cyclingapp-main-54:/layout/fragment_first.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\activity_main.xml",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\activity_create_event.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\activity_create_event.xml"
-    },
-    {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_profile.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_profile.xml"
-    },
-    {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_event.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_event.xml"
-    },
-    {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_view_route.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_view_route.xml"
-    },
-    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_view_current_event_route.xml",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_view_current_event_route.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\current_event.xml",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\current_event.xml"
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\activity_choose_friend_to_message.xml",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\activity_choose_friend_to_message.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-mergeDebugResources-51:\\layout\\fragment_map.xml",

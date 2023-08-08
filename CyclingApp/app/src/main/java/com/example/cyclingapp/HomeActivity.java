@@ -124,6 +124,18 @@ public class HomeActivity extends AppCompatActivity {
 
                     }
 
+                    case R.id.friend_list:{
+                        if (isNetworkAvailable()) getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendList()).commit();
+                        else Toast.makeText(HomeActivity.this, "No internet!", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+
+                    case R.id.Message:{
+                        if (isNetworkAvailable()) getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChatroomsFragment()).commit();
+                        else Toast.makeText(HomeActivity.this, "No internet!", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+
                     case R.id.logout:{
                         AuthUI.getInstance().signOut(HomeActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
                             public void onComplete(@NonNull Task<Void> task) {

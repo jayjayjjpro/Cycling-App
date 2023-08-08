@@ -238,42 +238,54 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Xcoga\.gradle
 		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:18:9-48
 	android:dataExtractionRules
 		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:13:9-65
+activity#com.example.cyclingapp.MessagingActivity
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:20:9-22:40
+	android:exported
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:21:13-46
+activity#com.example.cyclingapp.ChooseFriendToMessageActivity
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:23:9-25:40
+	android:exported
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:24:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:22:9-24:47
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:27:9-29:47
 	android:value
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:24:13-44
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:29:13-44
 	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:23:13-58
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:28:13-58
 activity#com.example.cyclingapp.CreateEventActivity
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:26:9-28:44
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:31:9-33:44
 	android:label
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:28:13-41
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:33:13-41
 	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:27:13-48
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:32:13-48
 activity#com.example.cyclingapp.CurrentEvent
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:30:9-32:45
-	android:label
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:32:13-42
-	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:31:13-41
-activity#com.example.cyclingapp.EventDetails
 ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:34:9-36:45
 	android:label
 		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:36:13-42
 	android:name
 		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:35:13-41
-activity#com.example.cyclingapp.EventDetails2
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:38:9-40:45
+activity#com.example.cyclingapp.EventDetails
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:37:9-39:45
 	android:label
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:40:13-42
-	android:name
 		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:39:13-42
-activity#com.example.cyclingapp.EventDetails3
-ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:42:9-44:45
-	android:label
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:44:13-42
 	android:name
-		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:43:13-42
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:38:13-41
+activity#com.example.cyclingapp.EventDetails2
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:40:9-42:45
+	android:label
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:42:13-42
+	android:name
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:41:13-42
+activity#com.example.cyclingapp.EventDetails3
+ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:43:9-45:45
+	android:label
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:45:13-42
+	android:name
+		ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:44:13-42
 activity#com.example.cyclingapp.HomeActivity
 ADDED from C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\src\main\AndroidManifest.xml:46:9-48:40
 	android:exported
