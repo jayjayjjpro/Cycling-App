@@ -4,7 +4,7 @@
             "outputFile": "com.example.cyclingapp-mergeDebugResources-50:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006\\Cycling-App\\CyclingApp\\app\\src\\main\\res\\values-land\\dimens.xml",
+                    "source": "C:\\Users\\Xcoga\\AndroidStudioProjects\\SC2006-Project\\CyclingApp\\app\\src\\main\\res\\values-land\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
