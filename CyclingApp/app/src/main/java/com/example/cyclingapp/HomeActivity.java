@@ -1,4 +1,5 @@
 package com.example.cyclingapp;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -22,20 +23,13 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
     User current_user = null;
-
-    List<String> friendList = new ArrayList<>();
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -61,7 +55,6 @@ public class HomeActivity extends AppCompatActivity {
         drawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setUsernameAndID();
-
 
 
         //For now, we will use Event fragment as our home page
@@ -103,25 +96,9 @@ public class HomeActivity extends AppCompatActivity {
                     }
 
                     case R.id.add_user:{
-                        // Create an instance of the fragment
-                        AddFriend addFriend = new AddFriend();
-                        currentUserFriendlist();
-
-                        // Create a bundle to hold the data
-                        Bundle bundle = new Bundle();
-                        bundle.putStringArrayList("friendList", (ArrayList<String>) friendList);
-
-                        // Set the bundle as arguments to the fragment
-                        addFriend.setArguments(bundle);
-
-                        // Load the fragment into the activity
-                        if (isNetworkAvailable()) getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.fragment_container, addFriend)
-                                .commit();
-
+                        if (isNetworkAvailable()) getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddUser()).commit();
                         else Toast.makeText(HomeActivity.this, "No internet!", Toast.LENGTH_SHORT).show();
                         break;
-
                     }
 
                     case R.id.friend_list:{
@@ -215,24 +192,5 @@ public class HomeActivity extends AppCompatActivity {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
-
-
-    private void currentUserFriendlist(){
-
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        CollectionReference usersRef = db.collection("users");
-
-        String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-
-        usersRef.document(userID)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        friendList = (List<String>) documentSnapshot.get("friendList");
-                    }
-                });
-
     }
 }

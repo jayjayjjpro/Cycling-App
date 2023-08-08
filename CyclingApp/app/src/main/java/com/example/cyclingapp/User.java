@@ -1,6 +1,5 @@
 package com.example.cyclingapp;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -14,7 +13,7 @@ public class User {
 
     private List<String> createdEvents;
 
-    private List<String> friendList;
+    private List<User> friendList;
 
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
@@ -24,9 +23,9 @@ public class User {
         this.id = id;
         this.displayName = displayName;
         this.email = email;
-        joinedEvents = null;
-        createdEvents = null;
-        friendList = new ArrayList<>();
+        this.completedEvents = completedEvents;
+        this.joinedEvents = joinedEvents;
+        this.createdEvents = createdEvents;
     }
 
     public String getId() {
@@ -79,11 +78,9 @@ public class User {
         this.createdEvents = createdEvents;
     }
 
-    public void setFriendList(List<String> friendList){this.friendList = friendList;}
+    public void setFriendList(List<User> friendList){this.friendList = friendList;}
 
-    public List<String> getFriendList(){return friendList;}
+    public void addFriend(User friend){friendList.add(friend);}
 
-    public void addFriend(String friend){friendList.add(friend);}
-
-    public void deleteFriend(String friend){friendList.remove(friend);}
+    public void deleteFriend(User friend){friendList.remove(friend);}
 }
