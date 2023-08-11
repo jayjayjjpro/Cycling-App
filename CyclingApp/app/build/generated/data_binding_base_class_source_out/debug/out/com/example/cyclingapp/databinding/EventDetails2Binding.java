@@ -46,7 +46,13 @@ public final class EventDetails2Binding implements ViewBinding {
   public final TextView partInfo2;
 
   @NonNull
+  public final TextView partInfo3;
+
+  @NonNull
   public final TextView participants2;
+
+  @NonNull
+  public final TextView participantsUsername;
 
   @NonNull
   public final Button startButton;
@@ -54,7 +60,8 @@ public final class EventDetails2Binding implements ViewBinding {
   private EventDetails2Binding(@NonNull LinearLayout rootView, @NonNull Button back,
       @NonNull TextView date2, @NonNull TextView dateInfo2, @NonNull TextView eventName2,
       @NonNull FrameLayout fragmentContainerViewRoute2, @NonNull TextView locInfo2,
-      @NonNull TextView locationInfo2, @NonNull TextView partInfo2, @NonNull TextView participants2,
+      @NonNull TextView locationInfo2, @NonNull TextView partInfo2, @NonNull TextView partInfo3,
+      @NonNull TextView participants2, @NonNull TextView participantsUsername,
       @NonNull Button startButton) {
     this.rootView = rootView;
     this.back = back;
@@ -65,7 +72,9 @@ public final class EventDetails2Binding implements ViewBinding {
     this.locInfo2 = locInfo2;
     this.locationInfo2 = locationInfo2;
     this.partInfo2 = partInfo2;
+    this.partInfo3 = partInfo3;
     this.participants2 = participants2;
+    this.participantsUsername = participantsUsername;
     this.startButton = startButton;
   }
 
@@ -144,9 +153,21 @@ public final class EventDetails2Binding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.partInfo3;
+      TextView partInfo3 = ViewBindings.findChildViewById(rootView, id);
+      if (partInfo3 == null) {
+        break missingId;
+      }
+
       id = R.id.participants2;
       TextView participants2 = ViewBindings.findChildViewById(rootView, id);
       if (participants2 == null) {
+        break missingId;
+      }
+
+      id = R.id.participants_Username;
+      TextView participantsUsername = ViewBindings.findChildViewById(rootView, id);
+      if (participantsUsername == null) {
         break missingId;
       }
 
@@ -157,8 +178,8 @@ public final class EventDetails2Binding implements ViewBinding {
       }
 
       return new EventDetails2Binding((LinearLayout) rootView, back, date2, dateInfo2, eventName2,
-          fragmentContainerViewRoute2, locInfo2, locationInfo2, partInfo2, participants2,
-          startButton);
+          fragmentContainerViewRoute2, locInfo2, locationInfo2, partInfo2, partInfo3, participants2,
+          participantsUsername, startButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

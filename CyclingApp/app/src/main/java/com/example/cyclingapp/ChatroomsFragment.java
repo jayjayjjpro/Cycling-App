@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +51,8 @@ public class ChatroomsFragment extends Fragment {
     ChatRoomRepository chatRoomRepository;
     UserRepository userRepository;
 
+    ListView listView;
+
 
     String currentUserUsername;
 
@@ -89,7 +92,7 @@ public class ChatroomsFragment extends Fragment {
         });
 
 
-        ListView listView = (ListView) view.findViewById(R.id.chatroomListView);
+        listView = (ListView) view.findViewById(R.id.chatroomListView);
 
         //retrieving all the chatrooms from the database
         db.collection("chatrooms").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -102,11 +105,9 @@ public class ChatroomsFragment extends Fragment {
                     part_of_chat = checkIfUserIsPartOfChat(chatroom);
                     //only add the chatroom to the UI if the user is part of the conversation
                     if (part_of_chat==true) {
-                        Log.d("chatroom Added","user is part of chat");
                         chatroomList.add(chatroom);
                     }
                 }
-                Log.d("executed chatroom_db get","executed");
 
                 // Update your UI with the chatRoomList
                 ChatRoomAdapter adapter = new ChatRoomAdapter(getActivity(), chatroomList);
@@ -163,31 +164,41 @@ public class ChatroomsFragment extends Fragment {
         if (requestCode == CREATE_NEW_CHAT) {
             if (resultCode == Activity.RESULT_OK) {
                 // Handle the result data here
-                String temp = data.getStringExtra("ChosenUserID");
-                MessagePartnerID = temp;
+                MessagePartnerID = data.getStringExtra("ChosenUserID");
+                String MessagePartnerUsername = data.getStringExtra("ChosenUserUsername");
 
-                //After we have the MessagePartnerID, we want to create a chatroom and store in Database
-                String chatroomID = generateChatroomID(userID,MessagePartnerID);
-                List<String> chatRoom_UserIDs= new ArrayList<>();
-                chatRoom_UserIDs.add(userID);
-                chatRoom_UserIDs.add(MessagePartnerID);
-                Timestamp timestamp = Timestamp.now();
+                ChatRoomModel chatRoom = generateChatroom(MessagePartnerID,MessagePartnerUsername,currentUserUsername,userID);
 
-
-                ChatRoomModel chatRoom = new ChatRoomModel(chatroomID,chatRoom_UserIDs,timestamp,userID,currentUserUsername);
                 chatRoomRepository.addChatroom(chatRoom);
 
             }
         }
+
+    }
+
+    private ChatRoomModel generateChatroom(String MessagePartnerID, String MessagePartnerUsername, String CurrentUserUsername, String CurrentUserID){
+        String chatroomID = generateChatroomID(CurrentUserID,MessagePartnerID);
+        List<String> chatRoom_UserIDs= new ArrayList<>();
+        chatRoom_UserIDs.add(CurrentUserID);
+        chatRoom_UserIDs.add(MessagePartnerID);
+        Timestamp timestamp = Timestamp.now();
+
+        List<String> chatRoom_users = new ArrayList<>();
+        chatRoom_users.add(CurrentUserUsername);
+        chatRoom_users.add(MessagePartnerUsername);
+
+        ChatRoomModel chatRoom = new ChatRoomModel(chatroomID,chatRoom_UserIDs,timestamp,CurrentUserID,CurrentUserUsername,chatRoom_users);
+
+        return chatRoom;
     }
 
     private String generateChatroomID(String current_userID, String other_userID) {
 
         int result = current_userID.compareTo(other_userID);
         if (result < 0) {
-            return current_userID + other_userID;
+            return current_userID +"_" + other_userID;
         } else if (result > 0) {
-            return other_userID + current_userID;
+            return other_userID + "_" + current_userID;
         } else return null;
 
     }

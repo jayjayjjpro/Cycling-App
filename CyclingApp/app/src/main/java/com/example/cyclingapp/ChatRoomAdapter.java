@@ -1,6 +1,7 @@
 package com.example.cyclingapp;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,18 +35,13 @@ public class ChatRoomAdapter extends ArrayAdapter<ChatRoomModel> {
 
 
         // Lookup view for data population
-        TextView chatroomID = (TextView) convertView.findViewById(R.id.chatroomID);
-        TextView lastMessageTimestamp = (TextView) convertView.findViewById(R.id.lastMessageTimestamp);
-        TextView lastMessageSenderID = (TextView) convertView.findViewById(R.id.lastMessageSenderID);
-        TextView participants = (TextView) convertView.findViewById(R.id.participants);
-        TextView lastMessageSenderUsername = (TextView) convertView.findViewById(R.id.lastMessageSenderUsername);
+        TextView participants_ID = (TextView) convertView.findViewById(R.id.participants_ID);
+        TextView participants_Username = (TextView) convertView.findViewById(R.id.participants_Username);
+
 
         // Populate the data into the template view using the data object
-        chatroomID.setText("chatroomID: " + chatRoomModel.getChatroomID());
-        lastMessageTimestamp.setText("Timestamp: " + convertTime(chatRoomModel.getLastMessageTimestamp()));
-        lastMessageSenderID.setText("last Message Sender ID: " + chatRoomModel.getLastMessageSenderID());
-        participants.setText("Participants:" + getParticipants(chatRoomModel.getUserIDs()));
-        lastMessageSenderUsername.setText("Sender: " + chatRoomModel.getLastMessageSenderUsername());
+        participants_ID.setText("IDs:" + getParticipantsID(chatRoomModel.getUserIDs()));
+        participants_Username.setText("ChatRoom for: " + getParticipantsUsername(chatRoomModel.getChat_users_usernames()));
 
 
         // Return the completed view to render on screen
@@ -53,10 +49,30 @@ public class ChatRoomAdapter extends ArrayAdapter<ChatRoomModel> {
     }
 
 
-    private String getParticipants(List<String> userIDs){
+    private String getParticipantsID(List<String> userIDs){
         String temp = "";
         for(int i=0;i<userIDs.size();i++){
-            temp = temp  + userIDs.get(i) + ", ";
+            if (i==userIDs.size()-1){
+                temp = temp  + userIDs.get(i);
+            }
+            else{
+                temp = temp  + userIDs.get(i) + ", ";
+            }
+
+        }
+        return temp;
+    }
+
+    private String getParticipantsUsername(List<String> usernames){
+        String temp = "";
+        for(int i=0;i<usernames.size();i++){
+            if(i==usernames.size()-1){
+                temp = temp  + usernames.get(i);
+            }
+            else{
+                temp = temp  + usernames.get(i) + ", ";
+            }
+
         }
         return temp;
     }
@@ -67,10 +83,12 @@ public class ChatRoomAdapter extends ArrayAdapter<ChatRoomModel> {
 
 // Create a SimpleDateFormat object with the desired time format
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss 'UTC'Z");
-        sdf.setTimeZone(TimeZone.getTimeZone("UTC+8"));
+        sdf.setTimeZone(TimeZone.getTimeZone("Asia/Singapore"));
 
 // Format the Date object to the desired format
         String formattedDate = sdf.format(date);
+
+        Log.d("FormatttedDate val: ",formattedDate);
 
         return formattedDate;
 

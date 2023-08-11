@@ -32,6 +32,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class EventDetails2 extends AppCompatActivity {
 
@@ -40,6 +41,8 @@ public class EventDetails2 extends AppCompatActivity {
     private TextView eventLocationTextView;
     private TextView dateTextView;
     private TextView participantsTextView;
+
+    private TextView participantsUsernamesTextView;
     private Button backButton;
     private Button startButton;
 
@@ -76,6 +79,7 @@ public class EventDetails2 extends AppCompatActivity {
         participantsTextView = findViewById(R.id.partInfo2);
         backButton = findViewById(R.id.back);
         startButton = findViewById(R.id.startButton);
+        participantsUsernamesTextView = findViewById(R.id.participants_Username);
 
 
         // Retrieve the event ID from the intent extras
@@ -123,6 +127,17 @@ public class EventDetails2 extends AppCompatActivity {
                         // Format the startTime as a string
                         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
                         String dateString = dateFormat.format(startTime.toDate());
+
+                        //TODO get the participants usernames and display them
+
+                        getParticipantUsernames(participants, new UsernamesCallback() {
+                            @Override
+                            public void onUsernamesReceived(List<String> usernames) {
+                                // This block will be executed once all usernames are retrieved
+                                participantsUsernamesTextView.setText(usernames.toString());
+
+                            }
+                        });
 
 
                         // Set the UI elements with the event details
@@ -193,6 +208,33 @@ public class EventDetails2 extends AppCompatActivity {
         Intent intent = new Intent(EventDetails2.this, CurrentEvent.class);
         startActivity(intent);
 
+    }
+
+    private void getParticipantUsernames(List<String> participants, final UsernamesCallback callback){
+        final List<String> usernames = new ArrayList<>();
+        final AtomicInteger count = new AtomicInteger(participants.size());
+        UserRepository userRepository = new UserRepository();
+        for (int i=0;i<participants.size();i++){
+            userRepository.getUserById(participants.get(i)).addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    User user = documentSnapshot.toObject(User.class);
+                    usernames.add(user.getDisplayName());
+
+                    if (count.decrementAndGet() == 0) {
+                        callback.onUsernamesReceived(usernames);
+                    }
+                }
+            });
+        }
+
+
+
+
+    }
+
+    private interface UsernamesCallback {
+        void onUsernamesReceived(List<String> participants_usernames);
     }
 }
 

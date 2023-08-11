@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\raw_cycling_path_network_kml.kml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\raw\\cycling_path_network_kml.kml"
-    },
-    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\raw_cycling_path_network_kml.kml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\raw\\cycling_path_network_kml.kml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -32,36 +32,40 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\event_details2.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_fragment_profile.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_profile.xml"
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_chat_message_recycler_row.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\chat_message_recycler_row.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_fragment_second.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_second.xml"
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_profile.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\menu_main_menu.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\menu\\main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_map_24.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_map_24.xml"
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_icon_back.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\icon_back.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_content_main.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\content_main.xml"
     },
     {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_map_24.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_map_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_upcoming_24.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_upcoming_24.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_header.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\header.xml"
-    },
-    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_header.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\header.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_person_24.xml.flat",
@@ -84,28 +88,32 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\menu\\test2.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_event_24.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_event_24.xml"
-    },
-    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_event_24.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_event_24.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_event_note_24.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_event_note_24.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_fragment_first.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_first.xml"
+        "merged": "com.example.cyclingapp-merged_res-52:/layout_event_details.xml.flat",
+        "source": "com.example.cyclingapp-main-54:/layout/event_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_logout_24.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_logout_24.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_person_add_24.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_person_add_24.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_logout_24.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_logout_24.xml"
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_item_friend.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\item_friend.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -152,8 +160,16 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_send_24.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\baseline_send_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_edit_text_rounded_corner.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\drawable\\edit_text_rounded_corner.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_current_event.xml.flat",
@@ -188,16 +204,16 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_chatrooms.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\xml\\backup_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\navigation\\nav_graph.xml"
+        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "com.example.cyclingapp-merged_res-52:/layout_event_details3.xml.flat",
+        "source": "com.example.cyclingapp-main-54:/layout/event_details3.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_activity_choose_friend_to_message.xml.flat",
@@ -224,16 +240,8 @@
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_upcoming_event.xml"
     },
     {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_fragment_add_friend.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_add_friend.xml"
-    },
-    {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_fragment_map.xml.flat",
         "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_map.xml"
-    },
-    {
-        "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\layout_fragment_message.xml.flat",
-        "source": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-main-54:\\layout\\fragment_message.xml"
     },
     {
         "merged": "C:\\Users\\Xcoga\\.gradle\\daemon\\7.5\\com.example.cyclingapp-merged_res-52:\\drawable_baseline_message_24.xml.flat",

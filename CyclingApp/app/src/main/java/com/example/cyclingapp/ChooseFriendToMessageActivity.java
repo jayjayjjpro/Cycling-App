@@ -62,6 +62,7 @@ public class ChooseFriendToMessageActivity extends AppCompatActivity {
                     Toast.makeText(ChooseFriendToMessageActivity.this, usersList.get(position).getDisplayName() + "creating Chatroom!", Toast.LENGTH_SHORT).show();
                     Intent resultIntent = new Intent();
                     resultIntent.putExtra("ChosenUserID", user.getId());
+                    resultIntent.putExtra("ChosenUserUsername",user.getDisplayName());
                     setResult(Activity.RESULT_OK, resultIntent);
                     finish();
                 }

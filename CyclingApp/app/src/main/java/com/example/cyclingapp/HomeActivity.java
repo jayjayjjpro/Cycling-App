@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 public class HomeActivity extends AppCompatActivity {
@@ -30,6 +31,8 @@ public class HomeActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
     User current_user = null;
+
+    String participantId;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -45,6 +48,13 @@ public class HomeActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        if (currentUser != null) {
+            participantId = currentUser.getUid();
+        }
 
 
         //following code is for NAVBAR
@@ -102,7 +112,7 @@ public class HomeActivity extends AppCompatActivity {
                     }
 
                     case R.id.friend_list:{
-                        if (isNetworkAvailable()) getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendList()).commit();
+                        if (isNetworkAvailable()) getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendListFragment()).commit();
                         else Toast.makeText(HomeActivity.this, "No internet!", Toast.LENGTH_SHORT).show();
                         break;
                     }
@@ -164,7 +174,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setUsernameAndID(){
-        String participantId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
 
         UserRepository userRepository = new UserRepository();
         Task<DocumentSnapshot> documentSnapshot = userRepository.getUserById(participantId);

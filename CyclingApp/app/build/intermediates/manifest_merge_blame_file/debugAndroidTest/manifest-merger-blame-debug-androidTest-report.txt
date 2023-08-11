@@ -3,24 +3,24 @@
 3    package="com.example.cyclingapp.test" >
 4
 5    <uses-sdk
-5-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:5:5-74
+5-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:5:5-74
 6        android:minSdkVersion="24"
-6-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:5:15-41
+6-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:5:15-41
 7        android:targetSdkVersion="33" />
-7-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:5:42-71
+7-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:5:42-71
 8
 9    <instrumentation
-9-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:11:5-15:72
+9-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:11:5-15:72
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:11:22-76
+10-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:11:22-76
 11        android:functionalTest="false"
-11-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:14:22-52
+11-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:14:22-52
 12        android:handleProfiling="false"
-12-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:13:22-53
+12-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:13:22-53
 13        android:label="Tests for com.example.cyclingapp"
-13-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:15:22-70
+13-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:15:22-70
 14        android:targetPackage="com.example.cyclingapp" />
-14-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:12:22-68
+14-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:12:22-68
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.5.0] C:\Users\Xcoga\.gradle\caches\transforms-3\7ef0e3684a63c8a5b172765ba088f16b\transformed\core-1.5.0\AndroidManifest.xml:24:5-72
@@ -40,12 +40,12 @@
 22    </queries>
 23
 24    <application
-24-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:7:5-9:19
+24-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:7:5-9:19
 25        android:debuggable="true"
 26        android:extractNativeLibs="false" >
 27        <uses-library android:name="android.test.runner" />
-27-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:8:9-60
-27-->C:\Users\Xcoga\AndroidStudioProjects\SC2006-Project\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest888500289839490367.xml:8:23-57
+27-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:8:9-60
+27-->C:\Users\Xcoga\AndroidStudioProjects\SC2006\Cycling-App\CyclingApp\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest9048329717913131586.xml:8:23-57
 28
 29        <activity
 29-->[androidx.test:core:1.5.0] C:\Users\Xcoga\.gradle\caches\transforms-3\7ef0e3684a63c8a5b172765ba088f16b\transformed\core-1.5.0\AndroidManifest.xml:27:9-34:20

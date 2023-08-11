@@ -1,8 +1,13 @@
 package com.example.cyclingapp;
 
+import android.util.Log;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
@@ -14,6 +19,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 public class ChatRoomRepository {
     private static final String CHATROOM_COLLECTION = "chatrooms";
     private final CollectionReference chatroomsCollection;
+    ChatRoomModel temp_chatRoomModel = null;
 
     public ChatRoomRepository() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -25,26 +31,47 @@ public class ChatRoomRepository {
         return chatroomsCollection.get();
     }
 
-    // Add a new chatroom with a unique ID
-    public Task<Void> addChatroom(ChatRoomModel chatRoomModel) {
-        return chatroomsCollection.add(chatRoomModel)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        // Update the event ID to match the generated document ID
-                        chatroomsCollection.document(documentReference.getId()).set(chatRoomModel);
-                    }
-                })
-                .continueWith(new Continuation<DocumentReference, Void>() {
-                    @Override
-                    public Void then(@NonNull Task<DocumentReference> task) throws Exception {
-                        if (!task.isSuccessful()) {
-                            throw task.getException();
-                        }
-                        return null;
-                    }
-                });
-    }
+
+    public void addChatroom(ChatRoomModel chatRoomModel) {
+
+
+        chatroomsCollection.document(chatRoomModel.getChatroomID()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                temp_chatRoomModel = documentSnapshot.toObject(ChatRoomModel.class);
+                if (temp_chatRoomModel == null) {
+                    Log.d("chatRoom did not exist", "null value");
+
+                    // Explicitly set the document ID to match the ChatRoomModel's ID
+                    DocumentReference chatroomRef = chatroomsCollection.document(chatRoomModel.getChatroomID());
+
+                    chatroomRef.set(chatRoomModel)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    // Document added successfully
+                                    Log.d("chatroom added", "success");
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    // Handle failure
+                                    Log.d("chatroom not added", "failure");
+                                }
+                            });
+
+                } else {
+                    Log.d("chatroom already exists", "no chatroom is created");
+                }
+            }
+        });
+
+
+
+        }
 
 
 }
+
+

@@ -1400,6 +1400,8 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color chat_color_receiver
+color chat_color_sender
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -1990,6 +1992,8 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color my_primary
+color my_secondary
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -2839,6 +2843,7 @@ drawable baseline_map_24
 drawable baseline_message_24
 drawable baseline_person_24
 drawable baseline_person_add_24
+drawable baseline_send_24
 drawable baseline_upcoming_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -2873,6 +2878,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable doge
+drawable edit_text_rounded_corner
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
 drawable fui_ic_check_circle_black_128dp
@@ -2900,6 +2906,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable icon_back
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -2980,6 +2987,8 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id ID
+id ID_friend
 id META
 id Message
 id NO_DEBUG
@@ -3072,6 +3081,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id back
 id back3
+id back_btn
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3079,6 +3089,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottom_layout
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3113,7 +3124,8 @@ id center_vertical
 id chain
 id chain2
 id chains
-id chatroomID
+id chat_message_input
+id chat_recycler_view
 id chatroomListView
 id checkbox
 id checked
@@ -3293,12 +3305,11 @@ id joinEvent
 id jumpToEnd
 id jumpToStart
 id labeled
-id lastMessageSenderID
-id lastMessageSenderUsername
-id lastMessageTimestamp
 id layout
 id left
 id leftToRight
+id left_chat_layout
+id left_chat_textview
 id legacy
 id light
 id line1
@@ -3346,6 +3357,7 @@ id material_value_index
 id matrix
 id media_actions
 id message
+id message_send_btn
 id middle
 id mini
 id month_grid
@@ -3406,6 +3418,7 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
+id other_username
 id outline
 id outward
 id overshoot
@@ -3421,6 +3434,8 @@ id partInfo3
 id participants
 id participants2
 id participants3
+id participants_ID
+id participants_Username
 id password
 id password_layout
 id password_toggle
@@ -3447,6 +3462,8 @@ id resend_code
 id reverseSawtooth
 id right
 id rightToLeft
+id right_chat_layout
+id right_chat_textview
 id right_icon
 id right_side
 id root
@@ -3575,6 +3592,7 @@ id titleDividerNoCustom
 id title_template
 id title_textview
 id toggle
+id toolbar
 id top
 id topPanel
 id top_level_view
@@ -3598,6 +3616,7 @@ id upcomingEventListView
 id useLogo
 id userID
 id username
+id username_friend
 id usersListView
 id vertical_only
 id viewRouteContainer
@@ -3745,6 +3764,7 @@ layout amu_text_bubble
 layout amu_webview
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout chat_message_recycler_row
 layout content_main
 layout current_event
 layout custom_dialog
@@ -3766,7 +3786,7 @@ layout design_text_input_start_icon
 layout event_details
 layout event_details2
 layout event_details3
-layout fragment_add_friend
+layout fragment_add_user
 layout fragment_chatrooms
 layout fragment_event
 layout fragment_friend_list
@@ -3805,6 +3825,7 @@ layout fui_welcome_back_password_prompt_layout
 layout header
 layout item_chat_room
 layout item_event
+layout item_friend
 layout item_user
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

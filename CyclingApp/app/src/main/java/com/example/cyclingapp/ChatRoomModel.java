@@ -14,6 +14,8 @@ import java.util.List;
 public class ChatRoomModel implements Parcelable {
     String chatroomID;
     List<String> userIDs;
+
+    List<String> chat_users_usernames;
     Timestamp lastMessageTimestamp;
     String lastMessageSenderID;
 
@@ -21,12 +23,21 @@ public class ChatRoomModel implements Parcelable {
 
 
 
-    public ChatRoomModel(String chatroomID, List<String> userIDs, Timestamp lastMessageTimestamp, String lastMessageSenderID, String lastMessageSenderUsername) {
+    public ChatRoomModel(String chatroomID, List<String> userIDs, Timestamp lastMessageTimestamp, String lastMessageSenderID, String lastMessageSenderUsername, List<String>chat_users_usernames) {
         this.chatroomID = chatroomID;
         this.userIDs = userIDs;
         this.lastMessageTimestamp = lastMessageTimestamp;
         this.lastMessageSenderID = lastMessageSenderID;
         this.lastMessageSenderUsername = lastMessageSenderUsername;
+        this.chat_users_usernames = chat_users_usernames;
+    }
+
+    public List<String> getChat_users_usernames() {
+        return chat_users_usernames;
+    }
+
+    public void setChat_users_usernames(List<String> chat_users_usernames) {
+        this.chat_users_usernames = chat_users_usernames;
     }
 
     public ChatRoomModel() {
@@ -36,6 +47,7 @@ public class ChatRoomModel implements Parcelable {
     protected ChatRoomModel(Parcel in) {
         chatroomID = in.readString();
         userIDs = in.createStringArrayList();
+        chat_users_usernames = in.createStringArrayList();
         lastMessageTimestamp = in.readParcelable(Timestamp.class.getClassLoader());
         lastMessageSenderID = in.readString();
         lastMessageSenderUsername = in.readString();
@@ -102,6 +114,7 @@ public class ChatRoomModel implements Parcelable {
     public void writeToParcel(@NonNull Parcel dest, int flags) {
         dest.writeString(chatroomID);
         dest.writeStringList(userIDs);
+        dest.writeStringList(chat_users_usernames);
         dest.writeParcelable(lastMessageTimestamp, flags);
         dest.writeString(lastMessageSenderID);
         dest.writeString(lastMessageSenderUsername);
