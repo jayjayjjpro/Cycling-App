@@ -16,4 +16,14 @@
 ![Events](Images/Events_Page.png) 
 ![EventsDetials](Images/Event_Details1.png) 
 - This is the page where you will see the list of available events. You can click the event and see the details.
-
+# Create Event Page
+![CreateEvent](Images/CreateEvent.png) 
+- The user can set the date,time and route for the Cycling Event.
+# Upcoming Event Page
+![Upcoming](Images/UpcomingEvents.png) 
+![EventsDetials2](Images/Events_Details2.png) 
+- User can view the upcoming events and details in this page.
+# Profile Pages
+![P1](Images/ProfilePage1.png) 
+![P2](Images/ProfilePage2.png) 
+- The user can view the completed events, total distance travelled and calories burned in the profile page.
